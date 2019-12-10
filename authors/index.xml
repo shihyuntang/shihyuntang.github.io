@@ -5,7 +5,7 @@
     <link>https://shihyuntang.github.io/authors/</link>
       <atom:link href="https://shihyuntang.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Authors</title>
@@ -15,19 +15,50 @@
     <item>
       <title></title>
       <link>https://shihyuntang.github.io/authors/admin/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/admin/</guid>
-      <description>&lt;p&gt;Hi, I am a graduate student from Taiwan and is now working with Dr. Lisa Prato at NAU/Lowell observatory. I started to pursue a Ph.D. at the Department of Astronomy and Planetary Science, NAU, Flagstaff, Arizona, on Jan. 2020.&lt;/p&gt;
+      <description>&lt;p&gt;Hi, I am Shih-Yun Tang (湯士昀), a first year graduate student from Taiwan that studying at the Northern Arizona University in the Department of Astronomy and Planetary Science. I work with Dr. Lisa Prato (Lowell Observatory) on TBD.&lt;/p&gt;
 &lt;p&gt;I completed both of my B.A. and M.S. in Physics at the National Central University, Taiwan. My first research project was to characterize the stellar and substellar members in the Coma Berenices star cluster with prof. Wen-Ping Chen. From there, I learn how to play around with the CDS database and also IR spectrum.&lt;/p&gt;
-&lt;p&gt;大家好&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Robert Ford</title>
-      <link>https://shihyuntang.github.io/authors/robert-ford/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/authors/robert-ford/</guid>
+      <title>Chen, W. P.</title>
+      <link>https://shihyuntang.github.io/authors/chen-w.-p./</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/chen-w.-p./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chiang, P. S.</title>
+      <link>https://shihyuntang.github.io/authors/chiang-p.-s./</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/chiang-p.-s./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Goldman, Bertrand</title>
+      <link>https://shihyuntang.github.io/authors/goldman-bertrand/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/goldman-bertrand/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Herczeg, Gregory J.</title>
+      <link>https://shihyuntang.github.io/authors/herczeg-gregory-j./</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/herczeg-gregory-j./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jose, Jessy</title>
+      <link>https://shihyuntang.github.io/authors/jose-jessy/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/jose-jessy/</guid>
       <description></description>
     </item>
     
