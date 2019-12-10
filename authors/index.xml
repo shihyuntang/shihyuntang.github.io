@@ -5,7 +5,7 @@
     <link>https://shihyuntang.github.io/authors/</link>
       <atom:link href="https://shihyuntang.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 17 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Authors</title>
@@ -15,7 +15,7 @@
     <item>
       <title></title>
       <link>https://shihyuntang.github.io/authors/admin/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/admin/</guid>
       <description>&lt;p&gt;Hi, I am Shih-Yun Tang (湯士昀), a first year graduate student from Taiwan that studying at the Northern Arizona University in the Department of Astronomy and Planetary Science. I work with Dr. Lisa Prato (Lowell Observatory) on TBD.&lt;/p&gt;
 &lt;p&gt;I completed both of my B.A. and M.S. in Physics at the National Central University, Taiwan. My first research project was to characterize the stellar and substellar members in the Coma Berenices star cluster with prof. Wen-Ping Chen. From there, I learn how to play around with the CDS database and also IR spectrum.&lt;/p&gt;
@@ -25,8 +25,96 @@
     <item>
       <title>Chen, W. P.</title>
       <link>https://shihyuntang.github.io/authors/chen-w.-p./</link>
-      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/chen-w.-p./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Goldman, Bertrand</title>
+      <link>https://shihyuntang.github.io/authors/goldman-bertrand/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/goldman-bertrand/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hong, Jongsuk</title>
+      <link>https://shihyuntang.github.io/authors/hong-jongsuk/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/hong-jongsuk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>J. Z. Liu</title>
+      <link>https://shihyuntang.github.io/authors/j.-z.-liu/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/j.-z.-liu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Just, Andreas</title>
+      <link>https://shihyuntang.github.io/authors/just-andreas/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/just-andreas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lin, Chien-Cheng</title>
+      <link>https://shihyuntang.github.io/authors/lin-chien-cheng/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/lin-chien-cheng/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pang, Xiaoying</title>
+      <link>https://shihyuntang.github.io/authors/pang-xiaoying/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/pang-xiaoying/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shukirgaliyev, Bekdaulet</title>
+      <link>https://shihyuntang.github.io/authors/shukirgaliyev-bekdaulet/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/shukirgaliyev-bekdaulet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>W. P. Chen</title>
+      <link>https://shihyuntang.github.io/authors/w.-p.-chen/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/w.-p.-chen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xiaoying Pang</title>
+      <link>https://shihyuntang.github.io/authors/xiaoying-pang/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/xiaoying-pang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yu Zhang</title>
+      <link>https://shihyuntang.github.io/authors/yu-zhang/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/yu-zhang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yuan, Zhen</title>
+      <link>https://shihyuntang.github.io/authors/yuan-zhen/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/yuan-zhen/</guid>
       <description></description>
     </item>
     
@@ -35,14 +123,6 @@
       <link>https://shihyuntang.github.io/authors/chiang-p.-s./</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/chiang-p.-s./</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Goldman, Bertrand</title>
-      <link>https://shihyuntang.github.io/authors/goldman-bertrand/</link>
-      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/authors/goldman-bertrand/</guid>
       <description></description>
     </item>
     

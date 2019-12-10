@@ -5,12 +5,28 @@
     <link>https://shihyuntang.github.io/authors/admin/</link>
       <atom:link href="https://shihyuntang.github.io/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Shih-Yun Tang</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 17 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Shih-Yun Tang</title>
       <link>https://shihyuntang.github.io/authors/admin/</link>
     </image>
+    
+    <item>
+      <title>Diagnosing the Stellar Population and Tidal Structure of the Blanco1 Star Cluster</title>
+      <link>https://shihyuntang.github.io/publication/202000_apj/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/publication/202000_apj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Discovery of Tidal Tails in Disrupting Open Clusters: Coma Berenices and a Neighbor Stellar Group</title>
+      <link>https://shihyuntang.github.io/publication/201905_apj/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/publication/201905_apj/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Display Jupyter Notebooks with Academic</title>
@@ -61,18 +77,7 @@ date: 2019-09-01
       <link>https://shihyuntang.github.io/publication/201808_apj/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/201808_apj/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
