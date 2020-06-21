@@ -5,12 +5,28 @@
     <link>https://shihyuntang.github.io/tags/</link>
       <atom:link href="https://shihyuntang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Tags</title>
       <link>https://shihyuntang.github.io/tags/</link>
     </image>
+    
+    <item>
+      <title>pipeline</title>
+      <link>https://shihyuntang.github.io/tags/pipeline/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/pipeline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://shihyuntang.github.io/tags/python/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/python/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Source Themes</title>
