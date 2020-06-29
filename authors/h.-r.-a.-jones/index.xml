@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>H. R. A. Jones | Shih-Yun Tang</title>
+    <link>https://shihyuntang.github.io/authors/h.-r.-a.-jones/</link>
+      <atom:link href="https://shihyuntang.github.io/authors/h.-r.-a.-jones/index.xml" rel="self" type="application/rss+xml" />
+    <description>H. R. A. Jones</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://shihyuntang.github.io/img/icon-192.png</url>
+      <title>H. R. A. Jones</title>
+      <link>https://shihyuntang.github.io/authors/h.-r.-a.-jones/</link>
+    </image>
+    
+    <item>
+      <title>Brown Dwarfs in LAMOST DR6: ultracool dwarfs in the young cluster Taurus and in the field</title>
+      <link>https://shihyuntang.github.io/publication/202006_lamostbd_apjl/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/publication/202006_lamostbd_apjl/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,7 +5,7 @@
     <link>https://shihyuntang.github.io/authors/</link>
       <atom:link href="https://shihyuntang.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 29 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Authors</title>
@@ -15,7 +15,7 @@
     <item>
       <title></title>
       <link>https://shihyuntang.github.io/authors/admin/</link>
-      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/admin/</guid>
       <description>&lt;p&gt;Hi, I am Shih-Yun Tang (湯士昀), a graduate student from Taiwan studying at the Northern Arizona University Department of Astronomy and Planetary Science. I am working with Dr. Lisa Prato (Lowell Observatory) on young stellar objects&amp;rsquo; (T-Tauri stars) IR spectra. Meanwhile, I am also working with Prof. Tyler Robinson on brown dwarf atmosphere.&lt;/p&gt;
 &lt;p&gt;I completed both of my B.A. and M.S. in Physics at the National Central University, Taiwan. My first research project was to characterize the stellar and substellar members in the Coma Berenices star cluster with prof. Wen-Ping Chen. From there, I learn how to play around with the CDS database and also IR spectrum.&lt;/p&gt;
@@ -23,9 +23,73 @@
     </item>
     
     <item>
+      <title>A-Li Luo</title>
+      <link>https://shihyuntang.github.io/authors/a-li-luo/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/a-li-luo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>H. R. A. Jones</title>
+      <link>https://shihyuntang.github.io/authors/h.-r.-a.-jones/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/h.-r.-a.-jones/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>M.B.N. Kouwenhoven</title>
+      <link>https://shihyuntang.github.io/authors/m.b.n.-kouwenhoven/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/m.b.n.-kouwenhoven/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mario Pasquato</title>
+      <link>https://shihyuntang.github.io/authors/mario-pasquato/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/mario-pasquato/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wen-Ping Chen</title>
+      <link>https://shihyuntang.github.io/authors/wen-ping-chen/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/wen-ping-chen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xiaoying Pang</title>
+      <link>https://shihyuntang.github.io/authors/xiaoying-pang/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/xiaoying-pang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>You-Fen Wang</title>
+      <link>https://shihyuntang.github.io/authors/you-fen-wang/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/you-fen-wang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yuqian Li</title>
+      <link>https://shihyuntang.github.io/authors/yuqian-li/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/yuqian-li/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>J. Z. Liu</title>
       <link>https://shihyuntang.github.io/authors/j.-z.-liu/</link>
-      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/j.-z.-liu/</guid>
       <description></description>
     </item>
@@ -33,23 +97,15 @@
     <item>
       <title>W. P. Chen</title>
       <link>https://shihyuntang.github.io/authors/w.-p.-chen/</link>
-      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/w.-p.-chen/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Xiaoying Pang</title>
-      <link>https://shihyuntang.github.io/authors/xiaoying-pang/</link>
-      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/authors/xiaoying-pang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Yu Zhang</title>
       <link>https://shihyuntang.github.io/authors/yu-zhang/</link>
-      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/yu-zhang/</guid>
       <description></description>
     </item>

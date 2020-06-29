@@ -5,12 +5,44 @@
     <link>https://shihyuntang.github.io/tags/</link>
       <atom:link href="https://shihyuntang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Tags</title>
       <link>https://shihyuntang.github.io/tags/</link>
     </image>
+    
+    <item>
+      <title>Brown Dwarf</title>
+      <link>https://shihyuntang.github.io/tags/brown-dwarf/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/brown-dwarf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LAMOST</title>
+      <link>https://shihyuntang.github.io/tags/lamost/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/lamost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NGC 2232</title>
+      <link>https://shihyuntang.github.io/tags/ngc-2232/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/ngc-2232/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open Cluster</title>
+      <link>https://shihyuntang.github.io/tags/open-cluster/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/open-cluster/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>pipeline</title>
@@ -31,23 +63,15 @@
     <item>
       <title>Blanco 1</title>
       <link>https://shihyuntang.github.io/tags/blanco-1/</link>
-      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/tags/blanco-1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Open Cluster</title>
-      <link>https://shihyuntang.github.io/tags/open-cluster/</link>
-      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/tags/open-cluster/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tidal tails</title>
       <link>https://shihyuntang.github.io/tags/tidal-tails/</link>
-      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/tags/tidal-tails/</guid>
       <description></description>
     </item>
@@ -57,14 +81,6 @@
       <link>https://shihyuntang.github.io/tags/coma-ber/</link>
       <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/tags/coma-ber/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Brown Dwarf</title>
-      <link>https://shihyuntang.github.io/tags/brown-dwarf/</link>
-      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/tags/brown-dwarf/</guid>
       <description></description>
     </item>
     
