@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blanco 1 | Shih-Yun Tang</title>
+    <link>https://shihyuntang.github.io/tags/blanco-1/</link>
+      <atom:link href="https://shihyuntang.github.io/tags/blanco-1/index.xml" rel="self" type="application/rss+xml" />
+    <description>Blanco 1</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://shihyuntang.github.io/img/icon-192.png</url>
+      <title>Blanco 1</title>
+      <link>https://shihyuntang.github.io/tags/blanco-1/</link>
+    </image>
+    
+    <item>
+      <title>Diagnosing the Stellar Population and Tidal Structure of the Blanco1 Star Cluster</title>
+      <link>https://shihyuntang.github.io/publication/202001_blanco1_apj/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/publication/202001_blanco1_apj/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
