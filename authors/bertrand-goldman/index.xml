@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>W. P. Chen | Shih-Yun Tang</title>
-    <link>https://shihyuntang.github.io/authors/w.-p.-chen/</link>
-      <atom:link href="https://shihyuntang.github.io/authors/w.-p.-chen/index.xml" rel="self" type="application/rss+xml" />
-    <description>W. P. Chen</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <title>Bertrand Goldman | Shih-Yun Tang</title>
+    <link>https://shihyuntang.github.io/authors/bertrand-goldman/</link>
+      <atom:link href="https://shihyuntang.github.io/authors/bertrand-goldman/index.xml" rel="self" type="application/rss+xml" />
+    <description>Bertrand Goldman</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 17 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
-      <title>W. P. Chen</title>
-      <link>https://shihyuntang.github.io/authors/w.-p.-chen/</link>
+      <title>Bertrand Goldman</title>
+      <link>https://shihyuntang.github.io/authors/bertrand-goldman/</link>
     </image>
-    
-    <item>
-      <title>Diagnosing the Stellar Population and Tidal Structure of the Blanco1 Star Cluster</title>
-      <link>https://shihyuntang.github.io/publication/202001_blanco1_apj/</link>
-      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/publication/202001_blanco1_apj/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Discovery of Tidal Tails in Disrupting Open Clusters: Coma Berenices and a Neighbor Stellar Group</title>
