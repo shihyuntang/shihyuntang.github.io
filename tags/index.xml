@@ -5,12 +5,28 @@
     <link>https://shihyuntang.github.io/tags/</link>
       <atom:link href="https://shihyuntang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 09 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Tags</title>
       <link>https://shihyuntang.github.io/tags/</link>
     </image>
+    
+    <item>
+      <title>NGC 2232</title>
+      <link>https://shihyuntang.github.io/tags/ngc-2232/</link>
+      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/ngc-2232/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open Cluster</title>
+      <link>https://shihyuntang.github.io/tags/open-cluster/</link>
+      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/open-cluster/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>pipeline</title>
@@ -33,14 +49,6 @@
       <link>https://shihyuntang.github.io/tags/blanco-1/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/tags/blanco-1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Open Cluster</title>
-      <link>https://shihyuntang.github.io/tags/open-cluster/</link>
-      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/tags/open-cluster/</guid>
       <description></description>
     </item>
     
