@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications | Shih-Yun Tang</title>
+    <title>Recent Publications | Shih-Yun Tang</title>
     <link>https://shihyuntang.github.io/publication/</link>
       <atom:link href="https://shihyuntang.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
-    <description>Publications</description>
+    <description>Recent Publications</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
-      <title>Publications</title>
+      <title>Recent Publications</title>
       <link>https://shihyuntang.github.io/publication/</link>
     </image>
     
