@@ -20,7 +20,7 @@
       <description>&lt;p&gt;Mainly&amp;mdash;as far as I know&amp;mdash;there are two ways to get python. One is straight from &lt;a href=&#34;https://www.python.org&#34;&gt;python.org&lt;/a&gt;. Another one is to install python via &lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;Anaconda&lt;/a&gt;. The preferred one will be via Anaconda[^1] cause this helps us ease the pain of package management in the future.&lt;/p&gt;
 &lt;h4 id=&#34;installation-via-conda&#34;&gt;Installation via conda&lt;/h4&gt;
 &lt;p&gt;Go on to &lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;&lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;https://www.anaconda.com/products/individual&lt;/a&gt;&lt;/a&gt;, and scroll down to find &lt;strong&gt;Anaconda Installers&lt;/strong&gt;. The default python version now should be later than 3.7[^2].&lt;/p&gt;
-&lt;p&gt;Extend study:
+&lt;p&gt;Extend study:\&lt;br&gt;
 [^1] Find out the relationship between Conda and Anaconda.
 [^2] Find out the difference between python 2.7.X and python 3.X.&lt;/p&gt;
 </description>
