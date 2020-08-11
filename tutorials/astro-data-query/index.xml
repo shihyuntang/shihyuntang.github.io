@@ -19,7 +19,7 @@
       <guid>https://shihyuntang.github.io/tutorials/astro-data-query/1-1/</guid>
       <description>&lt;p&gt;Mainly&amp;mdash;as far as I know&amp;mdash;there are two ways to get python. One is straight from &lt;a href=&#34;https://www.python.org&#34;&gt;python.org&lt;/a&gt;. The other one is to install python via &lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;Anaconda&lt;/a&gt;. The preferred one will be via Anaconda&lt;sup&gt;&lt;a href=&#34;#1&#34;&gt;1&lt;/a&gt;*&lt;/sup&gt; cause this helps us ease the pain of package management in the future.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;installation-via-anaconda&#34;&gt;Installation via Anaconda&lt;/h2&gt;
+&lt;h2 id=&#34;anaconda&#34;&gt;Anaconda&lt;/h2&gt;
 &lt;p&gt;Go on to &lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;&lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;https://www.anaconda.com/products/individual&lt;/a&gt;&lt;/a&gt;, and scroll down to find &lt;strong&gt;Anaconda Installers&lt;/strong&gt;. The default python version should now be later than 3.7&lt;sup&gt;&lt;a href=&#34;#2&#34;&gt;2&lt;/a&gt;**&lt;/sup&gt;. If you are using Windows or Mac, feel free to install via the &lt;strong&gt;graphical installer&lt;/strong&gt; (recommended for people without any knowledge about the command line/terminal). However, installation via the command line installer is much elegant and clean (default for Linux user).&lt;/p&gt;
 &lt;h3 id=&#34;installation-via-the-command-line-an-example-for-mac--linux&#34;&gt;Installation via the command line (an example for Mac &amp;amp; Linux)&lt;/h3&gt;
 &lt;p&gt;Right-click to copy the link for &lt;strong&gt;command line installer&lt;/strong&gt;, then open the terminal and type &lt;code&gt;wget&lt;/code&gt;, follow a space, then paste the url, e.g.,&lt;/p&gt;
@@ -36,6 +36,9 @@ Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Make sure that your python version is later than 3.7.X, and with &lt;strong&gt;Anaconda, Inc.&lt;/strong&gt; &lt;sup&gt;&lt;a href=&#34;#3&#34;&gt;†&lt;/a&gt;&lt;/sup&gt;.
 Type &lt;code&gt;exit()&lt;/code&gt; to exit.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The benefit of installing via the command line is that you can get rid of the bulky UI, and open the ipython, jupyter lab/notebook IDE from the terminal faster. This effect can be more severe when you have small RAM (&amp;lt;16GB), and not powerful enough CPUs.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;p&gt;Learn More:&lt;br&gt;
 &lt;a name=&#34;1&#34;&gt;1*&lt;/a&gt;: Find out the relationship between Conda and Anaconda.&lt;br&gt;
