@@ -18,24 +18,28 @@
       <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
       <guid>https://shihyuntang.github.io/tutorials/astro-data-query/1-1/</guid>
       <description>&lt;p&gt;Mainly&amp;mdash;as far as I know&amp;mdash;there are two ways to get python. One is straight from &lt;a href=&#34;https://www.python.org&#34;&gt;python.org&lt;/a&gt;. Another one is to install python via &lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;Anaconda&lt;/a&gt;. The preferred one will be via Anaconda&lt;sup&gt;&lt;a href=&#34;#1&#34;&gt;1&lt;/a&gt;*&lt;/sup&gt; cause this helps us ease the pain of package management in the future.&lt;/p&gt;
-&lt;h3 id=&#34;installation-via-conda&#34;&gt;Installation via conda&lt;/h3&gt;
-&lt;p&gt;Go on to &lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;&lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;https://www.anaconda.com/products/individual&lt;/a&gt;&lt;/a&gt;, and scroll down to find &lt;strong&gt;Anaconda Installers&lt;/strong&gt;. The default python version now should be later than 3.7&lt;sup&gt;&lt;a href=&#34;#2&#34;&gt;2&lt;/a&gt;**&lt;/sup&gt;. If you are using Windows or Mac, feel free to install via the &lt;strong&gt;graphical installer&lt;/strong&gt; (recommended for people without any knowledge about the command line/terminal). However, installation via the command line installer is much elegant and clean (default for Linux user).&lt;/p&gt;
+&lt;h3 id=&#34;installation-via-anaconda&#34;&gt;Installation via Anaconda&lt;/h3&gt;
+&lt;p&gt;Go on to &lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;&lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;https://www.anaconda.com/products/individual&lt;/a&gt;&lt;/a&gt;, and scroll down to find &lt;strong&gt;Anaconda Installers&lt;/strong&gt;. The default python version should now be later than 3.7&lt;sup&gt;&lt;a href=&#34;#2&#34;&gt;2&lt;/a&gt;**&lt;/sup&gt;. If you are using Windows or Mac, feel free to install via the &lt;strong&gt;graphical installer&lt;/strong&gt; (recommended for people without any knowledge about the command line/terminal). However, installation via the command line installer is much elegant and clean (default for Linux user).&lt;/p&gt;
 &lt;h4 id=&#34;installation-via-the-command-line-an-example-for-mac--linux&#34;&gt;Installation via the command line (an example for Mac &amp;amp; Linux)&lt;/h4&gt;
-&lt;p&gt;Right-click to copy the link for &lt;strong&gt;command line installer&lt;/strong&gt;, then open the terminal and type &lt;code&gt;wget&lt;/code&gt;, follow a space, then paste the url, e.g.,&lt;br&gt;
-&lt;code&gt;wget https://repo.anaconda.com/archive/Anaconda3-2020.07-MacOSX-x86_64.sh&lt;/code&gt;&lt;br&gt;
-(make sure to copy the url by yourself to get the lastest version).&lt;br&gt;
-After the download finished, type &lt;code&gt;bash&lt;/code&gt;, follow a space, and the file you just downloaded to start the installation, e.g.,&lt;br&gt;
-\bash Anaconda3-2020.07-MacOSX-x86_64.sh`.&lt;/p&gt;
-&lt;p&gt;After the installation is done, type&lt;code&gt;python&lt;/code&gt; and press Enter to see if you have something like this:&lt;/p&gt;
+&lt;p&gt;Right-click to copy the link for &lt;strong&gt;command line installer&lt;/strong&gt;, then open the terminal and type &lt;code&gt;wget&lt;/code&gt;, follow a space, then paste the url, e.g.,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://repo.anaconda.com/archive/Anaconda3-2020.07-MacOSX-x86_64.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(make sure to copy the url from Anacomda web page to get the lastest python version).&lt;br&gt;
+After the download is finished, type &lt;code&gt;bash&lt;/code&gt;, follow by a space, and then type the file name you just downloaded to start the installation, e.g.,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bash Anaconda3-2020.07-MacOSX-x86_64.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After the installation is done, type &lt;code&gt;python&lt;/code&gt; and press Enter to see if you have something like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;Python 3.7.7 (default, Mar 26 2020, 10:32:53)
 [Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
 Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Make sure that your python version is later than 3.7.X!&lt;/p&gt;
+&lt;p&gt;Make sure that your python version is later than 3.7.X, and with **Anaconda, Inc.**&lt;sup&gt;&lt;a href=&#34;#3&#34;&gt;&amp;amp;dagger&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;p&gt;You can now type &lt;code&gt;exit()&lt;/code&gt; to exit.&lt;/p&gt;
 &lt;p&gt;Extend study:&lt;br&gt;
 &lt;a name=&#34;1&#34;&gt;1*&lt;/a&gt;: Find out the relationship between Conda and Anaconda.&lt;br&gt;
 &lt;a name=&#34;2&#34;&gt;2**&lt;/a&gt;: Find out the difference between python 2.7.X and python 3.X.&lt;/p&gt;
+&lt;p&gt;Fun Fact:&lt;br&gt;
+&lt;a name=&#34;3&#34;&gt;&amp;amp;dagger&lt;/a&gt;: Do you know that every Mac is pre-installed with python?! However, the pre-installed version is out off date now, py2.7. So, don&#39;t be lazy! to and download the latest version!&lt;/p&gt;
 </description>
     </item>
     
