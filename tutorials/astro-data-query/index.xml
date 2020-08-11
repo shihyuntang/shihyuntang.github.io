@@ -33,17 +33,14 @@ After the download is finished, type &lt;code&gt;bash&lt;/code&gt;, follow by a 
 [Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
 Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Make sure that your python version is later than 3.7.X, and with &lt;strong&gt;Anaconda, Inc.&lt;/strong&gt; &lt;sup&gt;&lt;a href=&#34;#3&#34;&gt;†&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;You can now type &lt;code&gt;exit()&lt;/code&gt; to exit.&lt;/p&gt;
-&lt;p&gt;Learn More:\&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a name=&#34;1&#34;&gt;1*&lt;/a&gt;: Find out the relationship between Conda and Anaconda.&lt;br&gt;
+&lt;p&gt;Make sure that your python version is later than 3.7.X, and with &lt;strong&gt;Anaconda, Inc.&lt;/strong&gt; &lt;sup&gt;&lt;a href=&#34;#3&#34;&gt;†&lt;/a&gt;&lt;/sup&gt;.
+Type &lt;code&gt;exit()&lt;/code&gt; to exit.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Learn More:&lt;br&gt;
+&lt;a name=&#34;1&#34;&gt;1*&lt;/a&gt;: Find out the relationship between Conda and Anaconda.&lt;br&gt;
 &lt;a name=&#34;2&#34;&gt;2**&lt;/a&gt;: Find out the difference between python 2.7.X and python 3.X.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Fun Fact:\&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a name=&#34;3&#34;&gt;†&lt;/a&gt;: Do you know that every Mac is pre-installed with python?! However, the pre-installed version is out off date now, py2.7. So, don&#39;t be lazy! to and download the latest version!&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Fun Fact:&lt;br&gt;
+&lt;a name=&#34;3&#34;&gt;†&lt;/a&gt;: Do you know that every Mac is pre-installed with python?! However, the pre-installed version is out off date now, py2.7. So, don&#39;t be lazy! to and download the latest version!&lt;/p&gt;
 </description>
     </item>
     
