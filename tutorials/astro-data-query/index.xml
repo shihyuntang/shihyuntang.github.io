@@ -38,12 +38,12 @@ Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&
 Type &lt;code&gt;exit()&lt;/code&gt; to leave.&lt;/p&gt;
 &lt;p&gt;The benefit of installing via the command line is that you can get rid of the bulky UI, and open the ipython, jupyter lab/notebook IDE from the terminal faster. This effect can be more severe when you have a small RAM (&amp;lt;16GB), and less powerful CPUs.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Learn More:&lt;br&gt;
-&lt;a name=&#34;1&#34;&gt;1*&lt;/a&gt;: Find out the relationship between Conda and Anaconda.&lt;br&gt;
+&lt;h4 id=&#34;learn-more&#34;&gt;Learn More:&lt;/h4&gt;
+&lt;p&gt;&lt;a name=&#34;1&#34;&gt;1*&lt;/a&gt;: Find out the relationship between Conda and Anaconda.&lt;br&gt;
 &lt;a name=&#34;2&#34;&gt;2**&lt;/a&gt;: Find out the difference between python 2.7.X and python 3.X.&lt;br&gt;
 &lt;a name=&#34;3&#34;&gt;3**&lt;/a&gt;: Oh noooo! &lt;code&gt;Wget&lt;/code&gt; cannot work on my Mac, what should I dooooo?! Well, &lt;code&gt;curl&lt;/code&gt; might help.&lt;/p&gt;
-&lt;p&gt;Fun Fact:&lt;br&gt;
-&lt;a name=&#34;3&#34;&gt;†&lt;/a&gt;: Do you know that every Mac is pre-installed with python?! However, the pre-installed version is out off date now, py2.7. So, don&#39;t be lazy! to and download the latest version!&lt;/p&gt;
+&lt;h4 id=&#34;fun-fact&#34;&gt;Fun Fact:&lt;/h4&gt;
+&lt;p&gt;&lt;a name=&#34;3&#34;&gt;†&lt;/a&gt;: Do you know that every Mac is pre-installed with python?! However, the pre-installed version is out off date now, py2.7. So, don&#39;t be lazy! to and download the latest version!&lt;/p&gt;
 </description>
     </item>
     
