@@ -123,7 +123,7 @@
     
       <meta property="article:published_time" content="2020-08-11T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2020-08-11T14:27:32-07:00">
+    <meta property="article:modified_time" content="2020-08-11T14:44:29-07:00">
   
 
   
@@ -476,10 +476,10 @@
 <h2 id="anaconda">Anaconda</h2>
 <p>Go on to <a href="https://www.anaconda.com/products/individual"><a href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a></a>, and scroll down to find <strong>Anaconda Installers</strong>. The default python version should now be later than 3.7<sup><a href="#2">2</a>**</sup>. If you are using Windows or Mac, feel free to install via the <strong>graphical installer</strong> (recommended for people without any knowledge about the command line/terminal). However, installation via the command line installer is much elegant and clean (default for Linux user).</p>
 <h3 id="installation-via-the-command-line-an-example-for-mac--linux">Installation via the command line (an example for Mac &amp; Linux)</h3>
-<p>Right-click to copy the link for <strong>command line installer</strong>, then open the terminal and type <code>wget</code>, follow a space, then paste the url, e.g.,</p>
+<p>Right-click to copy the link for <strong>command line installer</strong>, then open the terminal and type <code>wget</code><sup><a href="#3">3</a>**</sup>, follow a space, then paste the url, e.g.,</p>
 <pre><code class="language-bash">wget https://repo.anaconda.com/archive/Anaconda3-2020.07-MacOSX-x86_64.sh
 </code></pre>
-<p>(make sure to copy the url from Anacomda web page to get the lastest python version).<br>
+<p>(make sure to copy the url from Anaconda web page to get the latest python version).<br>
 After the download is finished, type <code>bash</code>, follow by a space, and then type the file name you just downloaded to start the installation, e.g.,</p>
 <pre><code class="language-bash">bash Anaconda3-2020.07-MacOSX-x86_64.sh
 </code></pre>
@@ -489,14 +489,13 @@ After the download is finished, type <code>bash</code>, follow by a space, and t
 Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
 </code></pre>
 <p>Make sure that your python version is later than 3.7.X, and with <strong>Anaconda, Inc.</strong> <sup><a href="#3">†</a></sup>.
-Type <code>exit()</code> to exit.</p>
-<hr>
-<blockquote>
+Type <code>exit()</code> to leave.</p>
 <p>The benefit of installing via the command line is that you can get rid of the bulky UI, and open the ipython, jupyter lab/notebook IDE from the terminal faster. This effect can be more severe when you have a small RAM (&lt;16GB), and less powerful CPUs.</p>
-</blockquote>
+<hr>
 <p>Learn More:<br>
 <a name="1">1*</a>: Find out the relationship between Conda and Anaconda.<br>
-<a name="2">2**</a>: Find out the difference between python 2.7.X and python 3.X.</p>
+<a name="2">2**</a>: Find out the difference between python 2.7.X and python 3.X.<br>
+<a name="3">3**</a>: Oh noooo! <code>Wget</code> cannot work on my Mac, what should I dooooo?! Well, <code>curl</code> might help.</p>
 <p>Fun Fact:<br>
 <a name="3">†</a>: Do you know that every Mac is pre-installed with python?! However, the pre-installed version is out off date now, py2.7. So, don't be lazy! to and download the latest version!</p>
 
