@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://shihyuntang.github.io/tutorials/spirl/</loc>
+    <lastmod>2020-09-05T14:58:52-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://shihyuntang.github.io/tutorials/astro-data-query/</loc>
     <lastmod>2020-08-11T14:19:10-07:00</lastmod>
   </url>
