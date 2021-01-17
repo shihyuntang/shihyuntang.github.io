@@ -5,12 +5,20 @@
     <link>https://shihyuntang.github.io/tags/</link>
       <atom:link href="https://shihyuntang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 09 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Tags</title>
       <link>https://shihyuntang.github.io/tags/</link>
     </image>
+    
+    <item>
+      <title>Academic</title>
+      <link>https://shihyuntang.github.io/tags/academic/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/academic/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>NGC 2232</title>
@@ -97,14 +105,6 @@
       <link>https://shihyuntang.github.io/tags/demo/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/tags/demo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Academic</title>
-      <link>https://shihyuntang.github.io/tags/academic/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/tags/academic/</guid>
       <description></description>
     </item>
     
