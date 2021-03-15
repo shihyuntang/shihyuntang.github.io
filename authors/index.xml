@@ -5,7 +5,7 @@
     <link>https://shihyuntang.github.io/authors/</link>
       <atom:link href="https://shihyuntang.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Shih-Yun Tang 2021</copyright><lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Authors</title>
@@ -17,8 +17,8 @@
       <link>https://shihyuntang.github.io/authors/admin/</link>
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/admin/</guid>
-      <description>&lt;p&gt;Hi, I am Shih-Yun Tang (湯士昀), a graduate student from Taiwan studying at the Northern Arizona University (NAU) Department of Astronomy and Planetary Science. I am working with Dr. Lisa Prato (Lowell Observatory) on young stellar objects&amp;rsquo; (T-Tauri stars) IR spectra. Meanwhile, I am also working with Prof. Tyler Robinson on brown dwarf atmosphere.&lt;/p&gt;
-&lt;p&gt;I completed both of my B.A. and M.S. in Physics at the National Central University (NCU), Taiwan. My first research project was to characterize the stellar and substellar members in the Coma Berenices star cluster with prof. Wen-Ping Chen. I learn how to play with the CDS database and also IR spectrum during my time in NCU.&lt;/p&gt;
+      <description>&lt;p&gt;Hi, I am Shih-Yun Tang 湯士昀, a graduate student from Taiwan studying at the Northern Arizona University (NAU) Department of Astronomy and Planetary Science. I am working with Dr. Lisa Prato at the Lowell Observatory on using NIR and optical spectra to search for the youngest exoplanets around T-Tauri stars. Meanwhile, I am also working with Prof. Tyler Robinson at NAU on modeling ultracool objects&amp;rsquo; atmpsohere using 1D radiactive-convetive model. Lastly, as my side project, I am also working with Prof. Xiaoying Pang on using Gaia data to study stellar groups in the solar neighborhood.&lt;/p&gt;
+&lt;p&gt;I completed both of my B.A. and M.S. in Physics at the National Central University (NCU), Taiwan. My first research project was to characterize the stellar and substellar members in the Coma Berenices star cluster with prof. Wen-Ping Chen. And later as my Matser thesis, I was amount the first to discover the tidal tails of Coma Berenices star cluster with Gaia DR2 data.&lt;/p&gt;
 </description>
     </item>
     
