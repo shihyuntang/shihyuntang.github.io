@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jessica Luna | Shih-Yun Tang</title>
+    <link>https://shihyuntang.github.io/authors/jessica-luna/</link>
+      <atom:link href="https://shihyuntang.github.io/authors/jessica-luna/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jessica Luna</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2021 Shih-Yun Tang</copyright><lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://shihyuntang.github.io/img/icon-192.png</url>
+      <title>Jessica Luna</title>
+      <link>https://shihyuntang.github.io/authors/jessica-luna/</link>
+    </image>
+    
+    <item>
+      <title>IGRINS RV: A Precision RV Pipeline for IGRINS Using Modified Forward-Modeling in the Near-Infrared</title>
+      <link>https://shihyuntang.github.io/publication/202104_igrinsrv_aj/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/publication/202104_igrinsrv_aj/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
