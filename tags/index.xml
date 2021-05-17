@@ -5,12 +5,36 @@
     <link>https://shihyuntang.github.io/tags/</link>
       <atom:link href="https://shihyuntang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2021 Shih-Yun Tang</copyright><lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2021 Shih-Yun Tang</copyright><lastBuildDate>Fri, 14 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Tags</title>
       <link>https://shihyuntang.github.io/tags/</link>
     </image>
+    
+    <item>
+      <title>Brown Dwarf</title>
+      <link>https://shihyuntang.github.io/tags/brown-dwarf/</link>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/brown-dwarf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>planet</title>
+      <link>https://shihyuntang.github.io/tags/planet/</link>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/planet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open Cluster</title>
+      <link>https://shihyuntang.github.io/tags/open-cluster/</link>
+      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/tags/open-cluster/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>IGRINS</title>
@@ -33,14 +57,6 @@
       <link>https://shihyuntang.github.io/tags/radial-velocities/</link>
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/tags/radial-velocities/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Open Cluster</title>
-      <link>https://shihyuntang.github.io/tags/open-cluster/</link>
-      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/tags/open-cluster/</guid>
       <description></description>
     </item>
     
@@ -97,14 +113,6 @@
       <link>https://shihyuntang.github.io/tags/coma-ber/</link>
       <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/tags/coma-ber/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Brown Dwarf</title>
-      <link>https://shihyuntang.github.io/tags/brown-dwarf/</link>
-      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/tags/brown-dwarf/</guid>
       <description></description>
     </item>
     
