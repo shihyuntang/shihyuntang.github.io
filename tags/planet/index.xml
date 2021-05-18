@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>planet | Shih-Yun Tang</title>
+    <title>Planet | Shih-Yun Tang</title>
     <link>https://shihyuntang.github.io/tags/planet/</link>
       <atom:link href="https://shihyuntang.github.io/tags/planet/index.xml" rel="self" type="application/rss+xml" />
-    <description>planet</description>
+    <description>Planet</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2021 Shih-Yun Tang</copyright><lastBuildDate>Fri, 14 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
-      <title>planet</title>
+      <title>Planet</title>
       <link>https://shihyuntang.github.io/tags/planet/</link>
     </image>
     
