@@ -5,7 +5,7 @@
     <link>https://shihyuntang.github.io/authors/</link>
       <atom:link href="https://shihyuntang.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2021 Shih-Yun Tang</copyright><lastBuildDate>Wed, 26 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2021 Shih-Yun Tang</copyright><lastBuildDate>Thu, 10 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Authors</title>
@@ -15,7 +15,7 @@
     <item>
       <title></title>
       <link>https://shihyuntang.github.io/authors/admin/</link>
-      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/admin/</guid>
       <description>&lt;p&gt;Hi, I am Shih-Yun Tang 湯士昀, a graduate student from Taiwan studying at the Northern Arizona University (NAU) Department of Astronomy and Planetary Science. I am working with Dr. &lt;a href=&#34;http://www2.lowell.edu/users/lprato/&#34;&gt;Lisa Prato&lt;/a&gt; at the Lowell Observatory on using NIR and optical spectra to search for the youngest exoplanets around T Tauri stars. Meanwhile, I am also working with Prof. &lt;a href=&#34;https://hablabnet.wordpress.com/people/robinson/&#34;&gt;Tyler Robinson&lt;/a&gt; at NAU to model ultracool objects&amp;rsquo; atmosphere using the 1D radiative-convective model. Lastly, as my side project, I am also working with Prof. Xiaoying Pang on using Gaia data to study stellar groups in the solar neighborhood.&lt;/p&gt;
 &lt;p&gt;I completed my B.A. and M.S. in Physics at the National Central University (NCU), Taiwan. My first research project was to characterize the stellar and substellar members in the Coma Berenices star cluster with Prof. &lt;a href=&#34;https://www.astro.ncu.edu.tw/~wchen/wp_chen/index.htm&#34;&gt;Wen-Ping Chen&lt;/a&gt; as an undergraduate. Later, as my Master&#39;s thesis, I was among the first to discover the tidal tails of the Coma Berenices star cluster.&lt;/p&gt;
@@ -25,7 +25,7 @@
     <item>
       <title>Asa G. Stahl</title>
       <link>https://shihyuntang.github.io/authors/asa-g.-stahl/</link>
-      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/asa-g.-stahl/</guid>
       <description></description>
     </item>
@@ -33,8 +33,24 @@
     <item>
       <title>Christopher M. Johns-Krull</title>
       <link>https://shihyuntang.github.io/authors/christopher-m.-johns-krull/</link>
-      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/christopher-m.-johns-krull/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Joe Llama</title>
+      <link>https://shihyuntang.github.io/authors/joe-llama/</link>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/joe-llama/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>L. Prato</title>
+      <link>https://shihyuntang.github.io/authors/l.-prato/</link>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/authors/l.-prato/</guid>
       <description></description>
     </item>
     
@@ -75,22 +91,6 @@
       <link>https://shihyuntang.github.io/authors/jessica-luna/</link>
       <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/authors/jessica-luna/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Joe Llama</title>
-      <link>https://shihyuntang.github.io/authors/joe-llama/</link>
-      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/authors/joe-llama/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>L. Prato</title>
-      <link>https://shihyuntang.github.io/authors/l.-prato/</link>
-      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/authors/l.-prato/</guid>
       <description></description>
     </item>
     

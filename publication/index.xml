@@ -13,6 +13,14 @@
     </image>
     
     <item>
+      <title>IGRINS RV: A Python Package for Precision Radial Velocities with Near-Infrared Spectra</title>
+      <link>https://shihyuntang.github.io/publication/202104_igrinsrv_joss/</link>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/publication/202104_igrinsrv_joss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>IGRINS RV: A Precision RV Pipeline for IGRINS Using Modified Forward-Modeling in the Near-Infrared</title>
       <link>https://shihyuntang.github.io/publication/202104_igrinsrv_aj/</link>
       <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
@@ -33,14 +41,6 @@
       <link>https://shihyuntang.github.io/publication/202102_oc3d_apj/</link>
       <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/202102_oc3d_apj/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>IGRINS RV: A Python Package for Precision Radial Velocities with Near-Infrared Spectra</title>
-      <link>https://shihyuntang.github.io/publication/202104_igrinsrv_joss/</link>
-      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/publication/202104_igrinsrv_joss/</guid>
       <description></description>
     </item>
     
