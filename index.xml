@@ -20,7 +20,7 @@
       <description>&lt;p&gt;Mainly&amp;mdash;as far as I know&amp;mdash;there are two ways to get python. One is straight from &lt;a href=&#34;https://www.python.org&#34;&gt;python.org&lt;/a&gt;. The other one is to install python via &lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;Anaconda&lt;/a&gt;. The preferred one will be via Anaconda&lt;sup&gt;&lt;a href=&#34;#1&#34;&gt;1&lt;/a&gt;*&lt;/sup&gt; cause this helps us ease the pain of package management in the future.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;anaconda&#34;&gt;Anaconda&lt;/h2&gt;
-&lt;p&gt;Go on to &lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;&lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;https://www.anaconda.com/products/individual&lt;/a&gt;&lt;/a&gt;, and scroll down to find &lt;strong&gt;Anaconda Installers&lt;/strong&gt;. The default python version should now be later than 3.7&lt;sup&gt;&lt;a href=&#34;#2&#34;&gt;2&lt;/a&gt;**&lt;/sup&gt;. If you are using Windows or Mac, feel free to install via the &lt;strong&gt;graphical installer&lt;/strong&gt; (recommended for people without any knowledge about the command line/terminal). However, installation via the command line installer is much elegant and clean (default for Linux user).&lt;/p&gt;
+&lt;p&gt;Go on to &lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;https://www.anaconda.com/products/individual&lt;/a&gt;, and scroll down to find &lt;strong&gt;Anaconda Installers&lt;/strong&gt;. The default python version should now be later than 3.7&lt;sup&gt;&lt;a href=&#34;#2&#34;&gt;2&lt;/a&gt;**&lt;/sup&gt;. If you are using Windows or Mac, feel free to install via the &lt;strong&gt;graphical installer&lt;/strong&gt; (recommended for people without any knowledge about the command line/terminal). However, installation via the command line installer is much elegant and clean (default for Linux user).&lt;/p&gt;
 &lt;h3 id=&#34;installation-via-the-command-line-an-example-for-mac--linux&#34;&gt;Installation via the command line (an example for Mac &amp;amp; Linux)&lt;/h3&gt;
 &lt;p&gt;Right-click to copy the link for &lt;strong&gt;command line installer&lt;/strong&gt;, then open the terminal and type &lt;code&gt;wget&lt;/code&gt;&lt;sup&gt;&lt;a href=&#34;#3&#34;&gt;3&lt;/a&gt;**&lt;/sup&gt;, follow a space, then paste the url, e.g.,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://repo.anaconda.com/archive/Anaconda3-2020.07-MacOSX-x86_64.sh
@@ -43,7 +43,7 @@ Type &lt;code&gt;exit()&lt;/code&gt; to leave.&lt;/p&gt;
 &lt;a name=&#34;2&#34;&gt;2**&lt;/a&gt;: Find out the difference between python 2.7.X and python 3.X.&lt;br&gt;
 &lt;a name=&#34;3&#34;&gt;3**&lt;/a&gt;: Oh Noooo! &lt;code&gt;Wget&lt;/code&gt; cannot work on my Mac, what should I Dooooo?! Well, &lt;code&gt;curl&lt;/code&gt; might help.&lt;/p&gt;
 &lt;h4 id=&#34;fun-fact&#34;&gt;Fun Fact:&lt;/h4&gt;
-&lt;p&gt;&lt;a name=&#34;3&#34;&gt;†&lt;/a&gt;: Do you know that every Mac is pre-installed with python?! However, the pre-installed version is out off date, py2.7. Thus, don&#39;t be lazy and download the latest version now!!&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;3&#34;&gt;†&lt;/a&gt;: Do you know that every Mac is pre-installed with python?! However, the pre-installed version is out off date, py2.7. Thus, don&amp;rsquo;t be lazy and download the latest version now!!&lt;/p&gt;
 </description>
     </item>
     
@@ -77,12 +77,20 @@ Type &lt;code&gt;exit()&lt;/code&gt; to leave.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&#39;s &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>3D Morphology of Open Clusters in the Solar Neighborhood with Gaia EDR3 II: Hierarchical Star Formation Revealed by Spatial and Kinematic Substructures</title>
+      <link>https://shihyuntang.github.io/publication/202204_oc3dii_apj/</link>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/publication/202204_oc3dii_apj/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -227,15 +235,15 @@ $$&lt;/p&gt;
 {{% fragment %}} Three {{% /fragment %}}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
-One
+&lt;span class=&#34;fragment &#34; &gt;
+   One 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-&lt;strong&gt;Two&lt;/strong&gt;
+   **Two** 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-Three
-&lt;/span&gt;&lt;/p&gt;
+   Three 
+&lt;/span&gt;
 &lt;hr&gt;
 &lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
 &lt;ul&gt;
@@ -256,6 +264,7 @@ Three
 &lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
 &lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;/aside&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
@@ -289,7 +298,7 @@ Three
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
-&lt;p&gt;Let&#39;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
 &lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
 .reveal section h2,
