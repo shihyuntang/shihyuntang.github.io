@@ -2,8 +2,8 @@
   "name": "Shih-Yun Tang",
   "short_name": "Shih-Yun Tang",
   "lang": "en-us",
-  "theme_color": "rgb(0, 136, 204)",
-  "background_color": "rgb(0, 136, 204)",
+  "theme_color": "#ff704d",
+  "background_color": "#ff704d",
   "icons": [{
     "src": "../img/icon-192.png",
     "sizes": "192x192",
