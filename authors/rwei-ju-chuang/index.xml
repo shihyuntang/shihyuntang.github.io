@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Yifan Wang | Shih-Yun Tang</title>
-    <link>https://shihyuntang.github.io/authors/yifan-wang/</link>
-      <atom:link href="https://shihyuntang.github.io/authors/yifan-wang/index.xml" rel="self" type="application/rss+xml" />
-    <description>Yifan Wang</description>
+    <title>Rwei-ju Chuang | Shih-Yun Tang</title>
+    <link>https://shihyuntang.github.io/authors/rwei-ju-chuang/</link>
+      <atom:link href="https://shihyuntang.github.io/authors/rwei-ju-chuang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Rwei-ju Chuang</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2023 Shih-Yun Tang</copyright><lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
-      <title>Yifan Wang</title>
-      <link>https://shihyuntang.github.io/authors/yifan-wang/</link>
+      <title>Rwei-ju Chuang</title>
+      <link>https://shihyuntang.github.io/authors/rwei-ju-chuang/</link>
     </image>
     
     <item>
@@ -17,14 +17,6 @@
       <link>https://shihyuntang.github.io/publication/202307_binaryetar_evo_env_aj/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/202307_binaryetar_evo_env_aj/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>3D Morphology of Open Clusters in the Solar Neighborhood with Gaia EDR3 II: Hierarchical Star Formation Revealed by Spatial and Kinematic Substructures</title>
-      <link>https://shihyuntang.github.io/publication/202204_oc3dii_apj/</link>
-      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/publication/202204_oc3dii_apj/</guid>
       <description></description>
     </item>
     
