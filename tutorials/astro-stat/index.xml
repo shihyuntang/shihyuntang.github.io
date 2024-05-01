@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Overview | Shih-Yun Tang</title>
+    <link>https://shihyuntang.github.io/tutorials/astro-stat/</link>
+      <atom:link href="https://shihyuntang.github.io/tutorials/astro-stat/index.xml" rel="self" type="application/rss+xml" />
+    <description>Overview</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2024 Shih-Yun Tang</copyright><lastBuildDate>Sun, 28 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://shihyuntang.github.io/img/icon-192.png</url>
+      <title>Overview</title>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/</link>
+    </image>
+    
+    <item>
+      <title>Probability Basic</title>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/1-probability/</link>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/1-probability/</guid>
+      <description>&lt;h2 id=&#34;probability-distributions&#34;&gt;Probability Distributions&lt;/h2&gt;
+&lt;p&gt;Probability distributions describe how the probabilities of a &lt;strong&gt;random variable&lt;/strong&gt; are distributed. Here are the two main types of probability functions associated with these distributions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Probability Density Function (PDF, continuous):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Description:&lt;/strong&gt; The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Key Characteristic:&lt;/strong&gt; The area under the PDF curve between two points represents the probability of the variable falling within that range.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Example:&lt;/strong&gt; The normal distribution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Probability Mass Function (PMF, discrete):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Description:&lt;/strong&gt; The PMF is used for discrete random variables and specifies the probability that a random variable is exactly equal to some value.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Key Characteristic:&lt;/strong&gt; The sum of all the probabilities represented by the PMF must equal 1, as it accounts for every possible discrete value the variable can take.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Example:&lt;/strong&gt; The binomial distribution, and the Poisson distribution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Cumulative Distribution Function (CDF):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Description:&lt;/strong&gt; The CDF is used to determine the probability that a random variable (X) is $\lesssim$ to a certain value. CDF can be applied to both discrete and continuous random variables.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Key Characteristic:&lt;/strong&gt; The CDF is a non-decreasing function that ranges from 0 to 1. For continuous variables, it is obtained by integrating the PDF over the range of possible values. For discrete variables, it is the cumulative sum of the PMF.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Example:&lt;/strong&gt; For normal distribution, the CDF is used to calculate the probability that the variable is less than a specific threshold, which is central to hypothesis testing and confidence interval estimation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;chebyshevs-theorem&#34;&gt;Chebyshev&amp;rsquo;s Theorem&lt;/h2&gt;
+&lt;p&gt;Chebyshev&amp;rsquo;s Theorem, also known as Chebyshev&amp;rsquo;s Inequality, is a fundamental result in probability theory that provides a way &lt;strong&gt;to estimate the probability that a random variable differs from its mean&lt;/strong&gt;. This theorem is not restricted to normally distributed data, making it very versatile.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem Statement:&lt;/strong&gt;
+$$
+P(|X-\mu| &amp;lt; k\sigma) \geq 1 - \frac{1}{k^2}
+$$
+where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;($\mu$) is the mean of the random variable ( X ),&lt;/li&gt;
+&lt;li&gt;($\sigma$) is the standard deviation of ( X ),&lt;/li&gt;
+&lt;li&gt;($k$) is a positive number greater than 1.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Key Points:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Generality:&lt;/strong&gt; Chebyshev&amp;rsquo;s theorem applies to any probability distribution where the mean and variance are defined.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Implication:&lt;/strong&gt; The inequality tells us that no matter the shape of the distribution, the proportion of values that fall within ($k$) standard deviations of the mean is at least $( 1 - \frac{1}{k^2})$. For example, at least (75%) of the values lie within 2 standard deviations of the mean (since ($k=2$) gives $( 1-\frac{1}{4} = 0.75)$).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Limitations:&lt;/strong&gt; While the theorem provides a lower bound, it does not give exact probabilities, and the bounds can be quite loose, especially for distributions that tightly clustered around the mean.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chebyshev&amp;rsquo;s Theorem is particularly useful for analysts and statisticians dealing with samples from unknown distributions, as it provides a safe, conservative estimate of the spread of data around the mean.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;discrete-distributions&#34;&gt;Discrete Distributions&lt;/h2&gt;
+&lt;h3 id=&#34;binomial-distribution&#34;&gt;Binomial Distribution&lt;/h3&gt;
+&lt;p&gt;The Binomial distribution is a discrete probability distribution that models the number of successes in a fixed number of independent trials, with each trial having two possible outcomes, typically labeled as &amp;ldquo;success&amp;rdquo; and &amp;ldquo;failure&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Points:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There are only two possible outcomes for each trial: success (1) and failure (0).&lt;/li&gt;
+&lt;li&gt;The trials are independent, meaning the outcome of one trial does not affect the outcomes of other trials.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The probability mass function (PMF) for the Binomial distribution is expressed as:
+$$
+P(X=x) = C^{n}_{x} \theta^x (1-\theta)^{n-x}
+$$
+where $\theta$ is the probability of success on a single trial, $x$ is the number of successes, and $n$ is the total number of trials.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;
+Consider flipping a fair coin five times. What is the probability of getting exactly two heads?&lt;/p&gt;
+&lt;p&gt;The calculation is as follows:
+$$
+P(X=2) = C^{5}_{2} 0.5^2 (1-0.5)^3 = \frac{5!}{2!3!} \times 0.25 \times 0.125 = 31.25%
+$$&lt;/p&gt;
+&lt;h3 id=&#34;geometric-distribution&#34;&gt;Geometric distribution&lt;/h3&gt;
+&lt;h3 id=&#34;poisson-distribution&#34;&gt;Poisson Distribution&lt;/h3&gt;
+&lt;p&gt;The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring within a fixed interval of time or space. It assumes these events occur with a known constant mean rate and independently of the time since the last event.&lt;/p&gt;
+&lt;p&gt;A practical example is photometry using a Charge-Coupled Device (CCD), where light—specifically, the number of photons—hits the CCD at a constant rate. Importantly, the arrival of photons is assumed to be independent of previous arrivals, provided the CCD is not saturated.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Independence of events holds only if the CCD is not saturated.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Assumptions:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The rate of event occurrence, $\lambda$, is constant over time. For example, the number of events occurring between $t$ and $t + \Delta t$ is $\lambda \Delta t$.&lt;/li&gt;
+&lt;li&gt;The probability of an event in the interval ${t, t+\Delta t}$ is independent of previous events.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The probability mass function (PMF) of the Poisson distribution is defined as:
+$$
+P(x; \lambda) = \frac{\lambda^x e^{-\lambda}}{x!}
+$$
+where $\lambda$ is the expected number of events in a given interval, and $x$ is the observed number of events.&lt;/p&gt;
+&lt;p&gt;For the Poisson distribution, the expected value (mean) is $\mu = \lambda$, and the variance is $\sigma^2 = \lambda$.&lt;/p&gt;
+&lt;h4 id=&#34;poisson-noise-shot-noise&#34;&gt;Poisson Noise (Shot Noise)&lt;/h4&gt;
+&lt;p&gt;Since $\sigma^2 = \lambda$, the standard deviation (Poisson noise) is $\sigma = \sqrt{\lambda}$. In photometry, where $N$ represents the number of photons hitting the CCD, this implies $\sigma = \sqrt{N}$.&lt;/p&gt;
+&lt;p&gt;Due to the characteristics of the Poisson distribution, the signal-to-noise ratio (SNR) is calculated as follows:
+$$
+SNR = \frac{\mu}{\sigma} = \frac{\mu}{\sqrt{\mu}} = \sqrt{\mu}
+$$
+This relationship highlights the inherent noise properties in photon-counting measurements like those in CCD photometry.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;confidence-interval&#34;&gt;Confidence Interval&lt;/h2&gt;
+&lt;h2 id=&#34;z-test-vs-t-test&#34;&gt;z test vs. t test&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Radom Variables</title>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/1-2/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/1-2/</guid>
+      <description>&lt;p&gt;Coming Soon&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Binomial</title>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/2-1/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/2-1/</guid>
+      <description>&lt;p&gt;Coming Soon&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
