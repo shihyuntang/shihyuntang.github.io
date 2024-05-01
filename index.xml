@@ -14,9 +14,113 @@
     
     <item>
       <title>Probability Basic</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/1-probability/</link>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/1-some-basic/</link>
       <pubDate>Mon, 29 Apr 2024 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/1-probability/</guid>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/1-some-basic/</guid>
+      <description>&lt;h2 id=&#34;some-terminology-in-statistics&#34;&gt;Some Terminology in Statistics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;i.i.d. (Independent and Identically Distributed):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; This term refers to a set of random variables that are all independent of each other and share the same probability distribution. The assumption of i.i.d. is crucial in many statistical methods because it simplifies the mathematical analysis and inference processes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Null Hypothesis:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; In hypothesis testing, the null hypothesis is a general statement or default position that there is no relationship between two measured phenomena or no association among groups tested.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;P-value:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; The p-value is the probability of observing test results at least as extreme as the results actually observed, under the assumption that the null hypothesis is correct. A p-value less than a pre-determined significance level, often 0.05, leads to the rejection of the null hypothesis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Confidence Interval (CI):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; A confidence interval is a range of values, derived from sample statistics, that is likely to contain the value of an unknown population parameter. The confidence level represents the probability that this interval will capture this parameter in repeated samples.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Type I and Type II Errors:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Type I Error (False Positive):&lt;/strong&gt; Occurs when the null hypothesis is incorrectly rejected when it is actually true.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Type II Error (False Negative):&lt;/strong&gt; Occurs when the null hypothesis is not rejected when it is actually false.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;first-and-second-moments&#34;&gt;First and Second Moments&lt;/h2&gt;
+&lt;p&gt;In probability and statistics, the concepts of first and second moments are central to understanding the distributions of random variables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;First Moment (Mean):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; The first moment is the expected value of a random variable $X$, denoted as $E(X)$.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Formula:&lt;/strong&gt;
+$$E(X) = \mu$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Second Moment (Variance):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; The second moment about the mean is the variance of the random variable $X$, denoted as $\sigma^2$. It measures the spread of the data points around the mean.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Formula:&lt;/strong&gt; The variance is calculated using the expectation of the &lt;em&gt;squared deviations from the mean&lt;/em&gt;:
+$$
+\sigma^2 = E[(X-\mu)^2] = E[X^2] - E(X)^2
+$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$$\begin{align}
+\sigma^2 &amp;amp;= E[(X-\mu)^2] \\
+&amp;amp;= E[X^2 - 2X\mu + \mu^2] \\
+&amp;amp;= E[X^2] - 2\mu E(X) + E(\mu^2) \\
+&amp;amp;= E[X^2] - 2\mu^2 + \mu^2 \\
+&amp;amp;= E[X^2] - \mu^2 \\
+&amp;amp;= E[X^2] - E(X)^2
+\end{align}$$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Third Moment (Skewness):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; The third central moment describes the skewness of the distribution of a random variable, indicating the degree of asymmetry around the mean. Skewness can reveal whether the distribution tails off more on one side than the other.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Formula:&lt;/strong&gt; The third moment is calculated using the expectation of the cubed deviations from the mean:
+$$
+E[(X - E(X))^3]
+$$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interpretation:&lt;/strong&gt; A positive skewness indicates that the distribution has a long tail to the right (more positive side), while a negative skewness indicates a long tail to the left (more negative side).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Covariance:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; Covariance measures the joint variability of two random variables, $X$ and $Y$. It assesses the degree to which two variables change together. If the greater values of one variable mainly correspond to the greater values of the other variable, and the same holds for the lesser values, the covariance is positive.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Formula:&lt;/strong&gt; The covariance between two variables $X$ and $Y$ is given by:
+$$
+\text{Cov}(X, Y) = E[(X - E(X))(Y - E(Y))]
+$$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interpretation:&lt;/strong&gt; A positive covariance indicates that as $X$ increases, $Y$ tends to increase. A negative covariance suggests that as $X$ increases, $Y$ tends to decrease. Zero covariance indicates that the variables are independent, assuming they are also uncorrelated.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;standardization&#34;&gt;Standardization&lt;/h3&gt;
+&lt;p&gt;Transforming the random variable to with zero mean and unit variance. This tranasformation also removes the unit on the random variable.&lt;/p&gt;
+&lt;p&gt;$$
+X_{std} = \frac{X - \mu}{\sigma}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;z-test-vs-t-test&#34;&gt;z test vs. t test&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Distributions</title>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/2-probability/</link>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/2-probability/</guid>
       <description>&lt;h2 id=&#34;probability-distributions&#34;&gt;Probability Distributions&lt;/h2&gt;
 &lt;p&gt;Probability distributions describe how the probabilities of a &lt;strong&gt;random variable&lt;/strong&gt; are distributed. Here are the two main types of probability functions associated with these distributions:&lt;/p&gt;
 &lt;ol&gt;
@@ -83,7 +187,29 @@ Consider flipping a fair coin five times. What is the probability of getting exa
 $$
 P(X=2) = C^{5}_{2} 0.5^2 (1-0.5)^3 = \frac{5!}{2!3!} \times 0.25 \times 0.125 = 31.25%
 $$&lt;/p&gt;
-&lt;h3 id=&#34;geometric-distribution&#34;&gt;Geometric distribution&lt;/h3&gt;
+&lt;h3 id=&#34;geometric-distribution&#34;&gt;Geometric Distribution&lt;/h3&gt;
+&lt;p&gt;The Geometric distribution describes the probability of observing the first success on the $x$-th trial in a sequence of Bernoulli trials.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PMF:&lt;/strong&gt;
+$$
+g(x; \theta) = \theta(1-\theta)^{x-1}
+$$
+where, $\theta$ is the probability of success on each trial, and $x$ is the trial number of the first success.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Properties:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mean ($\mu$):&lt;/strong&gt; The expected number of trials to get the first success is given by:
+$$
+\mu = \frac{1}{\theta}
+$$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Variance ($\sigma^2$):&lt;/strong&gt; The variance of the number of trials to get the first success is:
+$$
+\sigma^2 = \frac{1-\theta}{\theta^2}
+$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Interpretation:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The mean and variance provide insights into the &amp;ldquo;spread&amp;rdquo; or variability of trials needed to achieve the first success, with higher values of $\theta$ leading to fewer expected trials.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This distribution is commonly used in &lt;em&gt;quality control&lt;/em&gt;, &lt;em&gt;reliability testing&lt;/em&gt;, and other areas where the &amp;ldquo;time&amp;rdquo; or number of trials until the first success is of interest.&lt;/p&gt;
 &lt;h3 id=&#34;poisson-distribution&#34;&gt;Poisson Distribution&lt;/h3&gt;
 &lt;p&gt;The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring within a fixed interval of time or space. It assumes these events occur with a known constant mean rate and independently of the time since the last event.&lt;/p&gt;
 &lt;p&gt;A practical example is photometry using a Charge-Coupled Device (CCD), where light—specifically, the number of photons—hits the CCD at a constant rate. Importantly, the arrival of photons is assumed to be independent of previous arrivals, provided the CCD is not saturated.&lt;/p&gt;
@@ -109,8 +235,6 @@ SNR = \frac{\mu}{\sigma} = \frac{\mu}{\sqrt{\mu}} = \sqrt{\mu}
 $$
 This relationship highlights the inherent noise properties in photon-counting measurements like those in CCD photometry.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;confidence-interval&#34;&gt;Confidence Interval&lt;/h2&gt;
-&lt;h2 id=&#34;z-test-vs-t-test&#34;&gt;z test vs. t test&lt;/h2&gt;
 </description>
     </item>
     
