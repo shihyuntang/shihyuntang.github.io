@@ -28,12 +28,11 @@
   
     
   
-  <meta name="description" content="Probability Distributions Probability distributions describe how the probabilities of a random variable are distributed. Here are the two main types of probability functions associated with these distributions:
-Probability Density Function (PDF, continuous):
-Description: The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables. Key Characteristic: The area under the PDF curve between two points represents the probability of the variable falling within that range.">
+  <meta name="description" content="Some Terminology in Statistics i.i.d. (Independent and Identically Distributed): This term refers to a set of random variables that are all independent of each other and share the same probability distribution. The assumption of i.i.d. is crucial in many statistical methods because it simplifies the mathematical analysis and inference processes.
+Null Hypothesis: In hypothesis testing, the null hypothesis is a general statement or default position that there is no relationship between two measured phenomena or no association among groups tested.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/1-probability/">
+  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/0-some-basic/">
 
   
 
@@ -102,7 +101,7 @@ Description: The PDF is used to specify the probability of a random variable fal
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/1-probability/">
+  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/0-some-basic/">
 
   
   
@@ -115,11 +114,10 @@ Description: The PDF is used to specify the probability of a random variable fal
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Shih-Yun Tang">
-  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/1-probability/">
-  <meta property="og:title" content="Distributions | Shih-Yun Tang">
-  <meta property="og:description" content="Probability Distributions Probability distributions describe how the probabilities of a random variable are distributed. Here are the two main types of probability functions associated with these distributions:
-Probability Density Function (PDF, continuous):
-Description: The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables. Key Characteristic: The area under the PDF curve between two points represents the probability of the variable falling within that range."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/0-some-basic/">
+  <meta property="og:title" content="Probability Basic | Shih-Yun Tang">
+  <meta property="og:description" content="Some Terminology in Statistics i.i.d. (Independent and Identically Distributed): This term refers to a set of random variables that are all independent of each other and share the same probability distribution. The assumption of i.i.d. is crucial in many statistical methods because it simplifies the mathematical analysis and inference processes.
+Null Hypothesis: In hypothesis testing, the null hypothesis is a general statement or default position that there is no relationship between two measured phenomena or no association among groups tested."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://shihyuntang.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -144,7 +142,7 @@ Description: The PDF is used to specify the probability of a random variable fal
 
 
 
-  <title>Distributions | Shih-Yun Tang</title>
+  <title>Probability Basic | Shih-Yun Tang</title>
 
 </head>
 
@@ -443,11 +441,11 @@ Description: The PDF is used to specify the probability of a random variable fal
     <a class="docs-toc-link" href="/tutorials/astro-stat/0-some-basic/">1 Probability</a>
     <ul class="nav docs-sidenav">
       
-      <li >
+      <li class="active">
         <a href="/tutorials/astro-stat/0-some-basic/">Probability Basic</a>
       </li>
       
-      <li class="active">
+      <li >
         <a href="/tutorials/astro-stat/1-probability/">Distributions</a>
       </li>
       
@@ -503,13 +501,17 @@ Description: The PDF is used to specify the probability of a random variable fal
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#probability-distributions">Probability Distributions</a></li>
-    <li><a href="#chebyshevs-theorem">Chebyshev&rsquo;s Theorem</a></li>
-    <li><a href="#discrete-distributions">Discrete Distributions</a>
+    <li><a href="#some-terminology-in-statistics">Some Terminology in Statistics</a></li>
+    <li><a href="#first-and-second-moments">First and Second Moments</a>
       <ul>
-        <li><a href="#binomial-distribution">Binomial Distribution</a></li>
-        <li><a href="#geometric-distribution">Geometric Distribution</a></li>
-        <li><a href="#poisson-distribution">Poisson Distribution</a></li>
+        <li><a href="#standardization">Standardization</a></li>
+      </ul>
+    </li>
+    <li><a href="#z-test-vs-t-test">Z-Test vs. T-Test</a>
+      <ul>
+        <li><a href="#z-test">Z-Test</a></li>
+        <li><a href="#t-test">T-Test</a></li>
+        <li><a href="#key-differences">Key Differences</a></li>
       </ul>
     </li>
   </ul>
@@ -524,123 +526,136 @@ Description: The PDF is used to specify the probability of a random variable fal
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Distributions</h1>
+          <h1>Probability Basic</h1>
 
           <div class="article-style">
-            <h2 id="probability-distributions">Probability Distributions</h2>
-<p>Probability distributions describe how the probabilities of a <strong>random variable</strong> are distributed. Here are the two main types of probability functions associated with these distributions:</p>
-<ol>
-<li>
-<p><strong>Probability Density Function (PDF, continuous):</strong></p>
+            <h2 id="some-terminology-in-statistics">Some Terminology in Statistics</h2>
 <ul>
-<li><strong>Description:</strong> The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables.</li>
-<li><strong>Key Characteristic:</strong> The area under the PDF curve between two points represents the probability of the variable falling within that range.</li>
-<li><strong>Example:</strong> The normal distribution.</li>
+<li>
+<p><strong>i.i.d. (Independent and Identically Distributed):</strong>
+This term refers to a set of random variables that are all independent of each other and share the same probability distribution. The assumption of i.i.d. is crucial in many statistical methods because it simplifies the mathematical analysis and inference processes.</p>
+</li>
+<li>
+<p><strong>Null Hypothesis:</strong>
+In hypothesis testing, the null hypothesis is a general statement or default position that there is no relationship between two measured phenomena or no association among groups tested.</p>
+</li>
+<li>
+<p><strong>P-value:</strong>
+The p-value is the probability of observing test results at least as extreme as the results actually observed, under the assumption that the null hypothesis is correct. A p-value less than a pre-determined significance level, often 0.05, leads to the rejection of the null hypothesis.</p>
+</li>
+<li>
+<p><strong>Confidence Interval (CI):</strong>
+A confidence interval is a range of values, derived from sample statistics, that is likely to contain the value of an unknown population parameter. The confidence level represents the probability that this interval will capture this parameter in repeated samples.</p>
+</li>
+<li>
+<p><strong>Type I and Type II Errors:</strong></p>
+<ul>
+<li><strong>Type I Error (False Positive):</strong> Occurs when the null hypothesis is incorrectly rejected when it is actually true.</li>
+<li><strong>Type II Error (False Negative):</strong> Occurs when the null hypothesis is not rejected when it is actually false.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="first-and-second-moments">First and Second Moments</h2>
+<p>In probability and statistics, the concepts of first and second moments are central to understanding the distributions of random variables:</p>
+<ul>
+<li>
+<p><strong>First Moment (Mean):</strong></p>
+<ul>
+<li><strong>Definition:</strong> The first moment is the expected value of a random variable $X$, denoted as $E(X)$.</li>
+<li><strong>Formula:</strong>
+$$E(X) = \mu$$</li>
 </ul>
 </li>
 <li>
-<p><strong>Probability Mass Function (PMF, discrete):</strong></p>
+<p><strong>Second Moment (Variance):</strong></p>
 <ul>
-<li><strong>Description:</strong> The PMF is used for discrete random variables and specifies the probability that a random variable is exactly equal to some value.</li>
-<li><strong>Key Characteristic:</strong> The sum of all the probabilities represented by the PMF must equal 1, as it accounts for every possible discrete value the variable can take.</li>
-<li><strong>Example:</strong> The binomial distribution, and the Poisson distribution.</li>
-</ul>
-</li>
-</ol>
-<p><strong>Cumulative Distribution Function (CDF):</strong></p>
-<ul>
-<li><strong>Description:</strong> The CDF is used to determine the probability that a random variable (X) is $\lesssim$ to a certain value. CDF can be applied to both discrete and continuous random variables.</li>
-<li><strong>Key Characteristic:</strong> The CDF is a non-decreasing function that ranges from 0 to 1. For continuous variables, it is obtained by integrating the PDF over the range of possible values. For discrete variables, it is the cumulative sum of the PMF.</li>
-<li><strong>Example:</strong> For normal distribution, the CDF is used to calculate the probability that the variable is less than a specific threshold, which is central to hypothesis testing and confidence interval estimation.</li>
-</ul>
-<hr>
-<h2 id="chebyshevs-theorem">Chebyshev&rsquo;s Theorem</h2>
-<p>Chebyshev&rsquo;s Theorem, also known as Chebyshev&rsquo;s Inequality, is a fundamental result in probability theory that provides a way <strong>to estimate the probability that a random variable differs from its mean</strong>. This theorem is not restricted to normally distributed data, making it very versatile.</p>
-<p><strong>Theorem Statement:</strong>
+<li><strong>Definition:</strong> The second moment about the mean is the variance of the random variable $X$, denoted as $\sigma^2$. It measures the spread of the data points around the mean.</li>
+<li><strong>Formula:</strong> The variance is calculated using the expectation of the <em>squared deviations from the mean</em>:
 $$
-P(|X-\mu| &lt; k\sigma) \geq 1 - \frac{1}{k^2}
-$$
-where:</p>
-<ul>
-<li>($\mu$) is the mean of the random variable ( X ),</li>
-<li>($\sigma$) is the standard deviation of ( X ),</li>
-<li>($k$) is a positive number greater than 1.</li>
-</ul>
-<p><strong>Key Points:</strong></p>
-<ul>
-<li><strong>Generality:</strong> Chebyshev&rsquo;s theorem applies to any probability distribution where the mean and variance are defined.</li>
-<li><strong>Implication:</strong> The inequality tells us that no matter the shape of the distribution, the proportion of values that fall within ($k$) standard deviations of the mean is at least $( 1 - \frac{1}{k^2})$. For example, at least (75%) of the values lie within 2 standard deviations of the mean (since ($k=2$) gives $( 1-\frac{1}{4} = 0.75)$).</li>
-<li><strong>Limitations:</strong> While the theorem provides a lower bound, it does not give exact probabilities, and the bounds can be quite loose, especially for distributions that tightly clustered around the mean.</li>
-</ul>
-<p>Chebyshev&rsquo;s Theorem is particularly useful for analysts and statisticians dealing with samples from unknown distributions, as it provides a safe, conservative estimate of the spread of data around the mean.</p>
-<hr>
-<h2 id="discrete-distributions">Discrete Distributions</h2>
-<h3 id="binomial-distribution">Binomial Distribution</h3>
-<p>The Binomial distribution is a discrete probability distribution that models the number of successes in a fixed number of independent trials, with each trial having two possible outcomes, typically labeled as &ldquo;success&rdquo; and &ldquo;failure&rdquo;.</p>
-<p><strong>Key Points:</strong></p>
-<ul>
-<li>There are only two possible outcomes for each trial: success (1) and failure (0).</li>
-<li>The trials are independent, meaning the outcome of one trial does not affect the outcomes of other trials.</li>
-</ul>
-<p>The probability mass function (PMF) for the Binomial distribution is expressed as:
-$$
-P(X=x) = C^{n}_{x} \theta^x (1-\theta)^{n-x}
-$$
-where $\theta$ is the probability of success on a single trial, $x$ is the number of successes, and $n$ is the total number of trials.</p>
-<p><strong>Example:</strong>
-Consider flipping a fair coin five times. What is the probability of getting exactly two heads?</p>
-<p>The calculation is as follows:
-$$
-P(X=2) = C^{5}_{2} 0.5^2 (1-0.5)^3 = \frac{5!}{2!3!} \times 0.25 \times 0.125 = 31.25%
-$$</p>
-<h3 id="geometric-distribution">Geometric Distribution</h3>
-<p>The Geometric distribution describes the probability of observing the first success on the $x$-th trial in a sequence of Bernoulli trials.</p>
-<p><strong>PMF:</strong>
-$$
-g(x; \theta) = \theta(1-\theta)^{x-1}
-$$
-where, $\theta$ is the probability of success on each trial, and $x$ is the trial number of the first success.</p>
-<p><strong>Key Properties:</strong></p>
-<ul>
-<li><strong>Mean ($\mu$):</strong> The expected number of trials to get the first success is given by:
-$$
-\mu = \frac{1}{\theta}
-$$</li>
-<li><strong>Variance ($\sigma^2$):</strong> The variance of the number of trials to get the first success is:
-$$
-\sigma^2 = \frac{1-\theta}{\theta^2}
+\sigma^2 = E[(X-\mu)^2] = E[X^2] - E(X)^2
 $$</li>
 </ul>
-<p><strong>Interpretation:</strong></p>
-<ul>
-<li>The mean and variance provide insights into the &ldquo;spread&rdquo; or variability of trials needed to achieve the first success, with higher values of $\theta$ leading to fewer expected trials.</li>
-</ul>
-<p>This distribution is commonly used in <em>quality control</em>, <em>reliability testing</em>, and other areas where the &ldquo;time&rdquo; or number of trials until the first success is of interest.</p>
-<h3 id="poisson-distribution">Poisson Distribution</h3>
-<p>The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring within a fixed interval of time or space. It assumes these events occur with a known constant mean rate and independently of the time since the last event.</p>
-<p>A practical example is photometry using a Charge-Coupled Device (CCD), where light—specifically, the number of photons—hits the CCD at a constant rate. Importantly, the arrival of photons is assumed to be independent of previous arrivals, provided the CCD is not saturated.</p>
 <blockquote>
-<p><strong>Note:</strong> Independence of events holds only if the CCD is not saturated.</p>
+<p>$$\begin{align}
+\sigma^2 &amp;= E[(X-\mu)^2] \\
+&amp;= E[X^2 - 2X\mu + \mu^2] \\
+&amp;= E[X^2] - 2\mu E(X) + E(\mu^2) \\
+&amp;= E[X^2] - 2\mu^2 + \mu^2 \\
+&amp;= E[X^2] - \mu^2 \\
+&amp;= E[X^2] - E(X)^2
+\end{align}$$</p>
 </blockquote>
-<p><strong>Assumptions:</strong></p>
-<ol>
-<li>The rate of event occurrence, $\lambda$, is constant over time. For example, the number of events occurring between $t$ and $t + \Delta t$ is $\lambda \Delta t$.</li>
-<li>The probability of an event in the interval ${t, t+\Delta t}$ is independent of previous events.</li>
-</ol>
-<p>The probability mass function (PMF) of the Poisson distribution is defined as:
+</li>
+<li>
+<p><strong>Third Moment (Skewness):</strong></p>
+<ul>
+<li><strong>Definition:</strong> The third central moment describes the skewness of the distribution of a random variable, indicating the degree of asymmetry around the mean. Skewness can reveal whether the distribution tails off more on one side than the other.</li>
+<li><strong>Formula:</strong> The third moment is calculated using the expectation of the cubed deviations from the mean:
 $$
-P(x; \lambda) = \frac{\lambda^x e^{-\lambda}}{x!}
+E[(X - E(X))^3]
+$$</li>
+<li><strong>Interpretation:</strong> A positive skewness indicates that the distribution has a long tail to the right (more positive side), while a negative skewness indicates a long tail to the left (more negative side).</li>
+</ul>
+</li>
+<li>
+<p><strong>Covariance:</strong></p>
+<ul>
+<li><strong>Definition:</strong> Covariance measures the joint variability of two random variables, $X$ and $Y$. It assesses the degree to which two variables change together. If the greater values of one variable mainly correspond to the greater values of the other variable, and the same holds for the lesser values, the covariance is positive.</li>
+<li><strong>Formula:</strong> The covariance between two variables $X$ and $Y$ is given by:
 $$
-where $\lambda$ is the expected number of events in a given interval, and $x$ is the observed number of events.</p>
-<p>For the Poisson distribution, the expected value (mean) is $\mu = \lambda$, and the variance is $\sigma^2 = \lambda$.</p>
-<h4 id="poisson-noise-shot-noise">Poisson Noise (Shot Noise)</h4>
-<p>Since $\sigma^2 = \lambda$, the standard deviation (Poisson noise) is $\sigma = \sqrt{\lambda}$. In photometry, where $N$ represents the number of photons hitting the CCD, this implies $\sigma = \sqrt{N}$.</p>
-<p>Due to the characteristics of the Poisson distribution, the signal-to-noise ratio (SNR) is calculated as follows:
-$$
-SNR = \frac{\mu}{\sigma} = \frac{\mu}{\sqrt{\mu}} = \sqrt{\mu}
-$$
-This relationship highlights the inherent noise properties in photon-counting measurements like those in CCD photometry.</p>
+\text{Cov}(X, Y) = E[(X - E(X))(Y - E(Y))]
+$$</li>
+<li><strong>Interpretation:</strong> A positive covariance indicates that as $X$ increases, $Y$ tends to increase. A negative covariance suggests that as $X$ increases, $Y$ tends to decrease. Zero covariance indicates that the variables are independent, assuming they are also uncorrelated.</li>
+</ul>
+</li>
+</ul>
+<h3 id="standardization">Standardization</h3>
+<p>Transforming the random variable to with zero mean and unit variance. This tranasformation also removes the unit on the random variable.</p>
+<p>$$
+X_{std} = \frac{X - \mu}{\sigma}
+$$</p>
 <hr>
+<h2 id="z-test-vs-t-test">Z-Test vs. T-Test</h2>
+<p>Both the z-test and the t-test are statistical methods used to test hypotheses about means, but they are suited to different situations based on the distribution of the data and sample sizes.</p>
+<h3 id="z-test">Z-Test</h3>
+<ul>
+<li><strong>Usage:</strong> The z-test is used when the population <em>variance is known and the sample size is large</em> (typically, n &gt; 30). It can also be used for small samples if the data is known to follow a normal distribution.</li>
+<li><strong>Assumptions:</strong>
+<ul>
+<li>The population variance is known.</li>
+<li>The sample size is large enough for the Central Limit Theorem to apply, which ensures that the means of the samples are normally distributed.</li>
+</ul>
+</li>
+<li><strong>Formula:</strong> The test statistic for a z-test is calculated as follows:
+$$
+Z = \frac{\bar{X} - \mu_0}{\sigma/\sqrt{n}}
+$$
+where $\bar{X}$ is the sample mean, $\mu_0$ is the hypothesized population mean, $\sigma$ is the population standard deviation, and $n$ is the sample size.</li>
+</ul>
+<h3 id="t-test">T-Test</h3>
+<ul>
+<li><strong>Usage:</strong> The t-test is used when the population <em>variance is unknown and the sample size is small</em>. It is the appropriate test when dealing with estimates of the standard deviation from a normally distributed sample.</li>
+<li><strong>Assumptions:</strong>
+<ul>
+<li>The population from which samples are drawn is normally distributed.</li>
+<li>The population variance is unknown, and the sample variance is used as an estimate.</li>
+</ul>
+</li>
+<li><strong>Formula:</strong> The test statistic for a t-test is calculated as follows:
+$$
+T = \frac{\bar{X} - \mu_0}{s/\sqrt{n}}
+$$
+where $\bar{X}$ is the sample mean, $\mu_0$ is the hypothesized population mean, $s$ is the sample standard deviation, and $n$ is the sample size.</li>
+<li><strong>Degrees of Freedom:</strong> The degrees of freedom for the t-test are $n-1$, which affects the shape of the t-distribution used to determine the p-value.</li>
+</ul>
+<h3 id="key-differences">Key Differences</h3>
+<ul>
+<li><strong>Standard Deviation:</strong> The z-test uses the population standard deviation, while the t-test uses the sample&rsquo;s standard deviation as an estimate of the population’s standard deviation.</li>
+<li><strong>Sample Size:</strong> The z-test is typically used for larger sample sizes or when the population standard deviation is known, whereas the t-test is used for smaller sample sizes or when the population standard deviation is unknown.</li>
+<li><strong>Distribution:</strong> The z-test statistic follows a normal distribution, while the t-test statistic follows a t-distribution, which is more spread out with heavier tails, providing a more conservative test for small sample sizes.</li>
+</ul>
+<p><em>A comparison plot between the t-distribution and the standard normal distribution can be find <a href="https://www.jmp.com/en_us/statistics-knowledge-portal/t-test/t-distribution.html#:~:text=What's%20the%20key%20difference%20between,on%20the%20sample%20standard%20deviation.">here</a>.</em></p>
 
           </div>
 
@@ -656,15 +671,8 @@ This relationship highlights the inherent noise properties in photon-counting me
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/tutorials/astro-stat/0-some-basic/" rel="next">Probability Basic</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/tutorials/astro-stat/5-1-distribution/" rel="prev">Statistical Tests for Assessing Distribution</a>
+    <a href="/tutorials/astro-stat/1-probability/" rel="prev">Distributions</a>
   </div>
   
 </div>
@@ -686,7 +694,7 @@ This relationship highlights the inherent noise properties in photon-counting me
   
 
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/1%20Probability.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/0%20Some%20Basic.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
