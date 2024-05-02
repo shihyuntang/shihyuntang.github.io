@@ -28,10 +28,11 @@
   
     
   
-  <meta name="description" content="Coming Soon&hellip;">
+  <meta name="description" content="Some Terminology in Statistics i.i.d. (Independent and Identically Distributed): This term refers to a set of random variables that are all independent of each other and share the same probability distribution. The assumption of i.i.d. is crucial in many statistical methods because it simplifies the mathematical analysis and inference processes.
+Null Hypothesis: In hypothesis testing, the null hypothesis is a general statement or default position that there is no relationship between two measured phenomena or no association among groups tested.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/11-timeseries-analysis/">
+  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/1-1-some-basic/">
 
   
 
@@ -100,7 +101,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/11-timeseries-analysis/">
+  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/1-1-some-basic/">
 
   
   
@@ -113,15 +114,16 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Shih-Yun Tang">
-  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/11-timeseries-analysis/">
-  <meta property="og:title" content="Timeseries Analysis | Shih-Yun Tang">
-  <meta property="og:description" content="Coming Soon&hellip;"><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/1-1-some-basic/">
+  <meta property="og:title" content="Probability Basic | Shih-Yun Tang">
+  <meta property="og:description" content="Some Terminology in Statistics i.i.d. (Independent and Identically Distributed): This term refers to a set of random variables that are all independent of each other and share the same probability distribution. The assumption of i.i.d. is crucial in many statistical methods because it simplifies the mathematical analysis and inference processes.
+Null Hypothesis: In hypothesis testing, the null hypothesis is a general statement or default position that there is no relationship between two measured phenomena or no association among groups tested."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://shihyuntang.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-08-11T00:00:00&#43;01:00">
+      <meta property="article:published_time" content="2024-04-29T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2024-05-01T21:58:19-05:00">
+    <meta property="article:modified_time" content="2024-05-02T10:59:49-05:00">
   
 
   
@@ -140,7 +142,7 @@
 
 
 
-  <title>Timeseries Analysis | Shih-Yun Tang</title>
+  <title>Probability Basic | Shih-Yun Tang</title>
 
 </head>
 
@@ -439,7 +441,7 @@
     <a class="docs-toc-link" href="/tutorials/astro-stat/1-1-some-basic/">1 Probability</a>
     <ul class="nav docs-sidenav">
       
-      <li >
+      <li class="active">
         <a href="/tutorials/astro-stat/1-1-some-basic/">Probability Basic</a>
       </li>
       
@@ -501,7 +503,23 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      <nav id="TableOfContents"></nav>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#some-terminology-in-statistics">Some Terminology in Statistics</a></li>
+    <li><a href="#first-and-second-moments">First and Second Moments</a>
+      <ul>
+        <li><a href="#standardization">Standardization</a></li>
+      </ul>
+    </li>
+    <li><a href="#z-test-vs-t-test">Z-Test vs. T-Test</a>
+      <ul>
+        <li><a href="#z-test">Z-Test</a></li>
+        <li><a href="#t-test">T-Test</a></li>
+        <li><a href="#key-differences">Key Differences</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
       
     </div>
@@ -512,10 +530,136 @@
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Timeseries Analysis</h1>
+          <h1>Probability Basic</h1>
 
           <div class="article-style">
-            <p>Coming Soon&hellip;</p>
+            <h2 id="some-terminology-in-statistics">Some Terminology in Statistics</h2>
+<ul>
+<li>
+<p><strong>i.i.d. (Independent and Identically Distributed):</strong>
+This term refers to a set of random variables that are all independent of each other and share the same probability distribution. The assumption of i.i.d. is crucial in many statistical methods because it simplifies the mathematical analysis and inference processes.</p>
+</li>
+<li>
+<p><strong>Null Hypothesis:</strong>
+In hypothesis testing, the null hypothesis is a general statement or default position that there is no relationship between two measured phenomena or no association among groups tested.</p>
+</li>
+<li>
+<p><strong>P-value:</strong>
+The p-value is the probability of observing test results at least as extreme as the results actually observed, under the assumption that the null hypothesis is correct. A p-value less than a pre-determined significance level, often 0.05, leads to the rejection of the null hypothesis.</p>
+</li>
+<li>
+<p><strong>Confidence Interval (CI):</strong>
+A confidence interval is a range of values, derived from sample statistics, that is likely to contain the value of an unknown population parameter. The confidence level represents the probability that this interval will capture this parameter in repeated samples.</p>
+</li>
+<li>
+<p><strong>Type I and Type II Errors:</strong></p>
+<ul>
+<li><strong>Type I Error (False Positive):</strong> Occurs when the null hypothesis is incorrectly rejected when it is actually true.</li>
+<li><strong>Type II Error (False Negative):</strong> Occurs when the null hypothesis is not rejected when it is actually false.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="first-and-second-moments">First and Second Moments</h2>
+<p>In probability and statistics, the concepts of first and second moments are central to understanding the distributions of random variables:</p>
+<ul>
+<li>
+<p><strong>First Moment (Mean):</strong></p>
+<ul>
+<li><strong>Definition:</strong> The first moment is the expected value of a random variable $X$, denoted as $E(X)$.</li>
+<li><strong>Formula:</strong>
+$$E(X) = \mu$$</li>
+</ul>
+</li>
+<li>
+<p><strong>Second Moment (Variance):</strong></p>
+<ul>
+<li><strong>Definition:</strong> The second moment about the mean is the variance of the random variable $X$, denoted as $\sigma^2$. It measures the spread of the data points around the mean.</li>
+<li><strong>Formula:</strong> The variance is calculated using the expectation of the <em>squared deviations from the mean</em>:
+$$
+\sigma^2 = E[(X-\mu)^2] = E[X^2] - E(X)^2
+$$</li>
+</ul>
+<blockquote>
+<p>$$\begin{align}
+\sigma^2 &amp;= E[(X-\mu)^2] \\
+&amp;= E[X^2 - 2X\mu + \mu^2] \\
+&amp;= E[X^2] - 2\mu E(X) + E(\mu^2) \\
+&amp;= E[X^2] - 2\mu^2 + \mu^2 \\
+&amp;= E[X^2] - \mu^2 \\
+&amp;= E[X^2] - E(X)^2
+\end{align}$$</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Third Moment (Skewness):</strong></p>
+<ul>
+<li><strong>Definition:</strong> The third central moment describes the skewness of the distribution of a random variable, indicating the degree of asymmetry around the mean. Skewness can reveal whether the distribution tails off more on one side than the other.</li>
+<li><strong>Formula:</strong> The third moment is calculated using the expectation of the cubed deviations from the mean:
+$$
+E[(X - E(X))^3]
+$$</li>
+<li><strong>Interpretation:</strong> A positive skewness indicates that the distribution has a long tail to the right (more positive side), while a negative skewness indicates a long tail to the left (more negative side).</li>
+</ul>
+</li>
+<li>
+<p><strong>Covariance:</strong></p>
+<ul>
+<li><strong>Definition:</strong> Covariance measures the joint variability of two random variables, $X$ and $Y$. It assesses the degree to which two variables change together. If the greater values of one variable mainly correspond to the greater values of the other variable, and the same holds for the lesser values, the covariance is positive.</li>
+<li><strong>Formula:</strong> The covariance between two variables $X$ and $Y$ is given by:
+$$
+\text{Cov}(X, Y) = E[(X - E(X))(Y - E(Y))]
+$$</li>
+<li><strong>Interpretation:</strong> A positive covariance indicates that as $X$ increases, $Y$ tends to increase. A negative covariance suggests that as $X$ increases, $Y$ tends to decrease. Zero covariance indicates that the variables are independent, assuming they are also uncorrelated.</li>
+</ul>
+</li>
+</ul>
+<h3 id="standardization">Standardization</h3>
+<p>Transforming the random variable to with zero mean and unit variance. This tranasformation also removes the unit on the random variable.</p>
+<p>$$
+X_{std} = \frac{X - \mu}{\sigma}
+$$</p>
+<hr>
+<h2 id="z-test-vs-t-test">Z-Test vs. T-Test</h2>
+<p>Both the z-test and the t-test are statistical methods used to test hypotheses about means, but they are suited to different situations based on the distribution of the data and sample sizes.</p>
+<h3 id="z-test">Z-Test</h3>
+<ul>
+<li><strong>Usage:</strong> The z-test is used when the population <em>variance is known and the sample size is large</em> (typically, n &gt; 30). It can also be used for small samples if the data is known to follow a normal distribution.</li>
+<li><strong>Assumptions:</strong>
+<ul>
+<li>The population variance is known.</li>
+<li>The sample size is large enough for the Central Limit Theorem to apply, which ensures that the means of the samples are normally distributed.</li>
+</ul>
+</li>
+<li><strong>Formula:</strong> The test statistic for a z-test is calculated as follows:
+$$
+Z = \frac{\bar{X} - \mu_0}{\sigma/\sqrt{n}}
+$$
+where $\bar{X}$ is the sample mean, $\mu_0$ is the hypothesized population mean, $\sigma$ is the population standard deviation, and $n$ is the sample size.</li>
+</ul>
+<h3 id="t-test">T-Test</h3>
+<ul>
+<li><strong>Usage:</strong> The t-test is used when the population <em>variance is unknown and the sample size is small</em>. It is the appropriate test when dealing with estimates of the standard deviation from a normally distributed sample.</li>
+<li><strong>Assumptions:</strong>
+<ul>
+<li>The population from which samples are drawn is normally distributed.</li>
+<li>The population variance is unknown, and the sample variance is used as an estimate.</li>
+</ul>
+</li>
+<li><strong>Formula:</strong> The test statistic for a t-test is calculated as follows:
+$$
+T = \frac{\bar{X} - \mu_0}{s/\sqrt{n}}
+$$
+where $\bar{X}$ is the sample mean, $\mu_0$ is the hypothesized population mean, $s$ is the sample standard deviation, and $n$ is the sample size.</li>
+<li><strong>Degrees of Freedom:</strong> The degrees of freedom for the t-test are $n-1$, which affects the shape of the t-distribution used to determine the p-value.</li>
+</ul>
+<h3 id="key-differences">Key Differences</h3>
+<ul>
+<li><strong>Standard Deviation:</strong> The z-test uses the population standard deviation, while the t-test uses the sample&rsquo;s standard deviation as an estimate of the population’s standard deviation.</li>
+<li><strong>Sample Size:</strong> The z-test is typically used for larger sample sizes or when the population standard deviation is known, whereas the t-test is used for smaller sample sizes or when the population standard deviation is unknown.</li>
+<li><strong>Distribution:</strong> The z-test statistic follows a normal distribution, while the t-test statistic follows a t-distribution, which is more spread out with heavier tails, providing a more conservative test for small sample sizes.</li>
+</ul>
+<p><em>A comparison plot between the t-distribution and the standard normal distribution can be find <a href="https://www.jmp.com/en_us/statistics-knowledge-portal/t-test/t-distribution.html#:~:text=What's%20the%20key%20difference%20between,on%20the%20sample%20standard%20deviation.">here</a>.</em></p>
 
           </div>
 
@@ -531,15 +675,8 @@
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/tutorials/astro-stat/10-censored-and-truncated-data/" rel="next">Censored and Truncated Data</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/tutorials/astro-stat/12-1-variogram/" rel="prev">Variogram</a>
+    <a href="/tutorials/astro-stat/1-2-probability/" rel="prev">Distributions</a>
   </div>
   
 </div>
@@ -549,7 +686,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on May 1, 2024</p>
+          <p>Last updated on May 2, 2024</p>
 
           
 
@@ -561,7 +698,7 @@
   
 
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/11%20Timeseries%20Analysis.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/1-1%20Some%20Basic.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>

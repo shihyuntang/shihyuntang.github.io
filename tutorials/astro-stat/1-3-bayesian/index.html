@@ -28,10 +28,11 @@
   
     
   
-  <meta name="description" content="Coming Soon&hellip;">
+  <meta name="description" content="Bayes Theorem is a fundamental principle in probability theory and statistics that describes how to update the probability of a hypothesis based on new evidence. It is particularly powerful in the context of predictive modeling and decision-making processes.
+Mathematical Formulation If events $A$ and $B$ are independent, then the probability of $A$ given $B$ is simply the probability of $A$: $$ P(A|B) = P(A) $$ However, when events $A$ and $B$ are not independent, the relationship changes as follows: $$ P(A|B) = \frac{P(A \cap B)}{P(B)} \quad \text{and} \quad P(B|A) = \frac{P(A \cap B)}{P(A)} $$ From these relationships, we derive Bayes&rsquo; Theorem: $$ P(B|A) = \frac{P(B) P(A|B)}{P(A)} $$ Bayes&rsquo; Theorem can be interpreted in terms of updating beliefs: $$ \text{Posterior} = \frac{\text{Prior} \times \text{Likelihood}}{\text{Evidence}} $$">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/11-timeseries-analysis/">
+  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/1-3-bayesian/">
 
   
 
@@ -100,7 +101,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/11-timeseries-analysis/">
+  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/1-3-bayesian/">
 
   
   
@@ -113,15 +114,16 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Shih-Yun Tang">
-  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/11-timeseries-analysis/">
-  <meta property="og:title" content="Timeseries Analysis | Shih-Yun Tang">
-  <meta property="og:description" content="Coming Soon&hellip;"><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/1-3-bayesian/">
+  <meta property="og:title" content="Bayes&#39; theorem | Shih-Yun Tang">
+  <meta property="og:description" content="Bayes Theorem is a fundamental principle in probability theory and statistics that describes how to update the probability of a hypothesis based on new evidence. It is particularly powerful in the context of predictive modeling and decision-making processes.
+Mathematical Formulation If events $A$ and $B$ are independent, then the probability of $A$ given $B$ is simply the probability of $A$: $$ P(A|B) = P(A) $$ However, when events $A$ and $B$ are not independent, the relationship changes as follows: $$ P(A|B) = \frac{P(A \cap B)}{P(B)} \quad \text{and} \quad P(B|A) = \frac{P(A \cap B)}{P(A)} $$ From these relationships, we derive Bayes&rsquo; Theorem: $$ P(B|A) = \frac{P(B) P(A|B)}{P(A)} $$ Bayes&rsquo; Theorem can be interpreted in terms of updating beliefs: $$ \text{Posterior} = \frac{\text{Prior} \times \text{Likelihood}}{\text{Evidence}} $$"><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://shihyuntang.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-08-11T00:00:00&#43;01:00">
+      <meta property="article:published_time" content="2024-05-02T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2024-05-01T21:58:19-05:00">
+    <meta property="article:modified_time" content="2024-05-02T10:59:49-05:00">
   
 
   
@@ -140,7 +142,7 @@
 
 
 
-  <title>Timeseries Analysis | Shih-Yun Tang</title>
+  <title>Bayes&#39; theorem | Shih-Yun Tang</title>
 
 </head>
 
@@ -447,7 +449,7 @@
         <a href="/tutorials/astro-stat/1-2-probability/">Distributions</a>
       </li>
       
-      <li >
+      <li class="active">
         <a href="/tutorials/astro-stat/1-3-bayesian/">Bayes&#39; theorem</a>
       </li>
       
@@ -501,7 +503,24 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      <nav id="TableOfContents"></nav>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#mathematical-formulation">Mathematical Formulation</a></li>
+        <li><a href="#components-of-bayes-theorem">Components of Bayes&rsquo; Theorem</a></li>
+      </ul>
+    </li>
+    <li><a href="#practical-applications">Practical Applications</a></li>
+    <li><a href="#relationship-between-likelihood-and-chi-squared-statistic">Relationship Between Likelihood and Chi-Squared Statistic</a>
+      <ul>
+        <li><a href="#chi-squared-statistic">Chi-Squared Statistic:</a></li>
+        <li><a href="#calculation">Calculation:</a></li>
+        <li><a href="#using-chi-squared-to-calculate-likelihood">Using Chi-Squared to Calculate Likelihood:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
       
     </div>
@@ -512,10 +531,72 @@
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Timeseries Analysis</h1>
+          <h1>Bayes&#39; theorem</h1>
 
           <div class="article-style">
-            <p>Coming Soon&hellip;</p>
+            <p>Bayes Theorem is a fundamental principle in probability theory and statistics that describes how to update the probability of a hypothesis based on new evidence. It is particularly powerful in the context of predictive modeling and decision-making processes.</p>
+<h3 id="mathematical-formulation">Mathematical Formulation</h3>
+<p>If events $A$ and $B$ are independent, then the probability of $A$ given $B$ is simply the probability of $A$:
+$$
+P(A|B) = P(A)
+$$
+However, when events $A$ and $B$ are not independent, the relationship changes as follows:
+$$
+P(A|B) = \frac{P(A \cap B)}{P(B)} \quad \text{and} \quad P(B|A) = \frac{P(A \cap B)}{P(A)}
+$$
+From these relationships, we derive Bayes&rsquo; Theorem:
+$$
+P(B|A) = \frac{P(B) P(A|B)}{P(A)}
+$$
+Bayes&rsquo; Theorem can be interpreted in terms of updating beliefs:
+$$
+\text{Posterior} = \frac{\text{Prior} \times \text{Likelihood}}{\text{Evidence}}
+$$</p>
+<h3 id="components-of-bayes-theorem">Components of Bayes&rsquo; Theorem</h3>
+<ol>
+<li><strong>Likelihood ( $ P(A|B) $ ):</strong>
+The likelihood is a function that measures the plausibility of a model parameter value given specific observed data. In many applications, especially in statistical modeling, the likelihood is assumed to follow a normal distribution:
+$$
+L(\theta; x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\theta)^2}{2\sigma^2}}
+$$
+where $\theta$ represents the parameter of interest, $x$ represents the data, and $\sigma^2$ is the variance.</li>
+<li><strong>Prior ( $ P(B) $ ):</strong>
+The prior represents the initial belief about the distribution of the parameter before considering the current data. Priors can be subjective or based on previous studies:
+$$
+P(\theta)
+$$
+It can be uniform (representing no initial preference) or follow a specific distribution that reflects prior knowledge about the parameter, e.g., a Gaussian prior, gamma and beta distribution.</li>
+<li><strong>Evidence or Normalizing Constant ( $ P(A) $ ):</strong>
+Often considered as a normalizing factor, the evidence ensures that the posterior probabilities sum to one. It is calculated as:
+$$
+P(A) = \int P(A|B) P(B) dB
+$$
+This factor is essential for the probabilistic model to be valid but is usually more relevant in analytical calculations than in practical applications.</li>
+<li><strong>Posterior ( $ P(B|A) $ ):</strong>
+The posterior probability reflects the updated belief about the parameter after considering the new evidence. It combines the prior and the likelihood given new data:
+$$
+P(\theta|x) = \frac{P(x|\theta)P(\theta)}{\int P(x|\theta)P(\theta) d\theta}
+$$</li>
+</ol>
+<h2 id="practical-applications">Practical Applications</h2>
+<p>Bayes&rsquo; Theorem is used extensively in various fields including exoplanet study, machine learning, medical testing, and any scenario requiring iterative updating of beliefs upon new evidence. Understanding how to apply the theorem allows for more informed decision-making processes and predictions.</p>
+<hr>
+<h2 id="relationship-between-likelihood-and-chi-squared-statistic">Relationship Between Likelihood and Chi-Squared Statistic</h2>
+<p>The likelihood function in statistical models often measures how well a set of parameters fits the data. When the data and the model predictions vary according to a normal distribution, the likelihood function can be directly linked to the chi-squared statistic.</p>
+<h3 id="chi-squared-statistic">Chi-Squared Statistic:</h3>
+<p>The chi-squared statistic is a measure of how expectations compare to actual observed data. In the context of likelihood calculations, the chi-squared statistic quantifies the discrepancy between observed data and the data predicted by the model, under the assumption that the discrepancies are normally distributed.</p>
+<h3 id="calculation">Calculation:</h3>
+<p>To calculate the chi-squared statistic as a measure of likelihood, you can use the following formula:
+$$
+\chi^2 = \sum \frac{(O_i - E_i)^2}{\sigma_i^2}
+$$
+where $O_i$ are the observed values, $E_i$ are the expected values predicted by the model, and $\sigma_i^2$ is the variance associated with each observation.</p>
+<h3 id="using-chi-squared-to-calculate-likelihood">Using Chi-Squared to Calculate Likelihood:</h3>
+<p>The likelihood of observing the data given the model can be expressed as:
+$$
+L = e^{-\chi^2/2}
+$$
+This formulation arises from the exponential component of the PDF of the normal distribution, which is what a likelihood function usually take, thus, a easier way to remember how to calculate the likelihood.</p>
 
           </div>
 
@@ -532,14 +613,14 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/tutorials/astro-stat/10-censored-and-truncated-data/" rel="next">Censored and Truncated Data</a>
+    <a href="/tutorials/astro-stat/1-2-probability/" rel="next">Distributions</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/tutorials/astro-stat/12-1-variogram/" rel="prev">Variogram</a>
+    <a href="/tutorials/astro-stat/5-1-distribution/" rel="prev">Distribution</a>
   </div>
   
 </div>
@@ -549,7 +630,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on May 1, 2024</p>
+          <p>Last updated on May 2, 2024</p>
 
           
 
@@ -561,7 +642,7 @@
   
 
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/11%20Timeseries%20Analysis.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/1-3%20Bayesian.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>

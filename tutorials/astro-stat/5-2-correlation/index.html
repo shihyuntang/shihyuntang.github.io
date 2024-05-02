@@ -28,7 +28,8 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="Nonparametric correlation tests are essential tools for assessing the strength and direction of a relationship between two datasets, especially when the underlying distributions are unknown or non-normal. These tests are robust alternatives to the Pearson correlation coefficient, suitable for various types of relationships. The null hypothesis for these tests is that there is no correlation between the datasets.
+*Pearson Correlation Coefficient Pearson correlation test is a parametric test, but I put it here for completeness and for comparison.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/5-2-correlation/">
@@ -115,11 +116,12 @@
   <meta property="og:site_name" content="Shih-Yun Tang">
   <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/5-2-correlation/">
   <meta property="og:title" content="Correlation | Shih-Yun Tang">
-  <meta property="og:description" content=""><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
+  <meta property="og:description" content="Nonparametric correlation tests are essential tools for assessing the strength and direction of a relationship between two datasets, especially when the underlying distributions are unknown or non-normal. These tests are robust alternatives to the Pearson correlation coefficient, suitable for various types of relationships. The null hypothesis for these tests is that there is no correlation between the datasets.
+*Pearson Correlation Coefficient Pearson correlation test is a parametric test, but I put it here for completeness and for comparison."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://shihyuntang.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-    <meta property="article:modified_time" content="2024-05-01T21:58:19-05:00">
+    <meta property="article:modified_time" content="2024-05-02T10:59:49-05:00">
   
 
   
@@ -434,15 +436,19 @@
   </div>
   
   <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/tutorials/astro-stat/0-some-basic/">1 Probability</a>
+    <a class="docs-toc-link" href="/tutorials/astro-stat/1-1-some-basic/">1 Probability</a>
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/tutorials/astro-stat/0-some-basic/">Probability Basic</a>
+        <a href="/tutorials/astro-stat/1-1-some-basic/">Probability Basic</a>
       </li>
       
       <li >
-        <a href="/tutorials/astro-stat/1-probability/">Distributions</a>
+        <a href="/tutorials/astro-stat/1-2-probability/">Distributions</a>
+      </li>
+      
+      <li >
+        <a href="/tutorials/astro-stat/1-3-bayesian/">Bayes&#39; theorem</a>
       </li>
       
     </ul>
@@ -455,7 +461,7 @@
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/tutorials/astro-stat/5-1-distribution/">Statistical Tests for Distribution</a>
+        <a href="/tutorials/astro-stat/5-1-distribution/">Distribution</a>
       </li>
       
       <li class="active">
@@ -495,7 +501,18 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      <nav id="TableOfContents"></nav>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pearson-correlation-coefficient">*Pearson Correlation Coefficient</a></li>
+        <li><a href="#spearmans-rank-correlation-coefficient-rho">Spearman&rsquo;s Rank Correlation Coefficient ($\rho$)</a></li>
+        <li><a href="#kendalls-tau-tau">Kendall&rsquo;s Tau ($\tau$)</a></li>
+        <li><a href="#comparison-of-correlation-tests">Comparison of Correlation Tests</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
       
     </div>
@@ -509,7 +526,67 @@
           <h1>Correlation</h1>
 
           <div class="article-style">
-            
+            <p>Nonparametric correlation tests are essential tools for assessing the strength and direction of a relationship between two datasets, especially when the underlying distributions are unknown or non-normal. These tests are robust alternatives to the Pearson correlation coefficient, suitable for various types of relationships. The null hypothesis for these tests is that there is no correlation between the datasets.</p>
+<h3 id="pearson-correlation-coefficient">*Pearson Correlation Coefficient</h3>
+<blockquote>
+<p>Pearson correlation test is a <strong>parametric test</strong>, but I put it here for completeness and for comparison.</p>
+</blockquote>
+<p>The Pearson correlation coefficient measures the linear relationship between two continuous variables. It is a parametric test and assumes that the data is normally distributed. The coefficient varies between -1 and +1, where +1 indicates a perfect positive linear relationship, -1 indicates a perfect negative linear relationship, and 0 indicates no linear relationship.</p>
+<h3 id="spearmans-rank-correlation-coefficient-rho">Spearman&rsquo;s Rank Correlation Coefficient ($\rho$)</h3>
+<p>Spearman&rsquo;s correlation assesses how well the relationship between two variables can be described using a monotonic function. It does not require the data to be normally distributed, as it uses the rank of the data rather than the actual values.</p>
+<p><strong>Statistic:</strong>
+$$
+\rho = 1 - \frac{6 \sum d_i^2 + T}{n(n^2 - 1)}
+$$
+where $d_i$ is the difference between the ranks of corresponding variables and $n$ is the number of observations. For handling ties, the correction term $T$ is applied:
+$$
+T = \sum t_x \left[ \frac{x^3 - x}{12} \right]
+$$
+where $t_x$ is the number of ties involving $x$ elements. To further estimate the $p$-value, the $z$ score can be calculated by:
+$$
+z = \sqrt{n-1} \rho
+$$
+which approximates a normal distribution under the null hypothesis. One can use the $\rho$ statistic and compare to the critical values <a href="https://www.york.ac.uk/depts/maths/tables/spearman.pdf">here</a>.</p>
+<h3 id="kendalls-tau-tau">Kendall&rsquo;s Tau ($\tau$)</h3>
+<p>Kendall&rsquo;s Tau measures the ordinal association between two variables by considering the number of concordant and discordant pairs. It is less sensitive to outliers than Pearson and can be more interpretable in terms of the proportion of concordant pairs.</p>
+<p><strong>Statistic:</strong>
+$$
+\tau = \frac{N_c - N_d}{\sqrt{(N_c + N_d + T)(N_c + N_d + U)}}
+$$
+where $N_c$ is the number of concordant pairs, $N_d$ is the number of discordant pairs, $T$ is the number of ties on one variable, and $U$ is the number of ties on the other variable.</p>
+<p>The critical values for $\tau$ can be find <a href="https://www.york.ac.uk/depts/maths/tables/kendall.pdf">here</a>.</p>
+<h3 id="comparison-of-correlation-tests">Comparison of Correlation Tests</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Test</strong></th>
+<th><strong>Best Use Case</strong></th>
+<th><strong>Sensitivity</strong></th>
+<th><strong>Data Requirements</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pearson</strong></td>
+<td>Linear relationships</td>
+<td>Highly sensitive to linear trends</td>
+<td>Normal distribution, continuous data</td>
+</tr>
+<tr>
+<td><strong>Spearman&rsquo;s rho</strong></td>
+<td>Monotonic relationships, not necessarily linear</td>
+<td>Sensitive to monotonic trends, not affected by outliers</td>
+<td>Ordinal data or non-normal distributions</td>
+</tr>
+<tr>
+<td><strong>Kendall&rsquo;s tau</strong></td>
+<td>General increasing or decreasing trends, less intensive computation</td>
+<td>Less sensitive to errors in data, good for small samples or data with many ties</td>
+<td>Ordinal data, robust against outliers</td>
+</tr>
+</tbody>
+</table>
+
           </div>
 
           
@@ -525,7 +602,7 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/tutorials/astro-stat/5-1-distribution/" rel="next">Statistical Tests for Assessing Distribution</a>
+    <a href="/tutorials/astro-stat/5-1-distribution/" rel="next">Distribution</a>
   </div>
   
   
@@ -542,7 +619,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on May 1, 2024</p>
+          <p>Last updated on May 2, 2024</p>
 
           
 

@@ -14,9 +14,9 @@
     
     <item>
       <title>Probability Basic</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/0-some-basic/</link>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/1-1-some-basic/</link>
       <pubDate>Mon, 29 Apr 2024 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/0-some-basic/</guid>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/1-1-some-basic/</guid>
       <description>&lt;h2 id=&#34;some-terminology-in-statistics&#34;&gt;Some Terminology in Statistics&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -149,9 +149,9 @@ where $\bar{X}$ is the sample mean, $\mu_0$ is the hypothesized population mean,
     
     <item>
       <title>Distributions</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/1-probability/</link>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/</link>
       <pubDate>Mon, 29 Apr 2024 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/1-probability/</guid>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/</guid>
       <description>&lt;h2 id=&#34;probability-distributions&#34;&gt;Probability Distributions&lt;/h2&gt;
 &lt;p&gt;Probability distributions describe how the probabilities of a &lt;strong&gt;random variable&lt;/strong&gt; are distributed. Here are the two main types of probability functions associated with these distributions:&lt;/p&gt;
 &lt;ol&gt;
@@ -270,7 +270,78 @@ This relationship highlights the inherent noise properties in photon-counting me
     </item>
     
     <item>
-      <title>Statistical Tests for Assessing Distribution</title>
+      <title>Bayes&#39; theorem</title>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/1-3-bayesian/</link>
+      <pubDate>Thu, 02 May 2024 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/1-3-bayesian/</guid>
+      <description>&lt;p&gt;Bayes Theorem is a fundamental principle in probability theory and statistics that describes how to update the probability of a hypothesis based on new evidence. It is particularly powerful in the context of predictive modeling and decision-making processes.&lt;/p&gt;
+&lt;h3 id=&#34;mathematical-formulation&#34;&gt;Mathematical Formulation&lt;/h3&gt;
+&lt;p&gt;If events $A$ and $B$ are independent, then the probability of $A$ given $B$ is simply the probability of $A$:
+$$
+P(A|B) = P(A)
+$$
+However, when events $A$ and $B$ are not independent, the relationship changes as follows:
+$$
+P(A|B) = \frac{P(A \cap B)}{P(B)} \quad \text{and} \quad P(B|A) = \frac{P(A \cap B)}{P(A)}
+$$
+From these relationships, we derive Bayes&amp;rsquo; Theorem:
+$$
+P(B|A) = \frac{P(B) P(A|B)}{P(A)}
+$$
+Bayes&amp;rsquo; Theorem can be interpreted in terms of updating beliefs:
+$$
+\text{Posterior} = \frac{\text{Prior} \times \text{Likelihood}}{\text{Evidence}}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;components-of-bayes-theorem&#34;&gt;Components of Bayes&amp;rsquo; Theorem&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Likelihood ( $ P(A|B) $ ):&lt;/strong&gt;
+The likelihood is a function that measures the plausibility of a model parameter value given specific observed data. In many applications, especially in statistical modeling, the likelihood is assumed to follow a normal distribution:
+$$
+L(\theta; x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\theta)^2}{2\sigma^2}}
+$$
+where $\theta$ represents the parameter of interest, $x$ represents the data, and $\sigma^2$ is the variance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prior ( $ P(B) $ ):&lt;/strong&gt;
+The prior represents the initial belief about the distribution of the parameter before considering the current data. Priors can be subjective or based on previous studies:
+$$
+P(\theta)
+$$
+It can be uniform (representing no initial preference) or follow a specific distribution that reflects prior knowledge about the parameter, e.g., a Gaussian prior, gamma and beta distribution.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evidence or Normalizing Constant ( $ P(A) $ ):&lt;/strong&gt;
+Often considered as a normalizing factor, the evidence ensures that the posterior probabilities sum to one. It is calculated as:
+$$
+P(A) = \int P(A|B) P(B) dB
+$$
+This factor is essential for the probabilistic model to be valid but is usually more relevant in analytical calculations than in practical applications.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Posterior ( $ P(B|A) $ ):&lt;/strong&gt;
+The posterior probability reflects the updated belief about the parameter after considering the new evidence. It combines the prior and the likelihood given new data:
+$$
+P(\theta|x) = \frac{P(x|\theta)P(\theta)}{\int P(x|\theta)P(\theta) d\theta}
+$$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;practical-applications&#34;&gt;Practical Applications&lt;/h2&gt;
+&lt;p&gt;Bayes&amp;rsquo; Theorem is used extensively in various fields including exoplanet study, machine learning, medical testing, and any scenario requiring iterative updating of beliefs upon new evidence. Understanding how to apply the theorem allows for more informed decision-making processes and predictions.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;relationship-between-likelihood-and-chi-squared-statistic&#34;&gt;Relationship Between Likelihood and Chi-Squared Statistic&lt;/h2&gt;
+&lt;p&gt;The likelihood function in statistical models often measures how well a set of parameters fits the data. When the data and the model predictions vary according to a normal distribution, the likelihood function can be directly linked to the chi-squared statistic.&lt;/p&gt;
+&lt;h3 id=&#34;chi-squared-statistic&#34;&gt;Chi-Squared Statistic:&lt;/h3&gt;
+&lt;p&gt;The chi-squared statistic is a measure of how expectations compare to actual observed data. In the context of likelihood calculations, the chi-squared statistic quantifies the discrepancy between observed data and the data predicted by the model, under the assumption that the discrepancies are normally distributed.&lt;/p&gt;
+&lt;h3 id=&#34;calculation&#34;&gt;Calculation:&lt;/h3&gt;
+&lt;p&gt;To calculate the chi-squared statistic as a measure of likelihood, you can use the following formula:
+$$
+\chi^2 = \sum \frac{(O_i - E_i)^2}{\sigma_i^2}
+$$
+where $O_i$ are the observed values, $E_i$ are the expected values predicted by the model, and $\sigma_i^2$ is the variance associated with each observation.&lt;/p&gt;
+&lt;h3 id=&#34;using-chi-squared-to-calculate-likelihood&#34;&gt;Using Chi-Squared to Calculate Likelihood:&lt;/h3&gt;
+&lt;p&gt;The likelihood of observing the data given the model can be expressed as:
+$$
+L = e^{-\chi^2/2}
+$$
+This formulation arises from the exponential component of the PDF of the normal distribution, which is what a likelihood function usually take, thus, a easier way to remember how to calculate the likelihood.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Distribution</title>
       <link>https://shihyuntang.github.io/tutorials/astro-stat/5-1-distribution/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/tutorials/astro-stat/5-1-distribution/</guid>
@@ -405,7 +476,67 @@ where $\text{mean}(T_1) = \frac{n_1(n_1+n_2+1)}{2}$, and $\text{Var}(T_1) = \fra
       <link>https://shihyuntang.github.io/tutorials/astro-stat/5-2-correlation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/tutorials/astro-stat/5-2-correlation/</guid>
-      <description></description>
+      <description>&lt;p&gt;Nonparametric correlation tests are essential tools for assessing the strength and direction of a relationship between two datasets, especially when the underlying distributions are unknown or non-normal. These tests are robust alternatives to the Pearson correlation coefficient, suitable for various types of relationships. The null hypothesis for these tests is that there is no correlation between the datasets.&lt;/p&gt;
+&lt;h3 id=&#34;pearson-correlation-coefficient&#34;&gt;*Pearson Correlation Coefficient&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pearson correlation test is a &lt;strong&gt;parametric test&lt;/strong&gt;, but I put it here for completeness and for comparison.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The Pearson correlation coefficient measures the linear relationship between two continuous variables. It is a parametric test and assumes that the data is normally distributed. The coefficient varies between -1 and +1, where +1 indicates a perfect positive linear relationship, -1 indicates a perfect negative linear relationship, and 0 indicates no linear relationship.&lt;/p&gt;
+&lt;h3 id=&#34;spearmans-rank-correlation-coefficient-rho&#34;&gt;Spearman&amp;rsquo;s Rank Correlation Coefficient ($\rho$)&lt;/h3&gt;
+&lt;p&gt;Spearman&amp;rsquo;s correlation assesses how well the relationship between two variables can be described using a monotonic function. It does not require the data to be normally distributed, as it uses the rank of the data rather than the actual values.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Statistic:&lt;/strong&gt;
+$$
+\rho = 1 - \frac{6 \sum d_i^2 + T}{n(n^2 - 1)}
+$$
+where $d_i$ is the difference between the ranks of corresponding variables and $n$ is the number of observations. For handling ties, the correction term $T$ is applied:
+$$
+T = \sum t_x \left[ \frac{x^3 - x}{12} \right]
+$$
+where $t_x$ is the number of ties involving $x$ elements. To further estimate the $p$-value, the $z$ score can be calculated by:
+$$
+z = \sqrt{n-1} \rho
+$$
+which approximates a normal distribution under the null hypothesis. One can use the $\rho$ statistic and compare to the critical values &lt;a href=&#34;https://www.york.ac.uk/depts/maths/tables/spearman.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;kendalls-tau-tau&#34;&gt;Kendall&amp;rsquo;s Tau ($\tau$)&lt;/h3&gt;
+&lt;p&gt;Kendall&amp;rsquo;s Tau measures the ordinal association between two variables by considering the number of concordant and discordant pairs. It is less sensitive to outliers than Pearson and can be more interpretable in terms of the proportion of concordant pairs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Statistic:&lt;/strong&gt;
+$$
+\tau = \frac{N_c - N_d}{\sqrt{(N_c + N_d + T)(N_c + N_d + U)}}
+$$
+where $N_c$ is the number of concordant pairs, $N_d$ is the number of discordant pairs, $T$ is the number of ties on one variable, and $U$ is the number of ties on the other variable.&lt;/p&gt;
+&lt;p&gt;The critical values for $\tau$ can be find &lt;a href=&#34;https://www.york.ac.uk/depts/maths/tables/kendall.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;comparison-of-correlation-tests&#34;&gt;Comparison of Correlation Tests&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Test&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Best Use Case&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Sensitivity&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Data Requirements&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pearson&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Linear relationships&lt;/td&gt;
+&lt;td&gt;Highly sensitive to linear trends&lt;/td&gt;
+&lt;td&gt;Normal distribution, continuous data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Spearman&amp;rsquo;s rho&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Monotonic relationships, not necessarily linear&lt;/td&gt;
+&lt;td&gt;Sensitive to monotonic trends, not affected by outliers&lt;/td&gt;
+&lt;td&gt;Ordinal data or non-normal distributions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Kendall&amp;rsquo;s tau&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;General increasing or decreasing trends, less intensive computation&lt;/td&gt;
+&lt;td&gt;Less sensitive to errors in data, good for small samples or data with many ties&lt;/td&gt;
+&lt;td&gt;Ordinal data, robust against outliers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
     <item>
