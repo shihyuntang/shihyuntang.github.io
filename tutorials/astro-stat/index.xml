@@ -35,28 +35,22 @@ The p-value is the probability of observing test results at least as extreme as 
 &lt;p&gt;&lt;strong&gt;Confidence Interval (CI):&lt;/strong&gt;
 A confidence interval is a range of values, derived from sample statistics, that is likely to contain the value of an unknown population parameter. The confidence level represents the probability that this interval will capture this parameter in repeated samples.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Type I and Type II Errors:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Type I Error (False Positive):&lt;/strong&gt; Occurs when the null hypothesis is incorrectly rejected when it is actually true.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Type II Error (False Negative):&lt;/strong&gt; Occurs when the null hypothesis is not rejected when it is actually false.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;!-- - **Type I and Type II Errors:**
+  - **Type I Error (False Positive):** Occurs when the null hypothesis is incorrectly rejected when it is actually true.
+  - **Type II Error (False Negative):** Occurs when the null hypothesis is not rejected when it is actually false. --&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;first-and-second-moments&#34;&gt;First and Second Moments&lt;/h2&gt;
 &lt;p&gt;In probability and statistics, the concepts of first and second moments are central to understanding the distributions of random variables:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;First Moment (Mean):&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;First Moment (Mean):&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; The first moment is the expected value of a random variable $X$, denoted as $E(X)$.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Formula:&lt;/strong&gt;
 $$E(X) = \mu$$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Second Moment (Variance):&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;Second Moment (Variance):&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; The second moment about the mean is the variance of the random variable $X$, denoted as $\sigma^2$. It measures the spread of the data points around the mean.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Formula:&lt;/strong&gt; The variance is calculated using the expectation of the &lt;em&gt;squared deviations from the mean&lt;/em&gt;:
@@ -75,8 +69,7 @@ $$&lt;/li&gt;
 \end{align}$$&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Third Moment (Skewness):&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;Third Moment (Skewness):&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; The third central moment describes the skewness of the distribution of a random variable, indicating the degree of asymmetry around the mean. Skewness can reveal whether the distribution tails off more on one side than the other.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Formula:&lt;/strong&gt; The third moment is calculated using the expectation of the cubed deviations from the mean:
@@ -86,8 +79,7 @@ $$&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Interpretation:&lt;/strong&gt; A positive skewness indicates that the distribution has a long tail to the right (more positive side), while a negative skewness indicates a long tail to the left (more negative side).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Covariance:&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;Covariance:&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; Covariance measures the joint variability of two random variables, $X$ and $Y$. It assesses the degree to which two variables change together. If the greater values of one variable mainly correspond to the greater values of the other variable, and the same holds for the lesser values, the covariance is positive.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Formula:&lt;/strong&gt; The covariance between two variables $X$ and $Y$ is given by:
@@ -155,16 +147,14 @@ where $\bar{X}$ is the sample mean, $\mu_0$ is the hypothesized population mean,
       <description>&lt;h2 id=&#34;probability-distributions&#34;&gt;Probability Distributions&lt;/h2&gt;
 &lt;p&gt;Probability distributions describe how the probabilities of a &lt;strong&gt;random variable&lt;/strong&gt; are distributed. Here are the two main types of probability functions associated with these distributions:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Probability Density Function (PDF, continuous):&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;Probability Density Function (PDF, continuous):&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Description:&lt;/strong&gt; The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Key Characteristic:&lt;/strong&gt; The area under the PDF curve between two points represents the probability of the variable falling within that range.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Example:&lt;/strong&gt; The normal distribution.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Probability Mass Function (PMF, discrete):&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;Probability Mass Function (PMF, discrete):&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Description:&lt;/strong&gt; The PMF is used for discrete random variables and specifies the probability that a random variable is exactly equal to some value.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Key Characteristic:&lt;/strong&gt; The sum of all the probabilities represented by the PMF must equal 1, as it accounts for every possible discrete value the variable can take.&lt;/li&gt;
@@ -745,11 +735,56 @@ where $n$ is the number of observations, $k$ is the number of parameters in the 
     </item>
     
     <item>
-      <title>Censored and Truncated Data</title>
+      <title>Nondetections-Censored and Truncated Data</title>
       <link>https://shihyuntang.github.io/tutorials/astro-stat/7-censored-and-truncated-data/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0100</pubDate>
       <guid>https://shihyuntang.github.io/tutorials/astro-stat/7-censored-and-truncated-data/</guid>
-      <description>&lt;p&gt;Coming Soon&amp;hellip;&lt;/p&gt;
+      <description>&lt;p&gt;In the real world, data collection is often incomplete or constrained by various factors. To fully utilize available data, it is sometimes necessary to handle &amp;lsquo;censored&amp;rsquo; and &amp;rsquo;truncated&amp;rsquo; data, particularly in fields such as medical studies, reliability engineering, and astronomy.&lt;/p&gt;
+&lt;h3 id=&#34;censored-data&#34;&gt;Censored Data&lt;/h3&gt;
+&lt;p&gt;Censored data occurs when the value of a measurement exists, but we only know that it falls above or below certain limits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Left-Censored Data (Upper Limit)&lt;/strong&gt;: The actual data point is less than a certain value, but the exact value is unknown. This is common in astronomy; for example, a star&amp;rsquo;s luminosity might be below the detection limit of a telescope. We know only the upper limit of the star&amp;rsquo;s luminosity.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Right-Censored Data (Lower Limit)&lt;/strong&gt;: The actual data point is greater than a certain value, but the exact value is unknown.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;truncated-data&#34;&gt;Truncated Data&lt;/h3&gt;
+&lt;p&gt;Truncated data occurs when data points below or above a certain threshold are not just unknown but completely absent from the dataset. Unlike censoring, with truncation, we do not have any information that data points exist outside of the observed range.&lt;/p&gt;
+&lt;p&gt;These characteristics have implications for statistical analysis, including distribution function estimation, correlation analysis, regression modeling, and hypothesis testing.&lt;/p&gt;
+&lt;h3 id=&#34;survival-and-hazard-functions-in-censoring&#34;&gt;Survival and Hazard Functions in Censoring&lt;/h3&gt;
+&lt;p&gt;Censoring techniques often use concepts from survival analysis:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Survival Function ($S(x)$)&lt;/strong&gt;: Represents the probability that a variable $X$ exceeds a certain value $x$.
+$$
+S(x) = P(X &amp;gt; x) = 1 - F(x)
+$$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hazard Rate ($h(x)$)&lt;/strong&gt;: Represents the conditional failure rate at a certain value.
+$$
+h(x) = \frac{f(x)}{S(x)}
+$$
+Here, $f(x)$ is the PDF at $x$, and the hazard rate can be interpreted as the likelihood of an event occurring at $x$ given that it has not occurred before $x$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;clarifying-the-example-on-hazard-rate&#34;&gt;Clarifying the Example on Hazard Rate&lt;/h3&gt;
+&lt;p&gt;Consider an example where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$f(95) = 1\%$: The probability of dying at the age of 95 is 1%.&lt;/li&gt;
+&lt;li&gt;$S(95) = 2\%$: The probability of surviving past the age of 95 is 2%.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To find the hazard rate $h(x)$ at age 95:
+$$
+h(95) = \frac{0.01}{0.02} = 0.5 \text{ or } 50\%
+$$
+This indicates that, given reaching age 95, there is a 50% chance of dying at that age.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;advanced-estimators-for-censored-and-truncated-data&#34;&gt;Advanced Estimators for Censored and Truncated Data&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Kaplan-Meier Nonparametric Estimator (Censored)&lt;/strong&gt;: The Kaplan-Meier estimator is crucial for analyzing survival data, particularly in medical research. It measures the fraction of subjects living for a certain amount of time after treatment. This estimator is particularly effective in handling right-censored data, where the survival time is only known to exceed a certain duration but the exact time of event (e.g., death, failure) is unknown. The Kaplan-Meier estimator uses the available data to estimate the survival function, $S(t)$, which provides insights into the likelihood of survival beyond observed time points.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Below is an example plot of the KM estimated survival curve of synthetic data on stellar luminosity data.
+&lt;img src=&#34;https://shihyuntang.github.io/ast-stat/KM.png&#34; alt=&#34;targets&#34;&gt;
+&lt;em&gt;Figure data credit: Sanya Arora&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Lynden-Bell–Woodroofe Estimator (Truncated)&lt;/strong&gt;: Commonly utilized in astronomical studies, the Lynden-Bell–Woodroofe estimator addresses issues with truncated samples, where observations below or above certain thresholds are missing entirely from the dataset. This estimator operates under the assumption that all observations derive from the same underlying distribution. It uses the observed distribution of the available data to estimate the distribution functions of the truncated segments, facilitating a more comprehensive understanding of the overall data distribution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both estimators are tailored to specific types of incomplete data: Kaplan-Meier for censored data, where some information about the survival time is available, and Lynden-Bell–Woodroofe for truncated data, where parts of the data are completely missing. Understanding their applications and differences is essential for accurately analyzing datasets characterized by incomplete observations.&lt;/p&gt;
 </description>
     </item>
     

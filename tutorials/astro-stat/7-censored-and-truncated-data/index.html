@@ -28,7 +28,9 @@
   
     
   
-  <meta name="description" content="Coming Soon&hellip;">
+  <meta name="description" content="In the real world, data collection is often incomplete or constrained by various factors. To fully utilize available data, it is sometimes necessary to handle &lsquo;censored&rsquo; and &rsquo;truncated&rsquo; data, particularly in fields such as medical studies, reliability engineering, and astronomy.
+Censored Data Censored data occurs when the value of a measurement exists, but we only know that it falls above or below certain limits:
+Left-Censored Data (Upper Limit): The actual data point is less than a certain value, but the exact value is unknown.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/7-censored-and-truncated-data/">
@@ -114,14 +116,16 @@
   
   <meta property="og:site_name" content="Shih-Yun Tang">
   <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/7-censored-and-truncated-data/">
-  <meta property="og:title" content="Censored and Truncated Data | Shih-Yun Tang">
-  <meta property="og:description" content="Coming Soon&hellip;"><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
+  <meta property="og:title" content="Nondetections-Censored and Truncated Data | Shih-Yun Tang">
+  <meta property="og:description" content="In the real world, data collection is often incomplete or constrained by various factors. To fully utilize available data, it is sometimes necessary to handle &lsquo;censored&rsquo; and &rsquo;truncated&rsquo; data, particularly in fields such as medical studies, reliability engineering, and astronomy.
+Censored Data Censored data occurs when the value of a measurement exists, but we only know that it falls above or below certain limits:
+Left-Censored Data (Upper Limit): The actual data point is less than a certain value, but the exact value is unknown."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://shihyuntang.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2024-05-02T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2024-05-02T20:53:04-05:00">
+    <meta property="article:modified_time" content="2024-05-02T22:31:00-05:00">
   
 
   
@@ -140,7 +144,7 @@
 
 
 
-  <title>Censored and Truncated Data | Shih-Yun Tang</title>
+  <title>Nondetections-Censored and Truncated Data | Shih-Yun Tang</title>
 
 </head>
 
@@ -579,7 +583,19 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      <nav id="TableOfContents"></nav>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#censored-data">Censored Data</a></li>
+        <li><a href="#truncated-data">Truncated Data</a></li>
+        <li><a href="#survival-and-hazard-functions-in-censoring">Survival and Hazard Functions in Censoring</a></li>
+        <li><a href="#clarifying-the-example-on-hazard-rate">Clarifying the Example on Hazard Rate</a></li>
+        <li><a href="#advanced-estimators-for-censored-and-truncated-data">Advanced Estimators for Censored and Truncated Data</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
       
     </div>
@@ -590,10 +606,55 @@
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Censored and Truncated Data</h1>
+          <h1>Nondetections-Censored and Truncated Data</h1>
 
           <div class="article-style">
-            <p>Coming Soon&hellip;</p>
+            <p>In the real world, data collection is often incomplete or constrained by various factors. To fully utilize available data, it is sometimes necessary to handle &lsquo;censored&rsquo; and &rsquo;truncated&rsquo; data, particularly in fields such as medical studies, reliability engineering, and astronomy.</p>
+<h3 id="censored-data">Censored Data</h3>
+<p>Censored data occurs when the value of a measurement exists, but we only know that it falls above or below certain limits:</p>
+<ul>
+<li><strong>Left-Censored Data (Upper Limit)</strong>: The actual data point is less than a certain value, but the exact value is unknown. This is common in astronomy; for example, a star&rsquo;s luminosity might be below the detection limit of a telescope. We know only the upper limit of the star&rsquo;s luminosity.</li>
+<li><strong>Right-Censored Data (Lower Limit)</strong>: The actual data point is greater than a certain value, but the exact value is unknown.</li>
+</ul>
+<h3 id="truncated-data">Truncated Data</h3>
+<p>Truncated data occurs when data points below or above a certain threshold are not just unknown but completely absent from the dataset. Unlike censoring, with truncation, we do not have any information that data points exist outside of the observed range.</p>
+<p>These characteristics have implications for statistical analysis, including distribution function estimation, correlation analysis, regression modeling, and hypothesis testing.</p>
+<h3 id="survival-and-hazard-functions-in-censoring">Survival and Hazard Functions in Censoring</h3>
+<p>Censoring techniques often use concepts from survival analysis:</p>
+<ul>
+<li><strong>Survival Function ($S(x)$)</strong>: Represents the probability that a variable $X$ exceeds a certain value $x$.
+$$
+S(x) = P(X &gt; x) = 1 - F(x)
+$$</li>
+<li><strong>Hazard Rate ($h(x)$)</strong>: Represents the conditional failure rate at a certain value.
+$$
+h(x) = \frac{f(x)}{S(x)}
+$$
+Here, $f(x)$ is the PDF at $x$, and the hazard rate can be interpreted as the likelihood of an event occurring at $x$ given that it has not occurred before $x$.</li>
+</ul>
+<h3 id="clarifying-the-example-on-hazard-rate">Clarifying the Example on Hazard Rate</h3>
+<p>Consider an example where:</p>
+<ul>
+<li>$f(95) = 1\%$: The probability of dying at the age of 95 is 1%.</li>
+<li>$S(95) = 2\%$: The probability of surviving past the age of 95 is 2%.</li>
+</ul>
+<p>To find the hazard rate $h(x)$ at age 95:
+$$
+h(95) = \frac{0.01}{0.02} = 0.5 \text{ or } 50\%
+$$
+This indicates that, given reaching age 95, there is a 50% chance of dying at that age.</p>
+<hr>
+<h3 id="advanced-estimators-for-censored-and-truncated-data">Advanced Estimators for Censored and Truncated Data</h3>
+<ul>
+<li><strong>Kaplan-Meier Nonparametric Estimator (Censored)</strong>: The Kaplan-Meier estimator is crucial for analyzing survival data, particularly in medical research. It measures the fraction of subjects living for a certain amount of time after treatment. This estimator is particularly effective in handling right-censored data, where the survival time is only known to exceed a certain duration but the exact time of event (e.g., death, failure) is unknown. The Kaplan-Meier estimator uses the available data to estimate the survival function, $S(t)$, which provides insights into the likelihood of survival beyond observed time points.</li>
+</ul>
+<p>Below is an example plot of the KM estimated survival curve of synthetic data on stellar luminosity data.
+<img src="/ast-stat/KM.png" alt="targets">
+<em>Figure data credit: Sanya Arora</em></p>
+<ul>
+<li><strong>Lynden-Bell–Woodroofe Estimator (Truncated)</strong>: Commonly utilized in astronomical studies, the Lynden-Bell–Woodroofe estimator addresses issues with truncated samples, where observations below or above certain thresholds are missing entirely from the dataset. This estimator operates under the assumption that all observations derive from the same underlying distribution. It uses the observed distribution of the available data to estimate the distribution functions of the truncated segments, facilitating a more comprehensive understanding of the overall data distribution.</li>
+</ul>
+<p>Both estimators are tailored to specific types of incomplete data: Kaplan-Meier for censored data, where some information about the survival time is available, and Lynden-Bell–Woodroofe for truncated data, where parts of the data are completely missing. Understanding their applications and differences is essential for accurately analyzing datasets characterized by incomplete observations.</p>
 
           </div>
 
