@@ -791,9 +791,83 @@ This indicates that, given reaching age 95, there is a 50% chance of dying at th
     <item>
       <title>Timeseries Analysis</title>
       <link>https://shihyuntang.github.io/tutorials/astro-stat/8-timeseries-analysis/</link>
-      <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
+      <pubDate>Fri, 03 May 2024 00:00:00 +0100</pubDate>
       <guid>https://shihyuntang.github.io/tutorials/astro-stat/8-timeseries-analysis/</guid>
-      <description>&lt;p&gt;Coming Soon&amp;hellip;&lt;/p&gt;
+      <description>&lt;h2 id=&#34;evenly-spaced-time-series-data&#34;&gt;Evenly Spaced Time Series Data&lt;/h2&gt;
+&lt;h3 id=&#34;autocorrelation-function-acf&#34;&gt;Autocorrelation Function (ACF)&lt;/h3&gt;
+&lt;p&gt;The Autocorrelation Function (ACF) measures the correlation between a time series and a lagged version of itself over various time intervals. It&amp;rsquo;s akin to performing a Pearson correlation test between the original time series data and the same data shifted by a lag time $k$. Notably, ACF(k=0) always equals 1, reflecting perfect self-correlation at zero lag.&lt;/p&gt;
+&lt;h3 id=&#34;partial-autocorrelation-function-pacf&#34;&gt;Partial Autocorrelation Function (PACF)&lt;/h3&gt;
+&lt;p&gt;The Partial Autocorrelation Function (PACF) quantifies the correlation between observations in a time series separated by $k$ time units, specifically adjusting for the correlations at shorter lags. This adjustment helps isolate the direct influence of past data points on the current observation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;At lag 1, PACF equals ACF as there are no previous terms to adjust for.&lt;/li&gt;
+&lt;li&gt;At lag 2, PACF assesses the correlation between points two units apart (e.g., $X_i$ - $X_{i+2}$), adjusting for the influence of the intervening lag (e.g., corelation between $X_i$ - $X_{i+1}$ and $X_{i+1}$ - $X_{i+2}$).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PACF is crucial for model building, especially in autoregressive models, as it helps identify the effective number of past observations (lags) that significantly influence future values.&lt;/p&gt;
+&lt;h3 id=&#34;autoregressive-ar-model&#34;&gt;Autoregressive (AR) Model&lt;/h3&gt;
+&lt;p&gt;In an AR model, each point in the series is modeled as a linear combination of its previous values:
+$$
+X_t = \alpha_1 X_{t-1} + \alpha_2 X_{t-2} + \cdots + \alpha_p X_{t-p} + \varepsilon_t
+$$
+where $\alpha_i$ are coefficients to be estimated and $\varepsilon_t$ is white noise.&lt;/p&gt;
+&lt;h3 id=&#34;moving-average-ma-model&#34;&gt;Moving Average (MA) Model&lt;/h3&gt;
+&lt;p&gt;An MA model expresses each point in the series as a linear combination of past noise terms:
+$$
+X_t = \varepsilon_t + \beta_1 \varepsilon_{t-1} + \beta_2 \varepsilon_{t-2} + \cdots + \beta_q \varepsilon_{t-q}
+$$
+where $\varepsilon_t = N(0, \sigma^2)$ and $\beta_i$ are coefficients to be estimated.&lt;/p&gt;
+&lt;h3 id=&#34;autoregressive-moving-average-arma-model&#34;&gt;Autoregressive Moving Average (ARMA) Model&lt;/h3&gt;
+&lt;p&gt;The ARMA $(p,q)$ model effectively combines autoregressive (AR) and moving average (MA) components:
+$$
+X_t = \alpha_1 X_{t-1} + \cdots + \alpha_p X_{t-p} + \varepsilon_t + \beta_1 \varepsilon_{t-1} + \cdots + \beta_q \varepsilon_{t-q}
+$$
+In this model, the parameters $p$ and $q$ denote the orders of the AR and MA components, respectively. These parameters are crucial as they determine the &amp;ldquo;memory&amp;rdquo; length of the model, indicating how far back in time the data&amp;rsquo;s dependencies and shocks influence the current observation.&lt;/p&gt;
+&lt;h3 id=&#34;autoregressive-integrated-moving-average-arima-model&#34;&gt;Autoregressive Integrated Moving Average (ARIMA) Model&lt;/h3&gt;
+&lt;p&gt;Building on the ARMA model, the ARIMA $(p,d,q)$ model incorporates an additional differencing component to render non-stationary time series data stationary. This adjustment is necessary for dealing with underlying trends or seasonality:&lt;/p&gt;
+&lt;!-- $$
+\text{Differenced Series: } Y_t = (1 - B)^d X_t
+$$
+$$
+Y_t = \alpha_1 Y_{t-1} + \cdots + \alpha_p Y_{t-p} + \varepsilon_t + \beta_1 \varepsilon_{t-1} + \cdots + \beta_q \varepsilon_{t-q}
+$$ --&gt;
+&lt;p&gt;In ARIMA, $d$ represents the degree of differencing required to flatten trends in the data, addressing long-term drift and ensuring stationarity. The parameters $p$ and $q$ continue to represent the AR and MA orders, respectively. ARIMA models are extensively used not only in modeling but also in forecasting scenarios, such as predicting financial market trends or stock prices.&lt;/p&gt;
+&lt;h3 id=&#34;fourier-power-spectrum&#34;&gt;Fourier Power Spectrum&lt;/h3&gt;
+&lt;p&gt;Fourier analysis converts time series data into the frequency domain, providing insights into periodicity and cyclic patterns within the series.&lt;/p&gt;
+&lt;h2 id=&#34;unevenly-spaced-time-series-data&#34;&gt;Unevenly Spaced Time Series Data&lt;/h2&gt;
+&lt;h3 id=&#34;lomb-scargle-periodogram-lsp&#34;&gt;Lomb-Scargle Periodogram (LSP)&lt;/h3&gt;
+&lt;p&gt;The LSP method extends Fourier analysis to unevenly spaced time series data, facilitating the detection of periodic signals. It also has another form that use leat-squares regression of the dataset to sine and cosine waves in a range of frequencies. A common form is:
+$$
+P_{LS}(\nu) = \frac{1}{2\sigma^2} \left[ \frac{\left(\sum_{i=1}^n X_i \cos(2\pi \nu t_i)\right)^2}{\sum_{i=1}^n \cos^2(2\pi \nu (t_i - \tau(\nu)))} + \frac{\left(\sum_{i=1}^n X_i \sin(2\pi \nu t_i)\right)^2}{\sum_{i=1}^n \sin^2(2\pi \nu (t_i - \tau(\nu)))} \right]
+$$
+where $\tau$ is defined as
+$$
+\tan(4\pi \nu \tau) = \frac{\sum_{i=1}^n \sin(4\pi \nu t_i)}{\sum_{i=1}^n \cos(4\pi \nu t_i)}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;other-analysis-techniques&#34;&gt;Other Analysis Techniques&lt;/h2&gt;
+&lt;h3 id=&#34;wavelet-analysis&#34;&gt;Wavelet Analysis&lt;/h3&gt;
+&lt;p&gt;Fourier Transform (FT) is a powerful tool for analyzing frequency components within a time series. However, a key limitation of a single FT is its lack of temporal resolution: it provides frequency information ($\nu$) but no insight into when these frequencies occur, especially if the data is non-stationary—meaning the frequency content changes over time.&lt;/p&gt;
+&lt;h4 id=&#34;problem-with-standard-fourier-transform&#34;&gt;Problem with Standard Fourier Transform&lt;/h4&gt;
+&lt;p&gt;For instance, if a time series exhibits seasonal variations, the frequency of these variations might change over different time intervals. A simple FT would average these changes across the entire dataset, potentially obscuring meaningful patterns.&lt;/p&gt;
+&lt;h4 id=&#34;solution-via-wavelet-analysis&#34;&gt;Solution via Wavelet Analysis&lt;/h4&gt;
+&lt;p&gt;Wavelet analysis addresses this limitation by allowing the examination of different frequencies at different times. This is achieved by dividing the time series into segments and analyzing each segment separately—a process that optimizes the extraction of temporal information at various frequencies.&lt;/p&gt;
+&lt;h4 id=&#34;visualizing-wavelet-transforms&#34;&gt;Visualizing Wavelet Transforms&lt;/h4&gt;
+&lt;p&gt;A wavelet plot typically displays frequency space ($\nu$) versus time ($t$). It offers a detailed view where, at shorter periods on the y-axis, there is higher time resolution, and conversely, longer periods offer broader frequency insights but lower time specificity. The parabolic shapes in the plot, often shaded, mark the boundary edge effects, indicating where data becomes less reliable due to edge artifacts.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.researchgate.net/profile/Victor-Manuel-Velasco-Herrera/publication/261322980/figure/fig2/AS:296841208975361@1447783867682/Wavelet-transform-analysis-of-the-newly-proposed-solar-activity-proxy-nitrate.png&#34; alt=&#34;Wavelet Transform Analysis Example&#34;&gt;
+(Credit: &lt;a href=&#34;https://www.researchgate.net/figure/Wavelet-transform-analysis-of-the-newly-proposed-solar-activity-proxy-nitrate_fig2_261322980&#34;&gt;ResearchGate&lt;/a&gt;)&lt;/p&gt;
+&lt;h4 id=&#34;wavelets-versus-fourier-transforms&#34;&gt;Wavelets Versus Fourier Transforms&lt;/h4&gt;
+&lt;p&gt;Instead of using Fourier transforms, wavelet analysis involves convoluting the time-sliced data with a wavelet function. This method is more effective because it adjusts to the localized variations in the time series through the use of variable-sized &amp;lsquo;windows&amp;rsquo;—smaller windows for higher frequencies and larger ones for lower frequencies.&lt;/p&gt;
+&lt;h4 id=&#34;common-wavelets&#34;&gt;Common Wavelets&lt;/h4&gt;
+&lt;p&gt;Commonly used wavelet functions include the Morlet and Daubechies wavelets, each with specific characteristics that make them suitable for different types of data analysis tasks.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.researchgate.net/profile/Steven-Vandeput/publication/267403305/figure/fig15/AS:654064610197505@1532952563244/Illustration-of-several-types-of-mother-wavelet-functions-Morlet-wavelet-top-left.png&#34; alt=&#34;Types of Mother Wavelet Functions&#34;&gt;
+(Credit: &lt;a href=&#34;https://www.researchgate.net/figure/Illustration-of-several-types-of-mother-wavelet-functions-Morlet-wavelet-top-left_fig15_267403305&#34;&gt;ResearchGate&lt;/a&gt;)&lt;/p&gt;
+&lt;h4 id=&#34;mathematical-expression&#34;&gt;Mathematical Expression&lt;/h4&gt;
+&lt;p&gt;The mathematical expression for a wavelet transform is given by:
+$$
+W[f(\lambda,t)] = \int_{-\infty}^{\infty} f(\nu) \frac{1}{\sqrt{\lambda}} \overline{\phi}\left(\frac{u-t}{\lambda}\right) du
+$$
+where $\lambda$ is the scaling factor that stretches or compresses the wavelet, adapting it to the signal&amp;rsquo;s local characteristics.&lt;/p&gt;
+&lt;p&gt;Wavelet analysis thus provides a more flexible and nuanced approach to understanding time series data, especially when the signal contains non-stationary or frequency-varying components.&lt;/p&gt;
+&lt;h3 id=&#34;nyquist-frequency&#34;&gt;Nyquist Frequency&lt;/h3&gt;
+&lt;p&gt;The Nyquist frequency $\nu_N = 1/(2 \Delta t)$ is the maximum frequency that can be effectively captured by the data, where $\Delta t$ is the sampling interval. It represents the boundary beyond which the sampling rate is insufficient to capture detailed variations in the data.&lt;/p&gt;
 </description>
     </item>
     
