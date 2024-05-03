@@ -28,12 +28,11 @@
   
     
   
-  <meta name="description" content="Probability Distributions Probability distributions describe how the probabilities of a random variable are distributed. Here are the two main types of probability functions associated with these distributions:
-Probability Density Function (PDF, continuous):
-Description: The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables. Key Characteristic: The area under the PDF curve between two points represents the probability of the variable falling within that range.">
+  <meta name="description" content="Introduction to Kriging Kriging is a geostatistical interpolation technique that uses spatial correlation models, such as variograms, to predict values at unsampled locations based on the values at sampled locations. There are several types of Kriging, each with specific assumptions and applications:
+Simple Kriging: Assumes the mean of the random field is known and constant throughout the region of interest. Ordinary Kriging: Assumes the mean is unknown but constant within the region of interest and is the most commonly used form as one do not know the mean in real world.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/">
+  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/9-2-kriging/">
 
   
 
@@ -102,7 +101,7 @@ Description: The PDF is used to specify the probability of a random variable fal
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/">
+  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/9-2-kriging/">
 
   
   
@@ -115,17 +114,16 @@ Description: The PDF is used to specify the probability of a random variable fal
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Shih-Yun Tang">
-  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/">
-  <meta property="og:title" content="Distributions | Shih-Yun Tang">
-  <meta property="og:description" content="Probability Distributions Probability distributions describe how the probabilities of a random variable are distributed. Here are the two main types of probability functions associated with these distributions:
-Probability Density Function (PDF, continuous):
-Description: The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables. Key Characteristic: The area under the PDF curve between two points represents the probability of the variable falling within that range."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/9-2-kriging/">
+  <meta property="og:title" content="Kriging | Shih-Yun Tang">
+  <meta property="og:description" content="Introduction to Kriging Kriging is a geostatistical interpolation technique that uses spatial correlation models, such as variograms, to predict values at unsampled locations based on the values at sampled locations. There are several types of Kriging, each with specific assumptions and applications:
+Simple Kriging: Assumes the mean of the random field is known and constant throughout the region of interest. Ordinary Kriging: Assumes the mean is unknown but constant within the region of interest and is the most commonly used form as one do not know the mean in real world."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://shihyuntang.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2024-04-29T00:00:00&#43;01:00">
+      <meta property="article:published_time" content="2024-05-01T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2024-05-02T10:59:49-05:00">
+    <meta property="article:modified_time" content="2024-05-02T20:53:04-05:00">
   
 
   
@@ -144,7 +142,7 @@ Description: The PDF is used to specify the probability of a random variable fal
 
 
 
-  <title>Distributions | Shih-Yun Tang</title>
+  <title>Kriging | Shih-Yun Tang</title>
 
 </head>
 
@@ -447,7 +445,7 @@ Description: The PDF is used to specify the probability of a random variable fal
         <a href="/tutorials/astro-stat/1-1-some-basic/">Probability Basic</a>
       </li>
       
-      <li class="active">
+      <li >
         <a href="/tutorials/astro-stat/1-2-probability/">Distributions</a>
       </li>
       
@@ -563,7 +561,7 @@ Description: The PDF is used to specify the probability of a random variable fal
         <a href="/tutorials/astro-stat/9-1-variogram/">Variogram</a>
       </li>
       
-      <li >
+      <li class="active">
         <a href="/tutorials/astro-stat/9-2-kriging/">Kriging</a>
       </li>
       
@@ -585,15 +583,10 @@ Description: The PDF is used to specify the probability of a random variable fal
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#probability-distributions">Probability Distributions</a></li>
-    <li><a href="#chebyshevs-theorem">Chebyshev&rsquo;s Theorem</a></li>
-    <li><a href="#discrete-distributions">Discrete Distributions</a>
-      <ul>
-        <li><a href="#binomial-distribution">Binomial Distribution</a></li>
-        <li><a href="#geometric-distribution">Geometric Distribution</a></li>
-        <li><a href="#poisson-distribution">Poisson Distribution</a></li>
-      </ul>
-    </li>
+    <li><a href="#introduction-to-kriging">Introduction to Kriging</a></li>
+    <li><a href="#more-on-variogram">More on Variogram</a></li>
+    <li><a href="#example-of-spatial-data-and-the-kriging-result">Example of Spatial Data and the Kriging Result</a></li>
+    <li><a href="#example-r-code-for-the-kriging">Example R Code for the Kriging</a></li>
   </ul>
 </nav>
 
@@ -606,123 +599,71 @@ Description: The PDF is used to specify the probability of a random variable fal
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Distributions</h1>
+          <h1>Kriging</h1>
 
           <div class="article-style">
-            <h2 id="probability-distributions">Probability Distributions</h2>
-<p>Probability distributions describe how the probabilities of a <strong>random variable</strong> are distributed. Here are the two main types of probability functions associated with these distributions:</p>
-<ol>
-<li>
-<p><strong>Probability Density Function (PDF, continuous):</strong></p>
+            <h2 id="introduction-to-kriging">Introduction to Kriging</h2>
+<p>Kriging is a geostatistical interpolation technique that uses spatial correlation models, such as variograms, to predict values at unsampled locations based on the values at sampled locations. There are several types of Kriging, each with specific assumptions and applications:</p>
 <ul>
-<li><strong>Description:</strong> The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables.</li>
-<li><strong>Key Characteristic:</strong> The area under the PDF curve between two points represents the probability of the variable falling within that range.</li>
-<li><strong>Example:</strong> The normal distribution.</li>
+<li><strong>Simple Kriging:</strong> Assumes the mean of the random field is known and constant throughout the region of interest.</li>
+<li><strong>Ordinary Kriging:</strong> Assumes the <em>mean is unknown</em> but constant within the region of interest and is the most commonly used form as one do not know the mean in real world.</li>
 </ul>
-</li>
-<li>
-<p><strong>Probability Mass Function (PMF, discrete):</strong></p>
+<h2 id="more-on-variogram">More on Variogram</h2>
+<p>The semivariance $\gamma(x_1, x_2)$ between two points can be expressed as:
+$$
+\gamma(d) = \frac{1}{2n} \sum_{i=1}^n [z(x_i + d) - z(x_i)]^2
+$$
+where $n$ is the number of pairs, $d$ is the distance between two points, and $z$ represents the values at the locations. The calculation of $\gamma(d)$ involves several key assumptions:</p>
 <ul>
-<li><strong>Description:</strong> The PMF is used for discrete random variables and specifies the probability that a random variable is exactly equal to some value.</li>
-<li><strong>Key Characteristic:</strong> The sum of all the probabilities represented by the PMF must equal 1, as it accounts for every possible discrete value the variable can take.</li>
-<li><strong>Example:</strong> The binomial distribution, and the Poisson distribution.</li>
+<li><strong>Stationary (homogeneous):</strong> Assumes that the statistical properties (mean, variance) of the process do not change over space. This implies that the mean and variance are constant throughout the region of interest, and the covariance between any two points depends only on the distance and direction between them, not on their absolute locations.</li>
+<li><strong>Isotropy:</strong> Assumes that the statistical properties are the same in all directions. This means that the variogram is a function only of the distance between sample points, not of the direction.</li>
 </ul>
-</li>
-</ol>
-<p><strong>Cumulative Distribution Function (CDF):</strong></p>
-<ul>
-<li><strong>Description:</strong> The CDF is used to determine the probability that a random variable (X) is $\lesssim$ to a certain value. CDF can be applied to both discrete and continuous random variables.</li>
-<li><strong>Key Characteristic:</strong> The CDF is a non-decreasing function that ranges from 0 to 1. For continuous variables, it is obtained by integrating the PDF over the range of possible values. For discrete variables, it is the cumulative sum of the PMF.</li>
-<li><strong>Example:</strong> For normal distribution, the CDF is used to calculate the probability that the variable is less than a specific threshold, which is central to hypothesis testing and confidence interval estimation.</li>
-</ul>
-<hr>
-<h2 id="chebyshevs-theorem">Chebyshev&rsquo;s Theorem</h2>
-<p>Chebyshev&rsquo;s Theorem, also known as Chebyshev&rsquo;s Inequality, is a fundamental result in probability theory that provides a way <strong>to estimate the probability that a random variable differs from its mean</strong>. This theorem is not restricted to normally distributed data, making it very versatile.</p>
-<p><strong>Theorem Statement:</strong>
-$$
-P(|X-\mu| &lt; k\sigma) \geq 1 - \frac{1}{k^2}
-$$
-where:</p>
-<ul>
-<li>($\mu$) is the mean of the random variable ( X ),</li>
-<li>($\sigma$) is the standard deviation of ( X ),</li>
-<li>($k$) is a positive number greater than 1.</li>
-</ul>
-<p><strong>Key Points:</strong></p>
-<ul>
-<li><strong>Generality:</strong> Chebyshev&rsquo;s theorem applies to any probability distribution where the mean and variance are defined.</li>
-<li><strong>Implication:</strong> The inequality tells us that no matter the shape of the distribution, the proportion of values that fall within ($k$) standard deviations of the mean is at least $( 1 - \frac{1}{k^2})$. For example, at least (75%) of the values lie within 2 standard deviations of the mean (since ($k=2$) gives $( 1-\frac{1}{4} = 0.75)$).</li>
-<li><strong>Limitations:</strong> While the theorem provides a lower bound, it does not give exact probabilities, and the bounds can be quite loose, especially for distributions that tightly clustered around the mean.</li>
-</ul>
-<p>Chebyshev&rsquo;s Theorem is particularly useful for analysts and statisticians dealing with samples from unknown distributions, as it provides a safe, conservative estimate of the spread of data around the mean.</p>
-<hr>
-<h2 id="discrete-distributions">Discrete Distributions</h2>
-<h3 id="binomial-distribution">Binomial Distribution</h3>
-<p>The Binomial distribution is a discrete probability distribution that models the number of successes in a fixed number of independent trials, with each trial having two possible outcomes, typically labeled as &ldquo;success&rdquo; and &ldquo;failure&rdquo;.</p>
-<p><strong>Key Points:</strong></p>
-<ul>
-<li>There are only two possible outcomes for each trial: success (1) and failure (0).</li>
-<li>The trials are independent, meaning the outcome of one trial does not affect the outcomes of other trials.</li>
-</ul>
-<p>The probability mass function (PMF) for the Binomial distribution is expressed as:
-$$
-P(X=x) = C^{n}_{x} \theta^x (1-\theta)^{n-x}
-$$
-where $\theta$ is the probability of success on a single trial, $x$ is the number of successes, and $n$ is the total number of trials.</p>
-<p><strong>Example:</strong>
-Consider flipping a fair coin five times. What is the probability of getting exactly two heads?</p>
-<p>The calculation is as follows:
-$$
-P(X=2) = C^{5}_{2} 0.5^2 (1-0.5)^3 = \frac{5!}{2!3!} \times 0.25 \times 0.125 = 31.25%
-$$</p>
-<h3 id="geometric-distribution">Geometric Distribution</h3>
-<p>The Geometric distribution describes the probability of observing the first success on the $x$-th trial in a sequence of Bernoulli trials.</p>
-<p><strong>PMF:</strong>
-$$
-g(x; \theta) = \theta(1-\theta)^{x-1}
-$$
-where, $\theta$ is the probability of success on each trial, and $x$ is the trial number of the first success.</p>
-<p><strong>Key Properties:</strong></p>
-<ul>
-<li><strong>Mean ($\mu$):</strong> The expected number of trials to get the first success is given by:
-$$
-\mu = \frac{1}{\theta}
-$$</li>
-<li><strong>Variance ($\sigma^2$):</strong> The variance of the number of trials to get the first success is:
-$$
-\sigma^2 = \frac{1-\theta}{\theta^2}
-$$</li>
-</ul>
-<p><strong>Interpretation:</strong></p>
-<ul>
-<li>The mean and variance provide insights into the &ldquo;spread&rdquo; or variability of trials needed to achieve the first success, with higher values of $\theta$ leading to fewer expected trials.</li>
-</ul>
-<p>This distribution is commonly used in <em>quality control</em>, <em>reliability testing</em>, and other areas where the &ldquo;time&rdquo; or number of trials until the first success is of interest.</p>
-<h3 id="poisson-distribution">Poisson Distribution</h3>
-<p>The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring within a fixed interval of time or space. It assumes these events occur with a known constant mean rate and independently of the time since the last event.</p>
-<p>A practical example is photometry using a Charge-Coupled Device (CCD), where light—specifically, the number of photons—hits the CCD at a constant rate. Importantly, the arrival of photons is assumed to be independent of previous arrivals, provided the CCD is not saturated.</p>
-<blockquote>
-<p><strong>Note:</strong> Independence of events holds only if the CCD is not saturated.</p>
-</blockquote>
-<p><strong>Assumptions:</strong></p>
-<ol>
-<li>The rate of event occurrence, $\lambda$, is constant over time. For example, the number of events occurring between $t$ and $t + \Delta t$ is $\lambda \Delta t$.</li>
-<li>The probability of an event in the interval ${t, t+\Delta t}$ is independent of previous events.</li>
-</ol>
-<p>The probability mass function (PMF) of the Poisson distribution is defined as:
-$$
-P(x; \lambda) = \frac{\lambda^x e^{-\lambda}}{x!}
-$$
-where $\lambda$ is the expected number of events in a given interval, and $x$ is the observed number of events.</p>
-<p>For the Poisson distribution, the expected value (mean) is $\mu = \lambda$, and the variance is $\sigma^2 = \lambda$.</p>
-<h4 id="poisson-noise-shot-noise">Poisson Noise (Shot Noise)</h4>
-<p>Since $\sigma^2 = \lambda$, the standard deviation (Poisson noise) is $\sigma = \sqrt{\lambda}$. In photometry, where $N$ represents the number of photons hitting the CCD, this implies $\sigma = \sqrt{N}$.</p>
-<p>Due to the characteristics of the Poisson distribution, the signal-to-noise ratio (SNR) is calculated as follows:
-$$
-SNR = \frac{\mu}{\sigma} = \frac{\mu}{\sqrt{\mu}} = \sqrt{\mu}
-$$
-This relationship highlights the inherent noise properties in photon-counting measurements like those in CCD photometry.</p>
-<hr>
+<p>In Kriging, we use $\gamma$ to weight the data for interpolation:</p>
+<p>$$\begin{align}
+\gamma(d) &amp;= \frac{1}{2n} \sum_{i=1}^n [z(x_i + d) - z(x_i)]^2 \\
+&amp;= \frac{1}{2} E\left(\left[z(x+d) - z(x)\right]^2\right)
+\text{(homogeneous assumption)} \\
+&amp;= \frac{1}{2} \left\{ E\left[ z^2(x+d) \right] + E\left[ z^2(x) \right] - 2E\left[ z(x+d) z(x) \right]\right\} \\
+&amp;= \frac{1}{2} \left\{ 2E\left[ z^2(x) \right] - 2E\left[ z(x+d) z(x) \right]\right\}
+\text{(homogeneous assumption)} \\
+&amp;= \sigma_x^2 + \mu_x^2 - \text{cov}[z(x), z(x+d)] - \mu_x^2
+\end{align}$$</p>
+<p>where the relationships: $E[x^2] = \sigma_x^2 + [E(x)]^2$ and $\text{cov}[X,Y] = E(XY) - E(X)E(Y)$ were used to get the second to last equation. We have:
+$$\begin{align}
+\gamma(d) &amp;= \sigma^2 - \text{cov}[z(x), z(x+d)] \\
+&amp;= \sigma^2 - \text{c}(d)
+\end{align}$$</p>
+<p>Therefore, we have the semivariance at distance $d$ is the variance minus the covariance between points at this distance.</p>
+<h2 id="example-of-spatial-data-and-the-kriging-result">Example of Spatial Data and the Kriging Result</h2>
+<p>The plots below show an example of spatial data (left) and its associated Kriging map (right). The data used here is the same as in the Variogram page, and the Kriging map uses the variogram model shown on the Variogram page to predict values at unsampled locations. This example demonstrates how Kriging utilizes the spatial structure of the data, as defined by the variogram, to provide a statistically optimal interpolation.</p>
+<p><img src="/ast-stat/kriging.png" alt="kriging">
+<em>Figure data credit: Charles M Pacheco</em></p>
+<h2 id="example-r-code-for-the-kriging">Example R Code for the Kriging</h2>
+<pre><code class="language-R"># Fit a variogram model
+vgm_model &lt;- vgm(psill = max(variogram_tox$gamma), 
+       model = &quot;Sph&quot;, range = 30)
+       
+x.range &lt;- range(df_2$x)
+y.range &lt;- range(df_2$y)
+
+grid.points &lt;- expand.grid(
+       x = seq(from = x.range[1], to = x.range[2], by = 1),
+       y = seq(from = y.range[1], to = y.range[2], by = 1))
+
+# Convert to SpatialPoints
+grid &lt;- SpatialPoints(grid.points)
+
+# Perform ordinary kriging
+kriged &lt;- krige(toxicity ~ 1, df_2, model = vgm_model, newdata = grid)
+
+options(repr.plot.width=5, repr.plot.height=5, repr.plot.res=200)
+# Create a map with overlay contours
+spplot(kriged, &quot;var1.pred&quot;, main = &quot;Kriging Map for Toxicity&quot;, 
+       xlab = &quot;X&quot;, ylab = &quot;Y&quot;,
+       sp.layout = list(&quot;sp.points&quot;, df_2, col = &quot;green&quot;),
+       colorkey = TRUE,
+       scales = list(draw = TRUE))
+</code></pre>
 
           </div>
 
@@ -739,15 +680,9 @@ This relationship highlights the inherent noise properties in photon-counting me
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/tutorials/astro-stat/1-1-some-basic/" rel="next">Probability Basic</a>
+    <a href="/tutorials/astro-stat/9-1-variogram/" rel="next">Variogram</a>
   </div>
   
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/tutorials/astro-stat/1-3-bayesian/" rel="prev">Bayes&#39; theorem</a>
-  </div>
   
 </div>
 
@@ -768,7 +703,7 @@ This relationship highlights the inherent noise properties in photon-counting me
   
 
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/1-2%20Probability.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/9-2%20kriging.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>

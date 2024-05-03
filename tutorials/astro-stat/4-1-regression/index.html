@@ -28,12 +28,11 @@
   
     
   
-  <meta name="description" content="Probability Distributions Probability distributions describe how the probabilities of a random variable are distributed. Here are the two main types of probability functions associated with these distributions:
-Probability Density Function (PDF, continuous):
-Description: The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables. Key Characteristic: The area under the PDF curve between two points represents the probability of the variable falling within that range.">
+  <meta name="description" content="Regression analysis is fundamental in statistical modeling, used for predicting and forecasting, and understanding relationships between variables. Below are various regression methods:
+Least-Square Linear Regression (without Uncertainty) Ordinary Least Squares (OLS): This method minimizes the residual sum of squares (RSS) between the observed values in the dataset and the values predicted by the linear model. $$ \text{min RSS} = \text{min} \sum_{i=1}^n (Y_i - \beta_0 - \beta_1 X_i)^2 $$ where $X_i$ and $Y_i$ are the observed values, and $\beta_0$ and $\beta_1$ are the intercept and slope of the linear model, respectively.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/">
+  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/4-1-regression/">
 
   
 
@@ -102,7 +101,7 @@ Description: The PDF is used to specify the probability of a random variable fal
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/">
+  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/4-1-regression/">
 
   
   
@@ -115,17 +114,16 @@ Description: The PDF is used to specify the probability of a random variable fal
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Shih-Yun Tang">
-  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/">
-  <meta property="og:title" content="Distributions | Shih-Yun Tang">
-  <meta property="og:description" content="Probability Distributions Probability distributions describe how the probabilities of a random variable are distributed. Here are the two main types of probability functions associated with these distributions:
-Probability Density Function (PDF, continuous):
-Description: The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables. Key Characteristic: The area under the PDF curve between two points represents the probability of the variable falling within that range."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/4-1-regression/">
+  <meta property="og:title" content="Regression | Shih-Yun Tang">
+  <meta property="og:description" content="Regression analysis is fundamental in statistical modeling, used for predicting and forecasting, and understanding relationships between variables. Below are various regression methods:
+Least-Square Linear Regression (without Uncertainty) Ordinary Least Squares (OLS): This method minimizes the residual sum of squares (RSS) between the observed values in the dataset and the values predicted by the linear model. $$ \text{min RSS} = \text{min} \sum_{i=1}^n (Y_i - \beta_0 - \beta_1 X_i)^2 $$ where $X_i$ and $Y_i$ are the observed values, and $\beta_0$ and $\beta_1$ are the intercept and slope of the linear model, respectively."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://shihyuntang.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2024-04-29T00:00:00&#43;01:00">
+      <meta property="article:published_time" content="2024-05-02T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2024-05-02T10:59:49-05:00">
+    <meta property="article:modified_time" content="2024-05-02T20:53:04-05:00">
   
 
   
@@ -144,7 +142,7 @@ Description: The PDF is used to specify the probability of a random variable fal
 
 
 
-  <title>Distributions | Shih-Yun Tang</title>
+  <title>Regression | Shih-Yun Tang</title>
 
 </head>
 
@@ -447,7 +445,7 @@ Description: The PDF is used to specify the probability of a random variable fal
         <a href="/tutorials/astro-stat/1-1-some-basic/">Probability Basic</a>
       </li>
       
-      <li class="active">
+      <li >
         <a href="/tutorials/astro-stat/1-2-probability/">Distributions</a>
       </li>
       
@@ -494,7 +492,7 @@ Description: The PDF is used to specify the probability of a random variable fal
     <a class="docs-toc-link" href="/tutorials/astro-stat/4-1-regression/">4 Regression</a>
     <ul class="nav docs-sidenav">
       
-      <li >
+      <li class="active">
         <a href="/tutorials/astro-stat/4-1-regression/">Regression</a>
       </li>
       
@@ -585,13 +583,12 @@ Description: The PDF is used to specify the probability of a random variable fal
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#probability-distributions">Probability Distributions</a></li>
-    <li><a href="#chebyshevs-theorem">Chebyshev&rsquo;s Theorem</a></li>
-    <li><a href="#discrete-distributions">Discrete Distributions</a>
+    <li>
       <ul>
-        <li><a href="#binomial-distribution">Binomial Distribution</a></li>
-        <li><a href="#geometric-distribution">Geometric Distribution</a></li>
-        <li><a href="#poisson-distribution">Poisson Distribution</a></li>
+        <li><a href="#least-square-linear-regression-without-uncertainty">Least-Square Linear Regression (without Uncertainty)</a></li>
+        <li><a href="#weighted-least-squares-with-uncertainty">Weighted Least Squares (with Uncertainty)</a></li>
+        <li><a href="#logistic-regression">Logistic Regression</a></li>
+        <li><a href="#model-validation-and-selection">Model Validation and Selection</a></li>
       </ul>
     </li>
   </ul>
@@ -606,123 +603,105 @@ Description: The PDF is used to specify the probability of a random variable fal
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Distributions</h1>
+          <h1>Regression</h1>
 
           <div class="article-style">
-            <h2 id="probability-distributions">Probability Distributions</h2>
-<p>Probability distributions describe how the probabilities of a <strong>random variable</strong> are distributed. Here are the two main types of probability functions associated with these distributions:</p>
-<ol>
-<li>
-<p><strong>Probability Density Function (PDF, continuous):</strong></p>
+            <p>Regression analysis is fundamental in statistical modeling, used for predicting and forecasting, and understanding relationships between variables. Below are various regression methods:</p>
+<h3 id="least-square-linear-regression-without-uncertainty">Least-Square Linear Regression (without Uncertainty)</h3>
 <ul>
-<li><strong>Description:</strong> The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables.</li>
-<li><strong>Key Characteristic:</strong> The area under the PDF curve between two points represents the probability of the variable falling within that range.</li>
-<li><strong>Example:</strong> The normal distribution.</li>
-</ul>
+<li>
+<p><strong>Ordinary Least Squares (OLS)</strong>: This method minimizes the residual sum of squares (RSS) between the observed values in the dataset and the values predicted by the linear model.
+$$
+\text{min RSS} = \text{min} \sum_{i=1}^n (Y_i - \beta_0 - \beta_1 X_i)^2
+$$
+where $X_i$ and $Y_i$ are the observed values, and $\beta_0$ and $\beta_1$ are the intercept and slope of the linear model, respectively.</p>
 </li>
 <li>
-<p><strong>Probability Mass Function (PMF, discrete):</strong></p>
-<ul>
-<li><strong>Description:</strong> The PMF is used for discrete random variables and specifies the probability that a random variable is exactly equal to some value.</li>
-<li><strong>Key Characteristic:</strong> The sum of all the probabilities represented by the PMF must equal 1, as it accounts for every possible discrete value the variable can take.</li>
-<li><strong>Example:</strong> The binomial distribution, and the Poisson distribution.</li>
-</ul>
+<p><strong>Symmetric Least Squares-Orthogonal Regression</strong>: This method minimizes the summed squares of the residuals orthogonal to the regression line, providing a more general approach than OLS when errors in both variables need to be considered.</p>
 </li>
-</ol>
-<p><strong>Cumulative Distribution Function (CDF):</strong></p>
-<ul>
-<li><strong>Description:</strong> The CDF is used to determine the probability that a random variable (X) is $\lesssim$ to a certain value. CDF can be applied to both discrete and continuous random variables.</li>
-<li><strong>Key Characteristic:</strong> The CDF is a non-decreasing function that ranges from 0 to 1. For continuous variables, it is obtained by integrating the PDF over the range of possible values. For discrete variables, it is the cumulative sum of the PMF.</li>
-<li><strong>Example:</strong> For normal distribution, the CDF is used to calculate the probability that the variable is less than a specific threshold, which is central to hypothesis testing and confidence interval estimation.</li>
+<li>
+<p><strong>Robust Regression - Thiel-Sen Estimator</strong>: This technique uses the median of the slopes between pairs of points as the estimator, providing robustness against outliers.</p>
+</li>
+<li>
+<p><strong>Quantile Regression</strong>: Focuses on estimating either the conditional median or other quantiles of the response variable, providing a more comprehensive view of the possible outcome distribution than mean regression.</p>
+</li>
+<li>
+<p><strong>Maximum Likelihood Estimation</strong>: Assumes a probability distribution model for the data, often a normal distribution, and finds the parameter values that maximize the likelihood of observing the data.</p>
+</li>
 </ul>
-<hr>
-<h2 id="chebyshevs-theorem">Chebyshev&rsquo;s Theorem</h2>
-<p>Chebyshev&rsquo;s Theorem, also known as Chebyshev&rsquo;s Inequality, is a fundamental result in probability theory that provides a way <strong>to estimate the probability that a random variable differs from its mean</strong>. This theorem is not restricted to normally distributed data, making it very versatile.</p>
-<p><strong>Theorem Statement:</strong>
+<h3 id="weighted-least-squares-with-uncertainty">Weighted Least Squares (with Uncertainty)</h3>
+<p>In scenarios with heteroscedastic errors (errors that varies), weighted least squares (WLS) is more appropriate:</p>
+<p>$$
+S_{r,wt} = \sum_{i=1}^n \frac{(Y_i - \beta_0 - \beta_1 X_i)^2}{\sigma_{Y,i}^2}
 $$
-P(|X-\mu| &lt; k\sigma) \geq 1 - \frac{1}{k^2}
-$$
-where:</p>
-<ul>
-<li>($\mu$) is the mean of the random variable ( X ),</li>
-<li>($\sigma$) is the standard deviation of ( X ),</li>
-<li>($k$) is a positive number greater than 1.</li>
-</ul>
-<p><strong>Key Points:</strong></p>
-<ul>
-<li><strong>Generality:</strong> Chebyshev&rsquo;s theorem applies to any probability distribution where the mean and variance are defined.</li>
-<li><strong>Implication:</strong> The inequality tells us that no matter the shape of the distribution, the proportion of values that fall within ($k$) standard deviations of the mean is at least $( 1 - \frac{1}{k^2})$. For example, at least (75%) of the values lie within 2 standard deviations of the mean (since ($k=2$) gives $( 1-\frac{1}{4} = 0.75)$).</li>
-<li><strong>Limitations:</strong> While the theorem provides a lower bound, it does not give exact probabilities, and the bounds can be quite loose, especially for distributions that tightly clustered around the mean.</li>
-</ul>
-<p>Chebyshev&rsquo;s Theorem is particularly useful for analysts and statisticians dealing with samples from unknown distributions, as it provides a safe, conservative estimate of the spread of data around the mean.</p>
-<hr>
-<h2 id="discrete-distributions">Discrete Distributions</h2>
-<h3 id="binomial-distribution">Binomial Distribution</h3>
-<p>The Binomial distribution is a discrete probability distribution that models the number of successes in a fixed number of independent trials, with each trial having two possible outcomes, typically labeled as &ldquo;success&rdquo; and &ldquo;failure&rdquo;.</p>
-<p><strong>Key Points:</strong></p>
-<ul>
-<li>There are only two possible outcomes for each trial: success (1) and failure (0).</li>
-<li>The trials are independent, meaning the outcome of one trial does not affect the outcomes of other trials.</li>
-</ul>
-<p>The probability mass function (PMF) for the Binomial distribution is expressed as:
-$$
-P(X=x) = C^{n}_{x} \theta^x (1-\theta)^{n-x}
-$$
-where $\theta$ is the probability of success on a single trial, $x$ is the number of successes, and $n$ is the total number of trials.</p>
-<p><strong>Example:</strong>
-Consider flipping a fair coin five times. What is the probability of getting exactly two heads?</p>
-<p>The calculation is as follows:
-$$
-P(X=2) = C^{5}_{2} 0.5^2 (1-0.5)^3 = \frac{5!}{2!3!} \times 0.25 \times 0.125 = 31.25%
+where $\sigma_{Y,i}^2$ is the variance associated with each observation, weighting the residuals accordingly. This is related to the $\chi^2$ statistic used in minimum $\chi^2$ regression:</p>
+<p>$$
+\chi^2_{me} = \sum_{i=1}^n (O_i - M_i)^2 / \sigma_{i,me}^2
 $$</p>
-<h3 id="geometric-distribution">Geometric Distribution</h3>
-<p>The Geometric distribution describes the probability of observing the first success on the $x$-th trial in a sequence of Bernoulli trials.</p>
-<p><strong>PMF:</strong>
-$$
-g(x; \theta) = \theta(1-\theta)^{x-1}
-$$
-where, $\theta$ is the probability of success on each trial, and $x$ is the trial number of the first success.</p>
-<p><strong>Key Properties:</strong></p>
-<ul>
-<li><strong>Mean ($\mu$):</strong> The expected number of trials to get the first success is given by:
-$$
-\mu = \frac{1}{\theta}
-$$</li>
-<li><strong>Variance ($\sigma^2$):</strong> The variance of the number of trials to get the first success is:
-$$
-\sigma^2 = \frac{1-\theta}{\theta^2}
-$$</li>
-</ul>
-<p><strong>Interpretation:</strong></p>
-<ul>
-<li>The mean and variance provide insights into the &ldquo;spread&rdquo; or variability of trials needed to achieve the first success, with higher values of $\theta$ leading to fewer expected trials.</li>
-</ul>
-<p>This distribution is commonly used in <em>quality control</em>, <em>reliability testing</em>, and other areas where the &ldquo;time&rdquo; or number of trials until the first success is of interest.</p>
-<h3 id="poisson-distribution">Poisson Distribution</h3>
-<p>The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring within a fixed interval of time or space. It assumes these events occur with a known constant mean rate and independently of the time since the last event.</p>
-<p>A practical example is photometry using a Charge-Coupled Device (CCD), where light—specifically, the number of photons—hits the CCD at a constant rate. Importantly, the arrival of photons is assumed to be independent of previous arrivals, provided the CCD is not saturated.</p>
-<blockquote>
-<p><strong>Note:</strong> Independence of events holds only if the CCD is not saturated.</p>
-</blockquote>
-<p><strong>Assumptions:</strong></p>
-<ol>
-<li>The rate of event occurrence, $\lambda$, is constant over time. For example, the number of events occurring between $t$ and $t + \Delta t$ is $\lambda \Delta t$.</li>
-<li>The probability of an event in the interval ${t, t+\Delta t}$ is independent of previous events.</li>
-</ol>
-<p>The probability mass function (PMF) of the Poisson distribution is defined as:
-$$
-P(x; \lambda) = \frac{\lambda^x e^{-\lambda}}{x!}
-$$
-where $\lambda$ is the expected number of events in a given interval, and $x$ is the observed number of events.</p>
-<p>For the Poisson distribution, the expected value (mean) is $\mu = \lambda$, and the variance is $\sigma^2 = \lambda$.</p>
-<h4 id="poisson-noise-shot-noise">Poisson Noise (Shot Noise)</h4>
-<p>Since $\sigma^2 = \lambda$, the standard deviation (Poisson noise) is $\sigma = \sqrt{\lambda}$. In photometry, where $N$ represents the number of photons hitting the CCD, this implies $\sigma = \sqrt{N}$.</p>
-<p>Due to the characteristics of the Poisson distribution, the signal-to-noise ratio (SNR) is calculated as follows:
-$$
-SNR = \frac{\mu}{\sigma} = \frac{\mu}{\sqrt{\mu}} = \sqrt{\mu}
-$$
-This relationship highlights the inherent noise properties in photon-counting measurements like those in CCD photometry.</p>
+<h3 id="logistic-regression">Logistic Regression</h3>
+<p>Logistic regression is used for modeling binary outcome variables by using the logistic function to estimate probabilities that can be transformed into binary values.</p>
 <hr>
+<h3 id="model-validation-and-selection">Model Validation and Selection</h3>
+<ul>
+<li>
+<p><strong>Coefficient of Determination (R²)</strong>: Measures the proportion of variability in a dataset that is explained by the regression model.
+$$
+R^2 = 1 - \frac{ \sum_{i=1}^n (Y_i - \hat{Y_i})^2 }{ \sum_{i=1}^n (Y_i - \bar{Y})^2 }
+$$
+where</p>
+<ul>
+<li>$\hat{Y_i}$ is the predicted value of the dependent variable for the $i$-th observation from the model</li>
+<li>$\bar{Y}$ is the mean of the observed data $Y_i$.</li>
+</ul>
+<p>An $R^2$ value of 1 implies a perfect fit, meaning that the model explains all the variability of the response data around its mean. Conversely, an $R^2$ value of 0 indicates at bad fit.</p>
+</li>
+<li>
+<p><strong>Adjusted $R^2$</strong>: Adjusts $R²$ for the number of predictors in the model, preventing overfitting by penalizing excessive use of parameters.
+$$
+R_a^2 = 1 - \frac{(1-R^2)(n-1)}{n-p-1}
+$$
+where $p$ is the number of parameters, and $n$ is the number of data points.</p>
+</li>
+<li>
+<p><strong>Normal quantile-quantile plot (Q-Q Plot)</strong>: Used to check the normality of residuals. If the points lie along a straight line, the residuals are normally distributed, an assumption in many regression models.</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p><strong>Akaike Information Criterion (AIC)</strong>: The AIC estimates the relative amount of information lost by a given model: the less information a model loses, the higher the quality of that model.
+$$
+\text{AIC} = 2k - 2\ln(\hat{L})
+$$
+where $k$ is the number of parameters in the model, and $\hat{L}$ is the maximum likelihood value.</p>
+<p>The model with the lowest AIC among a set of models is typically chosen. The AIC is particularly useful when a model is being fit to data: minimizing the AIC maximizes the likelihood function given the data while penalizing for increasing numbers of parameters.</p>
+</li>
+<li>
+<p><strong>Bayesian Information Criterion (BIC)</strong>: The BIC is similar to the AIC but introduces <em>a stronger penalty for including additional variables to the model</em>. It is derived from Bayesian probability.
+$$
+\text{BIC} = \ln(n)k - 2\ln(\hat{L})
+$$
+where $n$ is the number of observations, $k$ is the number of parameters in the model, and $\hat{L}$ is the maximum likelihood of the model.</p>
+<p>The BIC is generally stricter than the AIC and can be preferable for models with large $n$, penalizing free parameters more heavily. Like the AIC, <strong>the model with the lowest BIC is generally preferred</strong>.</p>
+</li>
+</ul>
+<!-- ## When to Use AIC vs. BIC
+
+| **Criterion** | **When to Use**                                                                                               |
+|---------------|---------------------------------------------------------------------------------------------------------------|
+| **AIC**       | More appropriate when the focus is on goodness of fit. Suitable for models where the sample size \( n \) is much larger than the number of parameters \( k \). Less strict about adding parameters. |
+| **BIC**       | Used when model parsimony is important. Especially useful in models with a large number of observations \( n \) and relatively less concern about capturing every parameter influence. More stringent in penalizing free parameters. | -->
+<!-- ## Summary Table for Regression Methods
+
+| **Method**                      | **Best Use**                                           | **Assumptions/Features**                                   |
+|---------------------------------|--------------------------------------------------------|------------------------------------------------------------|
+| **OLS Regression**              | Linear relationships with constant variance            | Assumes normality and linearity                            |
+| **Orthogonal Regression**       | Errors in both variables                               | Minimizes perpendicular distances                          |
+| **Robust Regression**           | Outlier-heavy data                                     | Resistant to outliers in data                              |
+| **Quantile Regression**         | Non-normal data; interested in other quantiles         | Does not assume a specific distribution for residuals      |
+| **Weighted Least Squares**      | Varied error size across data range                    | Weights observations by the inverse of their variance      |
+| **Logistic Regression**         | Binary outcome data                                    | Estimates probability of occurrence                        |
+ -->
 
           </div>
 
@@ -739,14 +718,14 @@ This relationship highlights the inherent noise properties in photon-counting me
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/tutorials/astro-stat/1-1-some-basic/" rel="next">Probability Basic</a>
+    <a href="/tutorials/astro-stat/3-1-data-smoothing/" rel="next">Data Smoothing-Density Estimation</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/tutorials/astro-stat/1-3-bayesian/" rel="prev">Bayes&#39; theorem</a>
+    <a href="/tutorials/astro-stat/5-1-multivariate-analysis/" rel="prev">Multivariate Analysis</a>
   </div>
   
 </div>
@@ -768,7 +747,7 @@ This relationship highlights the inherent noise properties in photon-counting me
   
 
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/1-2%20Probability.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/4-1%20Regression.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>

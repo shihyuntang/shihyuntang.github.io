@@ -342,9 +342,9 @@ This formulation arises from the exponential component of the PDF of the normal 
     
     <item>
       <title>Distribution</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/5-1-distribution/</link>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/2-1-distribution/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/5-1-distribution/</guid>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/2-1-distribution/</guid>
       <description>&lt;h2 id=&#34;empirical-distribution-function-edf&#34;&gt;Empirical Distribution Function (EDF)&lt;/h2&gt;
 &lt;p&gt;The Empirical Distribution Function (EDF) is a discrete version of the Cumulative Distribution Function (CDF). It is defined as:
 $$
@@ -473,9 +473,9 @@ where $\text{mean}(T_1) = \frac{n_1(n_1+n_2+1)}{2}$, and $\text{Var}(T_1) = \fra
     
     <item>
       <title>Correlation</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/5-2-correlation/</link>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/2-2-correlation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/5-2-correlation/</guid>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/2-2-correlation/</guid>
       <description>&lt;p&gt;Nonparametric correlation tests are essential tools for assessing the strength and direction of a relationship between two datasets, especially when the underlying distributions are unknown or non-normal. These tests are robust alternatives to the Pearson correlation coefficient, suitable for various types of relationships. The null hypothesis for these tests is that there is no correlation between the datasets.&lt;/p&gt;
 &lt;h3 id=&#34;pearson-correlation-coefficient&#34;&gt;*Pearson Correlation Coefficient&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -540,64 +540,233 @@ where $N_c$ is the number of concordant pairs, $N_d$ is the number of discordant
     </item>
     
     <item>
-      <title>Data smoothing-density estimation</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/6-data-smoothing/</link>
-      <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/6-data-smoothing/</guid>
-      <description>&lt;p&gt;Coming Soon&amp;hellip;&lt;/p&gt;
+      <title>Data Smoothing-Density Estimation</title>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/3-1-data-smoothing/</link>
+      <pubDate>Thu, 02 May 2024 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/3-1-data-smoothing/</guid>
+      <description>&lt;p&gt;Proper smoothing of data is crucial in various applications, especially for interpolating and visualizing results. A classic example involves choosing the right bin size for histograms. Incorrect bin sizes can either obscure significant data features by being too large or create misleading features if they are too small.&lt;/p&gt;
+&lt;h3 id=&#34;scotts-rule-for-bin-width&#34;&gt;Scott&amp;rsquo;s Rule for Bin Width&lt;/h3&gt;
+&lt;p&gt;Scott&amp;rsquo;s rule provides a method to determine the optimal bin width for a histogram, balancing detail and smoothness. The formula for Scott&amp;rsquo;s bin width is:
+$$
+h_{\text{Scott}} = \frac{3.5 \cdot \text{std}}{n^{1/3}} \quad \text{or} \quad \frac{2 \cdot \text{IQR}}{n^{1/3}}
+$$
+where $\text{std}$ is the standard deviation, $\text{IQR}$ is the interquartile range, and $n$ is the number of data points. This method aims to minimize potential distortion in the histogram by accounting for the variability and size of the data set.&lt;/p&gt;
+&lt;h3 id=&#34;average-smoothing-histogram&#34;&gt;Average Smoothing Histogram&lt;/h3&gt;
+&lt;p&gt;Average smoothing, applied to histograms, involves averaging adjacent bins to reduce variance within the bins. This technique smooths out fluctuations that might be random and highlights broader trends in the data distribution.&lt;/p&gt;
+&lt;h3 id=&#34;kernel-density-estimation-kde&#34;&gt;Kernel Density Estimation (KDE)&lt;/h3&gt;
+&lt;p&gt;Kernel Density Estimation is a non-parametric way to estimate the probability density function of a random variable. KDE smooths the data by convolving it with a kernel, which is a predefined function, typically Gaussian. The formula for KDE is:
+$$
+\hat{f}(x) = \frac{1}{nh} \sum_{i=1}^n K\left(\frac{x - x_i}{h}\right)
+$$
+where $K$ is the kernel function, $x_i$ are the data points, $h$ is the bandwidth, and $n$ is the number of data points. The choice of bandwidth $h$ crucially affects the estimator&amp;rsquo;s bias and variance.&lt;/p&gt;
+&lt;h3 id=&#34;adaptive-smoothing&#34;&gt;Adaptive Smoothing&lt;/h3&gt;
+&lt;p&gt;Adaptive smoothing techniques adjust the smoothing parameters locally, depending on the density or other characteristics of the data. These methods aim to achieve &lt;em&gt;better smoothing in areas with higher variability or lower density,&lt;/em&gt; allowing more detailed features to emerge in dense regions while smoothing out noise in sparse regions.&lt;/p&gt;
+&lt;h3 id=&#34;nadaraya-watson-estimator&#34;&gt;Nadaraya-Watson Estimator&lt;/h3&gt;
+&lt;p&gt;The Nadaraya-Watson estimator is a type of kernel regression that uses locally weighted averages to estimate conditional expectations. It is particularly useful in regression analysis to model the relationship between variables.&lt;/p&gt;
+&lt;!-- The estimator is defined as:
+$$
+  \hat{m}(x) = \frac{\sum_{i=1}^n K_h(x - x_i) y_i}{\sum_{i=1}^n K_h(x - x_i)}
+$$
+where $y_i$ are the response variables, and $K_h$ is a kernel weighted by a bandwidth $h$. This method is effective in capturing the local variability of the data without assuming a specific parametric form for the relationship.
+
+These techniques in data smoothing and density estimation are invaluable tools in data analysis, offering different approaches to uncovering and representing the underlying patterns in the data. Each method has its strengths and is suited to different types of data challenges. --&gt;
 </description>
     </item>
     
     <item>
       <title>Regression</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/7-regression/</link>
-      <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/7-regression/</guid>
-      <description>&lt;p&gt;Coming Soon&amp;hellip;&lt;/p&gt;
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/4-1-regression/</link>
+      <pubDate>Thu, 02 May 2024 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/4-1-regression/</guid>
+      <description>&lt;p&gt;Regression analysis is fundamental in statistical modeling, used for predicting and forecasting, and understanding relationships between variables. Below are various regression methods:&lt;/p&gt;
+&lt;h3 id=&#34;least-square-linear-regression-without-uncertainty&#34;&gt;Least-Square Linear Regression (without Uncertainty)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ordinary Least Squares (OLS)&lt;/strong&gt;: This method minimizes the residual sum of squares (RSS) between the observed values in the dataset and the values predicted by the linear model.
+$$
+\text{min RSS} = \text{min} \sum_{i=1}^n (Y_i - \beta_0 - \beta_1 X_i)^2
+$$
+where $X_i$ and $Y_i$ are the observed values, and $\beta_0$ and $\beta_1$ are the intercept and slope of the linear model, respectively.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Symmetric Least Squares-Orthogonal Regression&lt;/strong&gt;: This method minimizes the summed squares of the residuals orthogonal to the regression line, providing a more general approach than OLS when errors in both variables need to be considered.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Robust Regression - Thiel-Sen Estimator&lt;/strong&gt;: This technique uses the median of the slopes between pairs of points as the estimator, providing robustness against outliers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Quantile Regression&lt;/strong&gt;: Focuses on estimating either the conditional median or other quantiles of the response variable, providing a more comprehensive view of the possible outcome distribution than mean regression.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Maximum Likelihood Estimation&lt;/strong&gt;: Assumes a probability distribution model for the data, often a normal distribution, and finds the parameter values that maximize the likelihood of observing the data.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;weighted-least-squares-with-uncertainty&#34;&gt;Weighted Least Squares (with Uncertainty)&lt;/h3&gt;
+&lt;p&gt;In scenarios with heteroscedastic errors (errors that varies), weighted least squares (WLS) is more appropriate:&lt;/p&gt;
+&lt;p&gt;$$
+S_{r,wt} = \sum_{i=1}^n \frac{(Y_i - \beta_0 - \beta_1 X_i)^2}{\sigma_{Y,i}^2}
+$$
+where $\sigma_{Y,i}^2$ is the variance associated with each observation, weighting the residuals accordingly. This is related to the $\chi^2$ statistic used in minimum $\chi^2$ regression:&lt;/p&gt;
+&lt;p&gt;$$
+\chi^2_{me} = \sum_{i=1}^n (O_i - M_i)^2 / \sigma_{i,me}^2
+$$&lt;/p&gt;
+&lt;h3 id=&#34;logistic-regression&#34;&gt;Logistic Regression&lt;/h3&gt;
+&lt;p&gt;Logistic regression is used for modeling binary outcome variables by using the logistic function to estimate probabilities that can be transformed into binary values.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;model-validation-and-selection&#34;&gt;Model Validation and Selection&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Coefficient of Determination (R²)&lt;/strong&gt;: Measures the proportion of variability in a dataset that is explained by the regression model.
+$$
+R^2 = 1 - \frac{ \sum_{i=1}^n (Y_i - \hat{Y_i})^2 }{ \sum_{i=1}^n (Y_i - \bar{Y})^2 }
+$$
+where&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\hat{Y_i}$ is the predicted value of the dependent variable for the $i$-th observation from the model&lt;/li&gt;
+&lt;li&gt;$\bar{Y}$ is the mean of the observed data $Y_i$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;An $R^2$ value of 1 implies a perfect fit, meaning that the model explains all the variability of the response data around its mean. Conversely, an $R^2$ value of 0 indicates at bad fit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Adjusted $R^2$&lt;/strong&gt;: Adjusts $R²$ for the number of predictors in the model, preventing overfitting by penalizing excessive use of parameters.
+$$
+R_a^2 = 1 - \frac{(1-R^2)(n-1)}{n-p-1}
+$$
+where $p$ is the number of parameters, and $n$ is the number of data points.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Normal quantile-quantile plot (Q-Q Plot)&lt;/strong&gt;: Used to check the normality of residuals. If the points lie along a straight line, the residuals are normally distributed, an assumption in many regression models.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Akaike Information Criterion (AIC)&lt;/strong&gt;: The AIC estimates the relative amount of information lost by a given model: the less information a model loses, the higher the quality of that model.
+$$
+\text{AIC} = 2k - 2\ln(\hat{L})
+$$
+where $k$ is the number of parameters in the model, and $\hat{L}$ is the maximum likelihood value.&lt;/p&gt;
+&lt;p&gt;The model with the lowest AIC among a set of models is typically chosen. The AIC is particularly useful when a model is being fit to data: minimizing the AIC maximizes the likelihood function given the data while penalizing for increasing numbers of parameters.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Bayesian Information Criterion (BIC)&lt;/strong&gt;: The BIC is similar to the AIC but introduces &lt;em&gt;a stronger penalty for including additional variables to the model&lt;/em&gt;. It is derived from Bayesian probability.
+$$
+\text{BIC} = \ln(n)k - 2\ln(\hat{L})
+$$
+where $n$ is the number of observations, $k$ is the number of parameters in the model, and $\hat{L}$ is the maximum likelihood of the model.&lt;/p&gt;
+&lt;p&gt;The BIC is generally stricter than the AIC and can be preferable for models with large $n$, penalizing free parameters more heavily. Like the AIC, &lt;strong&gt;the model with the lowest BIC is generally preferred&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- ## When to Use AIC vs. BIC
+
+| **Criterion** | **When to Use**                                                                                               |
+|---------------|---------------------------------------------------------------------------------------------------------------|
+| **AIC**       | More appropriate when the focus is on goodness of fit. Suitable for models where the sample size \( n \) is much larger than the number of parameters \( k \). Less strict about adding parameters. |
+| **BIC**       | Used when model parsimony is important. Especially useful in models with a large number of observations \( n \) and relatively less concern about capturing every parameter influence. More stringent in penalizing free parameters. | --&gt;
+&lt;!-- ## Summary Table for Regression Methods
+
+| **Method**                      | **Best Use**                                           | **Assumptions/Features**                                   |
+|---------------------------------|--------------------------------------------------------|------------------------------------------------------------|
+| **OLS Regression**              | Linear relationships with constant variance            | Assumes normality and linearity                            |
+| **Orthogonal Regression**       | Errors in both variables                               | Minimizes perpendicular distances                          |
+| **Robust Regression**           | Outlier-heavy data                                     | Resistant to outliers in data                              |
+| **Quantile Regression**         | Non-normal data; interested in other quantiles         | Does not assume a specific distribution for residuals      |
+| **Weighted Least Squares**      | Varied error size across data range                    | Weights observations by the inverse of their variance      |
+| **Logistic Regression**         | Binary outcome data                                    | Estimates probability of occurrence                        |
+ --&gt;
 </description>
     </item>
     
     <item>
       <title>Multivariate Analysis</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/8-multivariate-analysis/</link>
-      <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/8-multivariate-analysis/</guid>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/5-1-multivariate-analysis/</link>
+      <pubDate>Thu, 02 May 2024 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/5-1-multivariate-analysis/</guid>
       <description>&lt;p&gt;Coming Soon&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Clustering and Classification</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/9-clustering-and-classification/</link>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/6-clustering-and-classification/</link>
       <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/9-clustering-and-classification/</guid>
-      <description>&lt;p&gt;Coming Soon&amp;hellip;&lt;/p&gt;
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/6-clustering-and-classification/</guid>
+      <description>&lt;p&gt;Clustering and classification are fundamental techniques in data analysis and machine learning, used to group data points based on similarities and to categorize them into distinct classes.&lt;/p&gt;
+&lt;h3 id=&#34;hierarchical-clustering&#34;&gt;Hierarchical Clustering&lt;/h3&gt;
+&lt;p&gt;Hierarchical clustering builds nested clusters by progressively merging or splitting them based on the distance between data points or groups. The method relies heavily on the choice of distance calculation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Single Linkage (Nearest Neighbor)&lt;/strong&gt;: This method, also known as the friend-of-a-friend technique, considers the shortest distance between points in two clusters (see the first plot below). It can result in elongated, &amp;ldquo;chain-like&amp;rdquo; clusters that capture local structure but might miss broader data groupings (see the second plot below).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Complete Linkage&lt;/strong&gt;: Use the maximum distance between points in two clusters. This method tends to produce more compact and well-separated clusters, reducing the chain effect seen in single linkage.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Linkage&lt;/strong&gt;: Calculates the average distance between all pairs of points in two clusters. This method provides a balance between the sensitivity of single linkage and the strictness of complete linkage.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ward&amp;rsquo;s Minimum Variance&lt;/strong&gt;: Minimizes the total within-cluster variance. At each step, the pair of clusters with the minimum increase in total variance are merged. This method tends to create more regular-sized clusters (e.g., spherical or ellipsoidal), which can be advantageous for certain datasets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.researchgate.net/profile/Pamela-Guevara/publication/281014334/figure/fig57/AS:418517879934980@1476793847581/The-three-linkage-types-of-hierarchical-clustering-single-link-complete-link-and.png&#34; alt=&#34;&#34;&gt;
+(Figure credit: &lt;a href=&#34;https://www.researchgate.net/figure/The-three-linkage-types-of-hierarchical-clustering-single-link-complete-link-and_fig57_281014334&#34;&gt;https://www.researchgate.net/figure/The-three-linkage-types-of-hierarchical-clustering-single-link-complete-link-and_fig57_281014334&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Once distances are calculated, the hierarchical clustering algorithm uses these distances to merge or split clusters:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Initialization&lt;/strong&gt;: Start by assigning each data point to its own cluster.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Merge Step&lt;/strong&gt;: At each step, merge the two clusters that are closest together, based on the distance calculation method chosen.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Update Distances&lt;/strong&gt;: Recalculate the distances between the new cluster and each of the old clusters.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Repeat&lt;/strong&gt;: Continue merging clusters until all data points are merged into a single cluster or until a desired number of clusters is reached.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These different linkage criteria can significantly impact the shapes and sizes of the clusters formed. A nice demonstration in various clustering scenarios can be found on the scikit-learn page, also shown below:
+&lt;img src=&#34;https://scikit-learn.org/stable/_images/sphx_glr_plot_linkage_comparison_001.png&#34; alt=&#34;&#34;&gt;
+(Figure credit: &lt;a href=&#34;https://scikit-learn.org/stable/auto_examples/cluster/plot_linkage_comparison.html#sphx-glr-auto-examples-cluster-plot-linkage-comparison-py&#34;&gt;https://scikit-learn.org/stable/auto_examples/cluster/plot_linkage_comparison.html#sphx-glr-auto-examples-cluster-plot-linkage-comparison-py&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&#34;k-means-clustering&#34;&gt;k-Means Clustering&lt;/h3&gt;
+&lt;p&gt;k-Means clustering partitions the data into $k$ mutually exclusive clusters, and returns the index of the cluster each point belongs to. This method aims to minimize the within-cluster sum of squares.&lt;/p&gt;
+&lt;h3 id=&#34;density-based-spatial-clustering-of-applications-with-noise-dbscan&#34;&gt;Density-Based Spatial Clustering of Applications with Noise (DBSCAN)&lt;/h3&gt;
+&lt;p&gt;DBSCAN groups together closely packed points and marks points in low-density regions as outliers. This method does not require specifying the number of clusters a priori, making it suitable for data with irregular or complex structures.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Parameters&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;$\mu$: Minimum number of points required to form a dense region.&lt;/li&gt;
+&lt;li&gt;$\varepsilon$: Specifies the &amp;ldquo;reach&amp;rdquo;, that is, the distance threshold within which points are considered neighbors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;k-nearest-neighbor-k-nn&#34;&gt;k-Nearest Neighbor (k-NN)&lt;/h3&gt;
+&lt;p&gt;k-Nearest Neighbors (k-NN) is primarily a classification technique renowned for its simplicity and effectiveness, especially suited for datasets where the decision boundaries between classes are not linear. The k-NN algorithm classifies new data points based on the majority vote of their k nearest neighbors in the feature space.&lt;/p&gt;
+&lt;p&gt;To apply k-NN effectively, data is typically split into two sets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Training Set&lt;/strong&gt;: This dataset is used to &amp;rsquo;train&amp;rsquo; or &amp;lsquo;fit&amp;rsquo; the model. It includes both the input features and the corresponding classification labels which are known.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Test Set&lt;/strong&gt;: This dataset is used solely for testing the performance of the trained model. It helps to evaluate how well the k-NN model generalizes to new, previously unseen data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once the model has been trained on the training set, it can be used to predict the class labels of new data in the test set, providing a measure of its classification accuracy.&lt;/p&gt;
+&lt;!-- ## Summary Table for Clustering and Classification Methods
+
+| **Method**           | **Characteristics**                                       | **Best Used For**                                       |
+|----------------------|-----------------------------------------------------------|---------------------------------------------------------|
+| **Hierarchical Clustering** | Builds clusters based on various distance calculations between points. | Data with inherent hierarchical structure and when a visual representation of cluster formation is beneficial. |
+| **k-Means Clustering**      | Partitions data into k predefined clusters by minimizing within-cluster variances. | Large datasets with well-separated clusters, where the number of clusters is known a priori. |
+| **DBSCAN**                  | Groups densely packed points and identifies points in low-density areas as outliers. Does not require predefined cluster number. | Complex datasets with noise and irregular cluster shapes, not well-suited to global clustering criteria. |
+| **k-Nearest Neighbors (k-NN)** | Classifies data based on the majority label among the nearest k neighbors. Utilizes training and test datasets to ensure model accuracy and generalization. | Classification tasks, especially in cases with non-linear decision boundaries and when model simplicity and interpretability are important. | --&gt;
 </description>
     </item>
     
     <item>
       <title>Censored and Truncated Data</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/10-censored-and-truncated-data/</link>
-      <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/10-censored-and-truncated-data/</guid>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/7-censored-and-truncated-data/</link>
+      <pubDate>Thu, 02 May 2024 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/7-censored-and-truncated-data/</guid>
       <description>&lt;p&gt;Coming Soon&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Timeseries Analysis</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/11-timeseries-analysis/</link>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/8-timeseries-analysis/</link>
       <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/11-timeseries-analysis/</guid>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/8-timeseries-analysis/</guid>
       <description>&lt;p&gt;Coming Soon&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Variogram</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/12-1-variogram/</link>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/9-1-variogram/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/12-1-variogram/</guid>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/9-1-variogram/</guid>
       <description>&lt;h2 id=&#34;introduction-to-variograms&#34;&gt;Introduction to Variograms&lt;/h2&gt;
 &lt;p&gt;A variogram is a fundamental tool in spatial statistics used to describe the spatial dependence and variability of data. It quantifies how data values at different locations relate to one another over space, essentially measuring the degree of spatial correlation. The variogram has lek features of: &amp;ldquo;nugget,&amp;rdquo; &amp;ldquo;sill,&amp;rdquo; and &amp;ldquo;range.&amp;rdquo;&lt;/p&gt;
 &lt;ul&gt;
@@ -637,9 +806,9 @@ plot(variogram_tox, model = model_tox,
     
     <item>
       <title>Kriging</title>
-      <link>https://shihyuntang.github.io/tutorials/astro-stat/12-2-kriging/</link>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/9-2-kriging/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/astro-stat/12-2-kriging/</guid>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/9-2-kriging/</guid>
       <description>&lt;h2 id=&#34;introduction-to-kriging&#34;&gt;Introduction to Kriging&lt;/h2&gt;
 &lt;p&gt;Kriging is a geostatistical interpolation technique that uses spatial correlation models, such as variograms, to predict values at unsampled locations based on the values at sampled locations. There are several types of Kriging, each with specific assumptions and applications:&lt;/p&gt;
 &lt;ul&gt;

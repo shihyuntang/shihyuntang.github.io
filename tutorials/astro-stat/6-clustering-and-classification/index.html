@@ -28,12 +28,12 @@
   
     
   
-  <meta name="description" content="Probability Distributions Probability distributions describe how the probabilities of a random variable are distributed. Here are the two main types of probability functions associated with these distributions:
-Probability Density Function (PDF, continuous):
-Description: The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables. Key Characteristic: The area under the PDF curve between two points represents the probability of the variable falling within that range.">
+  <meta name="description" content="Clustering and classification are fundamental techniques in data analysis and machine learning, used to group data points based on similarities and to categorize them into distinct classes.
+Hierarchical Clustering Hierarchical clustering builds nested clusters by progressively merging or splitting them based on the distance between data points or groups. The method relies heavily on the choice of distance calculation:
+Single Linkage (Nearest Neighbor): This method, also known as the friend-of-a-friend technique, considers the shortest distance between points in two clusters (see the first plot below).">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/">
+  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/6-clustering-and-classification/">
 
   
 
@@ -102,7 +102,7 @@ Description: The PDF is used to specify the probability of a random variable fal
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/">
+  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/6-clustering-and-classification/">
 
   
   
@@ -115,17 +115,17 @@ Description: The PDF is used to specify the probability of a random variable fal
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Shih-Yun Tang">
-  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/">
-  <meta property="og:title" content="Distributions | Shih-Yun Tang">
-  <meta property="og:description" content="Probability Distributions Probability distributions describe how the probabilities of a random variable are distributed. Here are the two main types of probability functions associated with these distributions:
-Probability Density Function (PDF, continuous):
-Description: The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables. Key Characteristic: The area under the PDF curve between two points represents the probability of the variable falling within that range."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/6-clustering-and-classification/">
+  <meta property="og:title" content="Clustering and Classification | Shih-Yun Tang">
+  <meta property="og:description" content="Clustering and classification are fundamental techniques in data analysis and machine learning, used to group data points based on similarities and to categorize them into distinct classes.
+Hierarchical Clustering Hierarchical clustering builds nested clusters by progressively merging or splitting them based on the distance between data points or groups. The method relies heavily on the choice of distance calculation:
+Single Linkage (Nearest Neighbor): This method, also known as the friend-of-a-friend technique, considers the shortest distance between points in two clusters (see the first plot below)."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://shihyuntang.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2024-04-29T00:00:00&#43;01:00">
+      <meta property="article:published_time" content="2020-08-11T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2024-05-02T10:59:49-05:00">
+    <meta property="article:modified_time" content="2024-05-02T20:53:04-05:00">
   
 
   
@@ -144,7 +144,7 @@ Description: The PDF is used to specify the probability of a random variable fal
 
 
 
-  <title>Distributions | Shih-Yun Tang</title>
+  <title>Clustering and Classification | Shih-Yun Tang</title>
 
 </head>
 
@@ -447,7 +447,7 @@ Description: The PDF is used to specify the probability of a random variable fal
         <a href="/tutorials/astro-stat/1-1-some-basic/">Probability Basic</a>
       </li>
       
-      <li class="active">
+      <li >
         <a href="/tutorials/astro-stat/1-2-probability/">Distributions</a>
       </li>
       
@@ -520,7 +520,7 @@ Description: The PDF is used to specify the probability of a random variable fal
     <a class="docs-toc-link" href="/tutorials/astro-stat/6-clustering-and-classification/">6 Clustering and Classification</a>
     <ul class="nav docs-sidenav">
       
-      <li >
+      <li class="active">
         <a href="/tutorials/astro-stat/6-clustering-and-classification/">Clustering and Classification</a>
       </li>
       
@@ -585,13 +585,12 @@ Description: The PDF is used to specify the probability of a random variable fal
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#probability-distributions">Probability Distributions</a></li>
-    <li><a href="#chebyshevs-theorem">Chebyshev&rsquo;s Theorem</a></li>
-    <li><a href="#discrete-distributions">Discrete Distributions</a>
+    <li>
       <ul>
-        <li><a href="#binomial-distribution">Binomial Distribution</a></li>
-        <li><a href="#geometric-distribution">Geometric Distribution</a></li>
-        <li><a href="#poisson-distribution">Poisson Distribution</a></li>
+        <li><a href="#hierarchical-clustering">Hierarchical Clustering</a></li>
+        <li><a href="#k-means-clustering">k-Means Clustering</a></li>
+        <li><a href="#density-based-spatial-clustering-of-applications-with-noise-dbscan">Density-Based Spatial Clustering of Applications with Noise (DBSCAN)</a></li>
+        <li><a href="#k-nearest-neighbor-k-nn">k-Nearest Neighbor (k-NN)</a></li>
       </ul>
     </li>
   </ul>
@@ -606,123 +605,59 @@ Description: The PDF is used to specify the probability of a random variable fal
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Distributions</h1>
+          <h1>Clustering and Classification</h1>
 
           <div class="article-style">
-            <h2 id="probability-distributions">Probability Distributions</h2>
-<p>Probability distributions describe how the probabilities of a <strong>random variable</strong> are distributed. Here are the two main types of probability functions associated with these distributions:</p>
-<ol>
-<li>
-<p><strong>Probability Density Function (PDF, continuous):</strong></p>
+            <p>Clustering and classification are fundamental techniques in data analysis and machine learning, used to group data points based on similarities and to categorize them into distinct classes.</p>
+<h3 id="hierarchical-clustering">Hierarchical Clustering</h3>
+<p>Hierarchical clustering builds nested clusters by progressively merging or splitting them based on the distance between data points or groups. The method relies heavily on the choice of distance calculation:</p>
 <ul>
-<li><strong>Description:</strong> The PDF is used to specify the probability of a random variable falling within a particular range of values, rather than taking any one specific value. This function is applicable only to continuous variables.</li>
-<li><strong>Key Characteristic:</strong> The area under the PDF curve between two points represents the probability of the variable falling within that range.</li>
-<li><strong>Example:</strong> The normal distribution.</li>
+<li><strong>Single Linkage (Nearest Neighbor)</strong>: This method, also known as the friend-of-a-friend technique, considers the shortest distance between points in two clusters (see the first plot below). It can result in elongated, &ldquo;chain-like&rdquo; clusters that capture local structure but might miss broader data groupings (see the second plot below).</li>
+<li><strong>Complete Linkage</strong>: Use the maximum distance between points in two clusters. This method tends to produce more compact and well-separated clusters, reducing the chain effect seen in single linkage.</li>
+<li><strong>Average Linkage</strong>: Calculates the average distance between all pairs of points in two clusters. This method provides a balance between the sensitivity of single linkage and the strictness of complete linkage.</li>
+<li><strong>Ward&rsquo;s Minimum Variance</strong>: Minimizes the total within-cluster variance. At each step, the pair of clusters with the minimum increase in total variance are merged. This method tends to create more regular-sized clusters (e.g., spherical or ellipsoidal), which can be advantageous for certain datasets.</li>
+</ul>
+<p><img src="https://www.researchgate.net/profile/Pamela-Guevara/publication/281014334/figure/fig57/AS:418517879934980@1476793847581/The-three-linkage-types-of-hierarchical-clustering-single-link-complete-link-and.png" alt="">
+(Figure credit: <a href="https://www.researchgate.net/figure/The-three-linkage-types-of-hierarchical-clustering-single-link-complete-link-and_fig57_281014334">https://www.researchgate.net/figure/The-three-linkage-types-of-hierarchical-clustering-single-link-complete-link-and_fig57_281014334</a>)</p>
+<p>Once distances are calculated, the hierarchical clustering algorithm uses these distances to merge or split clusters:</p>
+<ol>
+<li><strong>Initialization</strong>: Start by assigning each data point to its own cluster.</li>
+<li><strong>Merge Step</strong>: At each step, merge the two clusters that are closest together, based on the distance calculation method chosen.</li>
+<li><strong>Update Distances</strong>: Recalculate the distances between the new cluster and each of the old clusters.</li>
+<li><strong>Repeat</strong>: Continue merging clusters until all data points are merged into a single cluster or until a desired number of clusters is reached.</li>
+</ol>
+<p>These different linkage criteria can significantly impact the shapes and sizes of the clusters formed. A nice demonstration in various clustering scenarios can be found on the scikit-learn page, also shown below:
+<img src="https://scikit-learn.org/stable/_images/sphx_glr_plot_linkage_comparison_001.png" alt="">
+(Figure credit: <a href="https://scikit-learn.org/stable/auto_examples/cluster/plot_linkage_comparison.html#sphx-glr-auto-examples-cluster-plot-linkage-comparison-py">https://scikit-learn.org/stable/auto_examples/cluster/plot_linkage_comparison.html#sphx-glr-auto-examples-cluster-plot-linkage-comparison-py</a>)</p>
+<h3 id="k-means-clustering">k-Means Clustering</h3>
+<p>k-Means clustering partitions the data into $k$ mutually exclusive clusters, and returns the index of the cluster each point belongs to. This method aims to minimize the within-cluster sum of squares.</p>
+<h3 id="density-based-spatial-clustering-of-applications-with-noise-dbscan">Density-Based Spatial Clustering of Applications with Noise (DBSCAN)</h3>
+<p>DBSCAN groups together closely packed points and marks points in low-density regions as outliers. This method does not require specifying the number of clusters a priori, making it suitable for data with irregular or complex structures.</p>
+<ul>
+<li><strong>Parameters</strong>:
+<ul>
+<li>$\mu$: Minimum number of points required to form a dense region.</li>
+<li>$\varepsilon$: Specifies the &ldquo;reach&rdquo;, that is, the distance threshold within which points are considered neighbors.</li>
 </ul>
 </li>
-<li>
-<p><strong>Probability Mass Function (PMF, discrete):</strong></p>
-<ul>
-<li><strong>Description:</strong> The PMF is used for discrete random variables and specifies the probability that a random variable is exactly equal to some value.</li>
-<li><strong>Key Characteristic:</strong> The sum of all the probabilities represented by the PMF must equal 1, as it accounts for every possible discrete value the variable can take.</li>
-<li><strong>Example:</strong> The binomial distribution, and the Poisson distribution.</li>
-</ul>
-</li>
-</ol>
-<p><strong>Cumulative Distribution Function (CDF):</strong></p>
-<ul>
-<li><strong>Description:</strong> The CDF is used to determine the probability that a random variable (X) is $\lesssim$ to a certain value. CDF can be applied to both discrete and continuous random variables.</li>
-<li><strong>Key Characteristic:</strong> The CDF is a non-decreasing function that ranges from 0 to 1. For continuous variables, it is obtained by integrating the PDF over the range of possible values. For discrete variables, it is the cumulative sum of the PMF.</li>
-<li><strong>Example:</strong> For normal distribution, the CDF is used to calculate the probability that the variable is less than a specific threshold, which is central to hypothesis testing and confidence interval estimation.</li>
 </ul>
 <hr>
-<h2 id="chebyshevs-theorem">Chebyshev&rsquo;s Theorem</h2>
-<p>Chebyshev&rsquo;s Theorem, also known as Chebyshev&rsquo;s Inequality, is a fundamental result in probability theory that provides a way <strong>to estimate the probability that a random variable differs from its mean</strong>. This theorem is not restricted to normally distributed data, making it very versatile.</p>
-<p><strong>Theorem Statement:</strong>
-$$
-P(|X-\mu| &lt; k\sigma) \geq 1 - \frac{1}{k^2}
-$$
-where:</p>
+<h3 id="k-nearest-neighbor-k-nn">k-Nearest Neighbor (k-NN)</h3>
+<p>k-Nearest Neighbors (k-NN) is primarily a classification technique renowned for its simplicity and effectiveness, especially suited for datasets where the decision boundaries between classes are not linear. The k-NN algorithm classifies new data points based on the majority vote of their k nearest neighbors in the feature space.</p>
+<p>To apply k-NN effectively, data is typically split into two sets:</p>
 <ul>
-<li>($\mu$) is the mean of the random variable ( X ),</li>
-<li>($\sigma$) is the standard deviation of ( X ),</li>
-<li>($k$) is a positive number greater than 1.</li>
+<li><strong>Training Set</strong>: This dataset is used to &rsquo;train&rsquo; or &lsquo;fit&rsquo; the model. It includes both the input features and the corresponding classification labels which are known.</li>
+<li><strong>Test Set</strong>: This dataset is used solely for testing the performance of the trained model. It helps to evaluate how well the k-NN model generalizes to new, previously unseen data.</li>
 </ul>
-<p><strong>Key Points:</strong></p>
-<ul>
-<li><strong>Generality:</strong> Chebyshev&rsquo;s theorem applies to any probability distribution where the mean and variance are defined.</li>
-<li><strong>Implication:</strong> The inequality tells us that no matter the shape of the distribution, the proportion of values that fall within ($k$) standard deviations of the mean is at least $( 1 - \frac{1}{k^2})$. For example, at least (75%) of the values lie within 2 standard deviations of the mean (since ($k=2$) gives $( 1-\frac{1}{4} = 0.75)$).</li>
-<li><strong>Limitations:</strong> While the theorem provides a lower bound, it does not give exact probabilities, and the bounds can be quite loose, especially for distributions that tightly clustered around the mean.</li>
-</ul>
-<p>Chebyshev&rsquo;s Theorem is particularly useful for analysts and statisticians dealing with samples from unknown distributions, as it provides a safe, conservative estimate of the spread of data around the mean.</p>
-<hr>
-<h2 id="discrete-distributions">Discrete Distributions</h2>
-<h3 id="binomial-distribution">Binomial Distribution</h3>
-<p>The Binomial distribution is a discrete probability distribution that models the number of successes in a fixed number of independent trials, with each trial having two possible outcomes, typically labeled as &ldquo;success&rdquo; and &ldquo;failure&rdquo;.</p>
-<p><strong>Key Points:</strong></p>
-<ul>
-<li>There are only two possible outcomes for each trial: success (1) and failure (0).</li>
-<li>The trials are independent, meaning the outcome of one trial does not affect the outcomes of other trials.</li>
-</ul>
-<p>The probability mass function (PMF) for the Binomial distribution is expressed as:
-$$
-P(X=x) = C^{n}_{x} \theta^x (1-\theta)^{n-x}
-$$
-where $\theta$ is the probability of success on a single trial, $x$ is the number of successes, and $n$ is the total number of trials.</p>
-<p><strong>Example:</strong>
-Consider flipping a fair coin five times. What is the probability of getting exactly two heads?</p>
-<p>The calculation is as follows:
-$$
-P(X=2) = C^{5}_{2} 0.5^2 (1-0.5)^3 = \frac{5!}{2!3!} \times 0.25 \times 0.125 = 31.25%
-$$</p>
-<h3 id="geometric-distribution">Geometric Distribution</h3>
-<p>The Geometric distribution describes the probability of observing the first success on the $x$-th trial in a sequence of Bernoulli trials.</p>
-<p><strong>PMF:</strong>
-$$
-g(x; \theta) = \theta(1-\theta)^{x-1}
-$$
-where, $\theta$ is the probability of success on each trial, and $x$ is the trial number of the first success.</p>
-<p><strong>Key Properties:</strong></p>
-<ul>
-<li><strong>Mean ($\mu$):</strong> The expected number of trials to get the first success is given by:
-$$
-\mu = \frac{1}{\theta}
-$$</li>
-<li><strong>Variance ($\sigma^2$):</strong> The variance of the number of trials to get the first success is:
-$$
-\sigma^2 = \frac{1-\theta}{\theta^2}
-$$</li>
-</ul>
-<p><strong>Interpretation:</strong></p>
-<ul>
-<li>The mean and variance provide insights into the &ldquo;spread&rdquo; or variability of trials needed to achieve the first success, with higher values of $\theta$ leading to fewer expected trials.</li>
-</ul>
-<p>This distribution is commonly used in <em>quality control</em>, <em>reliability testing</em>, and other areas where the &ldquo;time&rdquo; or number of trials until the first success is of interest.</p>
-<h3 id="poisson-distribution">Poisson Distribution</h3>
-<p>The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring within a fixed interval of time or space. It assumes these events occur with a known constant mean rate and independently of the time since the last event.</p>
-<p>A practical example is photometry using a Charge-Coupled Device (CCD), where light—specifically, the number of photons—hits the CCD at a constant rate. Importantly, the arrival of photons is assumed to be independent of previous arrivals, provided the CCD is not saturated.</p>
-<blockquote>
-<p><strong>Note:</strong> Independence of events holds only if the CCD is not saturated.</p>
-</blockquote>
-<p><strong>Assumptions:</strong></p>
-<ol>
-<li>The rate of event occurrence, $\lambda$, is constant over time. For example, the number of events occurring between $t$ and $t + \Delta t$ is $\lambda \Delta t$.</li>
-<li>The probability of an event in the interval ${t, t+\Delta t}$ is independent of previous events.</li>
-</ol>
-<p>The probability mass function (PMF) of the Poisson distribution is defined as:
-$$
-P(x; \lambda) = \frac{\lambda^x e^{-\lambda}}{x!}
-$$
-where $\lambda$ is the expected number of events in a given interval, and $x$ is the observed number of events.</p>
-<p>For the Poisson distribution, the expected value (mean) is $\mu = \lambda$, and the variance is $\sigma^2 = \lambda$.</p>
-<h4 id="poisson-noise-shot-noise">Poisson Noise (Shot Noise)</h4>
-<p>Since $\sigma^2 = \lambda$, the standard deviation (Poisson noise) is $\sigma = \sqrt{\lambda}$. In photometry, where $N$ represents the number of photons hitting the CCD, this implies $\sigma = \sqrt{N}$.</p>
-<p>Due to the characteristics of the Poisson distribution, the signal-to-noise ratio (SNR) is calculated as follows:
-$$
-SNR = \frac{\mu}{\sigma} = \frac{\mu}{\sqrt{\mu}} = \sqrt{\mu}
-$$
-This relationship highlights the inherent noise properties in photon-counting measurements like those in CCD photometry.</p>
-<hr>
+<p>Once the model has been trained on the training set, it can be used to predict the class labels of new data in the test set, providing a measure of its classification accuracy.</p>
+<!-- ## Summary Table for Clustering and Classification Methods
+
+| **Method**           | **Characteristics**                                       | **Best Used For**                                       |
+|----------------------|-----------------------------------------------------------|---------------------------------------------------------|
+| **Hierarchical Clustering** | Builds clusters based on various distance calculations between points. | Data with inherent hierarchical structure and when a visual representation of cluster formation is beneficial. |
+| **k-Means Clustering**      | Partitions data into k predefined clusters by minimizing within-cluster variances. | Large datasets with well-separated clusters, where the number of clusters is known a priori. |
+| **DBSCAN**                  | Groups densely packed points and identifies points in low-density areas as outliers. Does not require predefined cluster number. | Complex datasets with noise and irregular cluster shapes, not well-suited to global clustering criteria. |
+| **k-Nearest Neighbors (k-NN)** | Classifies data based on the majority label among the nearest k neighbors. Utilizes training and test datasets to ensure model accuracy and generalization. | Classification tasks, especially in cases with non-linear decision boundaries and when model simplicity and interpretability are important. | -->
 
           </div>
 
@@ -739,14 +674,14 @@ This relationship highlights the inherent noise properties in photon-counting me
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/tutorials/astro-stat/1-1-some-basic/" rel="next">Probability Basic</a>
+    <a href="/tutorials/astro-stat/5-1-multivariate-analysis/" rel="next">Multivariate Analysis</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/tutorials/astro-stat/1-3-bayesian/" rel="prev">Bayes&#39; theorem</a>
+    <a href="/tutorials/astro-stat/7-censored-and-truncated-data/" rel="prev">Censored and Truncated Data</a>
   </div>
   
 </div>
@@ -768,7 +703,7 @@ This relationship highlights the inherent noise properties in photon-counting me
   
 
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/1-2%20Probability.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/6%20Clustering%20and%20Classification.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
