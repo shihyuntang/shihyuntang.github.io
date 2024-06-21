@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exoplanet | Shih-Yun Tang</title>
+    <link>https://shihyuntang.github.io/tags/exoplanet/</link>
+      <atom:link href="https://shihyuntang.github.io/tags/exoplanet/index.xml" rel="self" type="application/rss+xml" />
+    <description>Exoplanet</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2024 Shih-Yun Tang</copyright><lastBuildDate>Thu, 20 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://shihyuntang.github.io/img/icon-192.png</url>
+      <title>Exoplanet</title>
+      <link>https://shihyuntang.github.io/tags/exoplanet/</link>
+    </image>
+    
+    <item>
+      <title>Measuring the Spot Variability of T Tauri Stars Using Near-IR Atomic Fe and Molecular OH Lines</title>
+      <link>https://shihyuntang.github.io/publication/202406_ewr_obs_apj/</link>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/publication/202406_ewr_obs_apj/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;202406_EWR_obs_apj.png&#34; alt=&#34;&#34;&gt;
+&lt;em&gt;Image credit: Figure 7 in Tang et al. 2024.&lt;/em&gt;: The empirical Teff vs. equivalent width ratio plot.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

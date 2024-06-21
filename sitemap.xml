@@ -8,11 +8,17 @@
     <loc>https://shihyuntang.github.io/tutorials/spirl/</loc>
     <lastmod>2020-09-05T15:11:54-07:00</lastmod>
   </url><url>
+    <loc>https://shihyuntang.github.io/tutorials/tools/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
     <loc>https://shihyuntang.github.io/tutorials/astro-stat/</loc>
     <lastmod>2024-05-03T18:11:43-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tutorials/astro-stat/1-2-probability/</loc>
     <lastmod>2024-05-02T22:31:00-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/tutorials/tools/1-2-probability/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tutorials/astro-stat/1-3-bayesian/</loc>
     <lastmod>2024-05-02T10:59:49-05:00</lastmod>
@@ -51,253 +57,241 @@
     <lastmod>2019-12-09T21:40:20+08:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/</loc>
-    <lastmod>2024-05-03T18:11:43-05:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication_types/2/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/</loc>
-    <lastmod>2024-05-03T13:02:43-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/publication/202307_binaryetar_evo_env_aj/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/chengyuan-li/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/fabo-feng/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/jing-bai/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/m.b.n.-kouwenhoven/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/tags/open-cluster/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/publication_types/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/rwei-ju-chuang/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/tags/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/wen-ping-chen/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/xiaoying-pang/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/yicheng-rui/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/yifan-wang/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/asa-g.-stahl/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
-    <loc>https://shihyuntang.github.io/tags/binary-star/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/brian-a.-skiff/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/charles-a.-beichman/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
+    <loc>https://shihyuntang.github.io/authors/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/christopher-m.-johns-krull/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
-    <loc>https://shihyuntang.github.io/tags/di-tau/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/authors/g.-h.-schaefer/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
+    <loc>https://shihyuntang.github.io/tags/exoplanet/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/l.-prato/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/publication/202406_ewr_obs_apj/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/publication_types/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/tags/stellar-activity/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/tags/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/publication/202307_binaryetar_evo_env_aj/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/chengyuan-li/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/fabo-feng/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/jing-bai/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/m.b.n.-kouwenhoven/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/tags/open-cluster/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/rwei-ju-chuang/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/wen-ping-chen/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/xiaoying-pang/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/yicheng-rui/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/yifan-wang/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/tags/binary-star/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/brian-a.-skiff/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/charles-a.-beichman/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/tags/di-tau/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
+  </url><url>
+    <loc>https://shihyuntang.github.io/authors/g.-h.-schaefer/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication/202303_ditau_apj/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/taichi-uyama/</loc>
-    <lastmod>2023-08-21T22:06:55-05:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/danchen-wang/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication/202209_col132gul21_apjl/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/long-wang/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/mario-pasquato/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/yanshu-wang/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/yuqian-li/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/zhaoyu-li/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication/202204_oc3dii_apj/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/jiayu-li/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/teng-zhang/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/yezhang-li/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/zeqiu-yu/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
-    <loc>https://shihyuntang.github.io/publication/202109_velob_apj-/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <loc>https://shihyuntang.github.io/publication/202109_velob_apj/</loc>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/jongsuk-hong/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/zhen-yuan/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tags/brown-dwarf/</loc>
-    <lastmod>2022-04-13T18:14:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication/202105_ydwarf_moist_apj/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/mark-s.-marley/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/natasha-e.-batalha/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tags/planet/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/roxana-lupu/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/tyler-d.-robinson/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tags/igrins/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication/202104_igrinsrv_joss/</loc>
-    <lastmod>2021-08-20T19:51:55-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/joe-llama/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tags/radial-velocities/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/daniel-t.-jaffe/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/gregory-n.-mace/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/heeyoung-oh/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication/202104_igrinsrv_aj/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/jae-joon-lee/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/jessica-luna/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tags/planets-and-satellites-detection/</loc>
-    <lastmod>2021-12-08T08:51:50-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication/202102_oc3d_apj/</loc>
-    <lastmod>2021-09-30T07:08:38-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/frantisek-dinnbier/</loc>
-    <lastmod>2021-09-30T07:08:38-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/pavel-kroupa/</loc>
-    <lastmod>2021-09-30T07:08:38-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication/202006_ngc2232_apjl/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tags/ngc-2232/</loc>
-    <lastmod>2022-09-17T08:44:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/tags/fortran/</loc>
-    <lastmod>2020-08-11T07:32:48-07:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/project/near-infrared-radial-velocity-pipeline-igrins_rv/</loc>
-    <lastmod>2020-08-11T07:32:48-07:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/project/open-cluster-dynamic-study/</loc>
-    <lastmod>2020-08-11T07:32:48-07:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/tags/pipeline/</loc>
-    <lastmod>2020-08-11T07:32:48-07:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/project/</loc>
-    <lastmod>2020-08-11T07:32:48-07:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/tags/python/</loc>
-    <lastmod>2020-08-11T07:32:48-07:00</lastmod>
-  </url><url>
-    <loc>https://shihyuntang.github.io/project/y-dwarf-atmosphere-study/</loc>
-    <lastmod>2020-08-11T07:32:48-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tags/blanco-1/</loc>
-    <lastmod>2020-12-27T20:46:58-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication/202001_blanco1_apj/</loc>
-    <lastmod>2020-12-27T20:46:58-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/j.-z.-liu/</loc>
-    <lastmod>2020-12-27T20:46:58-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tags/tidal-tails/</loc>
-    <lastmod>2021-05-17T08:21:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/w.-p.-chen/</loc>
-    <lastmod>2022-04-13T18:14:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/yu-zhang/</loc>
-    <lastmod>2020-12-27T20:46:58-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/andreas-just/</loc>
-    <lastmod>2021-05-17T08:21:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/bekdaulet-shukirgaliyev/</loc>
-    <lastmod>2021-05-17T08:21:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/bertrand-goldman/</loc>
-    <lastmod>2022-04-13T18:14:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/chien-cheng-lin/</loc>
-    <lastmod>2021-05-17T08:21:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tags/coma-ber/</loc>
-    <lastmod>2022-04-13T18:14:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication/201905_comaber_tail_apj/</loc>
-    <lastmod>2021-05-17T08:21:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/slides/</loc>
     <lastmod>2019-12-09T21:40:20+08:00</lastmod>
@@ -306,16 +300,16 @@
     <lastmod>2019-12-09T21:40:20+08:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/publication/201808_comber_apj/</loc>
-    <lastmod>2022-04-13T18:14:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/gregory-j.-herczeg/</loc>
-    <lastmod>2022-04-13T18:14:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/jessy-jose/</loc>
-    <lastmod>2022-04-13T18:14:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/p.-s.-chiang/</loc>
-    <lastmod>2022-04-13T18:14:39-07:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/tags/deep-learning/</loc>
     <lastmod>2020-06-21T16:13:26-07:00</lastmod>
@@ -333,7 +327,7 @@
     <lastmod>2020-06-21T16:13:26-07:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/authors/admin/</loc>
-    <lastmod>2024-05-03T13:02:43-05:00</lastmod>
+    <lastmod>2024-06-20T21:19:25-05:00</lastmod>
   </url><url>
     <loc>https://shihyuntang.github.io/categories/</loc>
   </url><url>

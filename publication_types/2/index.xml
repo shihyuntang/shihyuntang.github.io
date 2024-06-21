@@ -5,7 +5,7 @@
     <link>https://shihyuntang.github.io/publication_types/2/</link>
       <atom:link href="https://shihyuntang.github.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2024 Shih-Yun Tang</copyright><lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2024 Shih-Yun Tang</copyright><lastBuildDate>Thu, 20 Jun 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>2</title>
@@ -13,11 +13,23 @@
     </image>
     
     <item>
+      <title>Measuring the Spot Variability of T Tauri Stars Using Near-IR Atomic Fe and Molecular OH Lines</title>
+      <link>https://shihyuntang.github.io/publication/202406_ewr_obs_apj/</link>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://shihyuntang.github.io/publication/202406_ewr_obs_apj/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;202406_EWR_obs_apj.png&#34; alt=&#34;&#34;&gt;
+&lt;em&gt;Image credit: Figure 7 in Tang et al. 2024.&lt;/em&gt;: The empirical Teff vs. equivalent width ratio plot.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Binary Star Evolution in Different Environments: Filamentary, Fractal, Halo and Tidal-tail Clusters</title>
       <link>https://shihyuntang.github.io/publication/202307_binaryetar_evo_env_aj/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/202307_binaryetar_evo_env_aj/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;202307_binaryetar_evo_env_aj.png&#34; alt=&#34;&#34;&gt;
+&lt;em&gt;Image credit: Figure 5 in Pang et al. 2023.&lt;/em&gt;: Box plot showing radial binary fraction as a function of cluster-centric distance as half-mass radius (rh). For each panel shows four types of clusters: (a) filamentary , (b) fractal, (c) halo , and (d) tidal-tail.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -25,7 +37,9 @@
       <link>https://shihyuntang.github.io/publication/202303_ditau_apj/</link>
       <pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/202303_ditau_apj/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;202303_ditau_apj.png&#34; alt=&#34;orbit&#34;&gt;
+&lt;em&gt;Image credit: Figure 2 in Tang et al. 2023.&lt;/em&gt;: Best model fit for DITau AB&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -33,7 +47,9 @@
       <link>https://shihyuntang.github.io/publication/202209_col132gul21_apjl/</link>
       <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/202209_col132gul21_apjl/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;202209_col132gul21_apjl.png&#34; alt=&#34;3d&#34;&gt;
+&lt;em&gt;Image credit: Figure 3 in Pang et al. 2022.&lt;/em&gt;: 3D morphology of the Collinder 132-Gulliver 21 stream. The oldest population surrounded by young populations can be seen in panel (b) with age of each group labeled.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -41,15 +57,19 @@
       <link>https://shihyuntang.github.io/publication/202204_oc3dii_apj/</link>
       <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/202204_oc3dii_apj/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;202204_oc3dII_apj.png&#34; alt=&#34;animation&#34;&gt;
+&lt;em&gt;Image credit: Figure 3 in Pang et al. 2022.&lt;/em&gt;: 3D morphology of 85 open clusters in the solar neighborhood with the color of the cluster scaled with the logarithm of age. An interactive version of this figure is available at &lt;a href=&#34;http://3doc-morphology.lowell.edu&#34;&gt;http://3doc-morphology.lowell.edu&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Disruption of Hierarchical Clustering in the Vela OB2 Complex and the Cluster Pair Collinder 135 and UBC 7 with Gaia EDR3: Evidence of Supernova Quenching</title>
-      <link>https://shihyuntang.github.io/publication/202109_velob_apj-/</link>
+      <link>https://shihyuntang.github.io/publication/202109_velob_apj/</link>
       <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://shihyuntang.github.io/publication/202109_velob_apj-/</guid>
-      <description></description>
+      <guid>https://shihyuntang.github.io/publication/202109_velob_apj/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;202108_VelOB_apj1.png&#34; alt=&#34;map&#34;&gt;
+&lt;em&gt;Image credit: Figure 8 in Pang et al. 2021.&lt;/em&gt;: IRAS-IRIS infrared image of the 60 $\mu m$ band. The members of Huluwa 1&amp;ndash;5, and the cluster pair Collinder135 and UBC7 are displayed as colored dots.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -57,7 +77,9 @@
       <link>https://shihyuntang.github.io/publication/202105_ydwarf_moist_apj/</link>
       <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/202105_ydwarf_moist_apj/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;202105_ydwarf_moist_apj.png&#34; alt=&#34;atmprofile&#34;&gt;
+&lt;em&gt;Image credit: Figure 1 in Tang et al. 2021.&lt;/em&gt;: Thermal structure profiles from converged solutions of the radiative-convective model at logg = 4.0 for YB ([M/H] of 0.0, here) and YP ([M/H] of 0.7 and 1.5) cases.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -73,7 +95,9 @@
       <link>https://shihyuntang.github.io/publication/202104_igrinsrv_aj/</link>
       <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/202104_igrinsrv_aj/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;202104_igrinsrv_aj.png&#34; alt=&#34;rv&#34;&gt;
+&lt;em&gt;Image credit: Figure 5 in Stahl et al. 2021.&lt;/em&gt;: Final RVs for RV standard stars&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -81,7 +105,9 @@
       <link>https://shihyuntang.github.io/publication/202102_oc3d_apj/</link>
       <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/202102_oc3d_apj/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;202102_oc3d_apj.png&#34; alt=&#34;3d&#34;&gt;
+&lt;em&gt;Image credit: Figure 8 in Pang et al. 2021.&lt;/em&gt;: Elipsoid fitting for the 3D spatial positions for the cluster members within tidal radius of NGC 2516, after distance correction through a Bayesian approach (see Section 4.1).&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -89,7 +115,9 @@
       <link>https://shihyuntang.github.io/publication/202006_ngc2232_apjl/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/202006_ngc2232_apjl/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;202006_ngc2232_apjl.png&#34; alt=&#34;MST&#34;&gt;
+&lt;em&gt;Image credit: Figure 5 in Pang et al. 2020.&lt;/em&gt;: Number density, mass density, and mean mass distributions along a clustercentric distance r for NGC 2232 (blue curves) and LP 2439 (red curves).&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -97,7 +125,9 @@
       <link>https://shihyuntang.github.io/publication/202001_blanco1_apj/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/202001_blanco1_apj/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;202001_blanco1_apj.png&#34; alt=&#34;spatial&#34;&gt;
+&lt;em&gt;Image credit: Figure 4 in Zhang et al. 2020.&lt;/em&gt; (a) Top view of Blanco1; (b) PM plot&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -105,7 +135,9 @@
       <link>https://shihyuntang.github.io/publication/201905_comaber_tail_apj/</link>
       <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/201905_comaber_tail_apj/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;201905_comaber_tail_apj.png&#34; alt=&#34;spatial&#34;&gt;
+&lt;em&gt;Image credit: Tang et al. 2019.&lt;/em&gt;: 3D spatial, proper motion, and radial velocity plot for Coma Ber &amp;amp; Group-X.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -113,7 +145,19 @@
       <link>https://shihyuntang.github.io/publication/201808_comber_apj/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       <guid>https://shihyuntang.github.io/publication/201808_comber_apj/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;img src=&#34;201808_comaber_apj.png&#34; alt=&#34;spectra&#34;&gt;
+&lt;em&gt;Image credit: Tang et al. 2018. Figure 17&lt;/em&gt;: The &lt;strong&gt;present day&lt;/strong&gt; mass function (MF) of the ~800 Myr old Coma Ber star cluster.&lt;/p&gt;
+&lt;h3 id=&#34;key-takeaways&#34;&gt;Key Takeaways&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Mass Function (MF) of Coma Berenices peaks at 0.3 $M_\odot$:
+&lt;ul&gt;
+&lt;li&gt;The slope of the MF, $\alpha$, is approximately 0.49 $\pm$ 0.03 for the mass range 0.3 to 2.3 $M_{\odot}$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The value of $\alpha$ for Coma Berenices is lower than that of the Salpeter initial mass function, which is 2.35 for masses between 1&amp;ndash;10 $M_{\odot}$ in the solar neighborhood.&lt;/li&gt;
+&lt;li&gt;The value of $\alpha$ for Coma Berenices is also lower than the present-day MF for field M dwarfs, which is approximately 1.3 for masses between 0.1&amp;ndash;0.7 $M_{\odot}$ (Reid et al. 2002).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>
