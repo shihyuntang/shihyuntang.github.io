@@ -28,8 +28,7 @@
   
     
   
-  <meta name="description" content="Principal Component Analysis (PCA) Procedure PCA is a statistical technique used to emphasize variation and bring out strong patterns in a dataset. It&rsquo;s especially powerful when dealing with high-dimensional data. Here&rsquo;s how it works:
-Step 1: Create the Data Matrix: Construct matrix $\mathbf{d}$ where each row represents an attribute (like properties of each target or person), and each column corresponds to different subjects or observations (e.g., targets or person). $$ \mathbf{d} = \begin{bmatrix} d_{11} &amp; d_{21} &amp; \cdots &amp; d_{t1} \\ d_{12} &amp; d_{22} &amp; \cdots &amp; d_{t2} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ d_{1n} &amp; d_{2n} &amp; \cdots &amp; d_{tn} \end{bmatrix} $$">
+  <meta name="description" content="} $$ where $\mathbf{} = \frac{1}{t} \sum_{j=1}^t d_{ji}$. This is basically means that for each attribute (each row) in $\mathbf{d}$, each values in it minus that attribute&#39;s mean value. So we have centered data $$ \mathbf{x} = \begin{bmatrix} x_{11} & x_{21} & \cdots & x_{t1} \\\ x_{12} & x_{22} & \cdots & x_{t2} \\\ \vdots & \vdots & \ddots & \vdots \\\ x_{1n} & x_{2n} & \cdots & x_{tn} \end{bmatrix} $$ - **Setp 3** Construct covariance matrix $\mathbf{\Sigma_x}$ from $\mathbf{x}$.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/5-1-multivariate-analysis/">
@@ -116,8 +115,7 @@ Step 1: Create the Data Matrix: Construct matrix $\mathbf{d}$ where each row rep
   <meta property="og:site_name" content="Shih-Yun Tang">
   <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/5-1-multivariate-analysis/">
   <meta property="og:title" content="Multivariate Analysis | Shih-Yun Tang">
-  <meta property="og:description" content="Principal Component Analysis (PCA) Procedure PCA is a statistical technique used to emphasize variation and bring out strong patterns in a dataset. It&rsquo;s especially powerful when dealing with high-dimensional data. Here&rsquo;s how it works:
-Step 1: Create the Data Matrix: Construct matrix $\mathbf{d}$ where each row represents an attribute (like properties of each target or person), and each column corresponds to different subjects or observations (e.g., targets or person). $$ \mathbf{d} = \begin{bmatrix} d_{11} &amp; d_{21} &amp; \cdots &amp; d_{t1} \\ d_{12} &amp; d_{22} &amp; \cdots &amp; d_{t2} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ d_{1n} &amp; d_{2n} &amp; \cdots &amp; d_{tn} \end{bmatrix} $$"><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
+  <meta property="og:description" content="} $$ where $\mathbf{} = \frac{1}{t} \sum_{j=1}^t d_{ji}$. This is basically means that for each attribute (each row) in $\mathbf{d}$, each values in it minus that attribute&#39;s mean value. So we have centered data $$ \mathbf{x} = \begin{bmatrix} x_{11} & x_{21} & \cdots & x_{t1} \\\ x_{12} & x_{22} & \cdots & x_{t2} \\\ \vdots & \vdots & \ddots & \vdots \\\ x_{1n} & x_{2n} & \cdots & x_{tn} \end{bmatrix} $$ - **Setp 3** Construct covariance matrix $\mathbf{\Sigma_x}$ from $\mathbf{x}$."><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://shihyuntang.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -932,7 +930,7 @@ Interpret the physical meaning of each principal component, which might involve 
     
     
     
-    <script src="/js/academic.min.dd460abf651c4e91377a0cc642a37eec.js"></script>
+    <script src="/js/academic.min.dab4f259dccb5050d23e41678cee70f2.js"></script>
 
     
 
