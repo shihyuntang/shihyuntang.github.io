@@ -28,11 +28,11 @@
   
     
   
-  <meta name="description" content="Bayes Theorem is a fundamental principle in probability theory and statistics that describes how to update the probability of a hypothesis based on new evidence. It is particularly powerful in the context of predictive modeling and decision-making processes.
-Mathematical Formulation If events $A$ and $B$ are independent, then the probability of $A$ given $B$ is simply the probability of $A$: $$ P(A|B) = P(A) $$ However, when events $A$ and $B$ are not independent, the relationship changes as follows: $$ P(A|B) = \frac{P(A \cap B)}{P(B)} \quad \text{and} \quad P(B|A) = \frac{P(A \cap B)}{P(A)} $$ From these relationships, we derive Bayes&rsquo; Theorem: $$ P(B|A) = \frac{P(B) P(A|B)}{P(A)} $$ Bayes&rsquo; Theorem can be interpreted in terms of updating beliefs: $$ \text{Posterior} = \frac{\text{Prior} \times \text{Likelihood}}{\text{Evidence}} $$">
+  <meta name="description" content="Both Markov Chain Monte Carlo (MCMC) and Nested Sampling (NS) are Bayesian inference techniques. They both rely on Bayes’ theorem, but they explore parameter space in fundamentally different ways. The biggest conceptual contrast is:
+ MCMC samples in the posterior space. NS samples in the prior space, gradually restricting it to higher-likelihood regions.  Before digging into the differences, let’s recall Bayes’ theorem: $$ \text{Posterior}(\mathcal{P}) = \frac{ \text{Likelihood}(\mathcal{L}) \times \text{Prior($\pi$)}}{\text{Evidence($\mathcal{Z}$)}} $$ $$ \mathcal{P}(\theta|x) = \frac{ \mathcal{L}(x|\theta)\times \pi(\theta) }{\int \mathcal{L}(x|\theta) \pi(\theta) d\theta } $$">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/1-3-bayesian/">
+  <link rel="alternate" hreflang="en-us" href="https://shihyuntang.github.io/tutorials/astro-stat/1-4-difference-between-mcmc-and-ns/">
 
   
 
@@ -101,7 +101,7 @@ Mathematical Formulation If events $A$ and $B$ are independent, then the probabi
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/1-3-bayesian/">
+  <link rel="canonical" href="https://shihyuntang.github.io/tutorials/astro-stat/1-4-difference-between-mcmc-and-ns/">
 
   
   
@@ -114,10 +114,10 @@ Mathematical Formulation If events $A$ and $B$ are independent, then the probabi
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Shih-Yun Tang">
-  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/1-3-bayesian/">
-  <meta property="og:title" content="Bayes&#39; theorem | Shih-Yun Tang">
-  <meta property="og:description" content="Bayes Theorem is a fundamental principle in probability theory and statistics that describes how to update the probability of a hypothesis based on new evidence. It is particularly powerful in the context of predictive modeling and decision-making processes.
-Mathematical Formulation If events $A$ and $B$ are independent, then the probability of $A$ given $B$ is simply the probability of $A$: $$ P(A|B) = P(A) $$ However, when events $A$ and $B$ are not independent, the relationship changes as follows: $$ P(A|B) = \frac{P(A \cap B)}{P(B)} \quad \text{and} \quad P(B|A) = \frac{P(A \cap B)}{P(A)} $$ From these relationships, we derive Bayes&rsquo; Theorem: $$ P(B|A) = \frac{P(B) P(A|B)}{P(A)} $$ Bayes&rsquo; Theorem can be interpreted in terms of updating beliefs: $$ \text{Posterior} = \frac{\text{Prior} \times \text{Likelihood}}{\text{Evidence}} $$"><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://shihyuntang.github.io/tutorials/astro-stat/1-4-difference-between-mcmc-and-ns/">
+  <meta property="og:title" content="Difference Between MCMC and NS | Shih-Yun Tang">
+  <meta property="og:description" content="Both Markov Chain Monte Carlo (MCMC) and Nested Sampling (NS) are Bayesian inference techniques. They both rely on Bayes’ theorem, but they explore parameter space in fundamentally different ways. The biggest conceptual contrast is:
+ MCMC samples in the posterior space. NS samples in the prior space, gradually restricting it to higher-likelihood regions.  Before digging into the differences, let’s recall Bayes’ theorem: $$ \text{Posterior}(\mathcal{P}) = \frac{ \text{Likelihood}(\mathcal{L}) \times \text{Prior($\pi$)}}{\text{Evidence($\mathcal{Z}$)}} $$ $$ \mathcal{P}(\theta|x) = \frac{ \mathcal{L}(x|\theta)\times \pi(\theta) }{\int \mathcal{L}(x|\theta) \pi(\theta) d\theta } $$"><meta property="og:image" content="https://shihyuntang.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://shihyuntang.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -142,7 +142,7 @@ Mathematical Formulation If events $A$ and $B$ are independent, then the probabi
 
 
 
-  <title>Bayes&#39; theorem | Shih-Yun Tang</title>
+  <title>Difference Between MCMC and NS | Shih-Yun Tang</title>
 
 </head>
 
@@ -391,11 +391,11 @@ Mathematical Formulation If events $A$ and $B$ are independent, then the probabi
         <a href="/tutorials/astro-stat/1-2-probability/">Distributions</a>
       </li>
       
-      <li class="active">
+      <li >
         <a href="/tutorials/astro-stat/1-3-bayesian/">Bayes&#39; theorem</a>
       </li>
       
-      <li >
+      <li class="active">
         <a href="/tutorials/astro-stat/1-4-difference-between-mcmc-and-ns/">MCMC vs. NS</a>
       </li>
       
@@ -529,20 +529,16 @@ Mathematical Formulation If events $A$ and $B$ are independent, then the probabi
 
       <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#markov-chain-monte-carlo-mcmc">Markov Chain Monte Carlo (MCMC)</a></li>
+    <li><a href="#nested-sampling-ns">Nested Sampling (NS)</a></li>
+    <li><a href="#more-about-ns">More About NS</a>
       <ul>
-        <li><a href="#mathematical-formulation">Mathematical Formulation</a></li>
-        <li><a href="#components-of-bayes-theorem">Components of Bayes&rsquo; Theorem</a></li>
+        <li><a href="#evidence-mathcalz">Evidence ($\mathcal{Z}$)</a></li>
+        <li><a href="#unnormalized-posterior-the-weight-w_i">Unnormalized Posterior (the weight $w_i$)</a></li>
+        <li><a href="#posterior-mathcalp">Posterior ($\mathcal{P}$)</a></li>
       </ul>
     </li>
-    <li><a href="#practical-applications">Practical Applications</a></li>
-    <li><a href="#relationship-between-likelihood-and-chi-squared-statistic">Relationship Between Likelihood and Chi-Squared Statistic</a>
-      <ul>
-        <li><a href="#chi-squared-statistic">Chi-Squared Statistic:</a></li>
-        <li><a href="#calculation">Calculation:</a></li>
-        <li><a href="#using-chi-squared-to-calculate-likelihood">Using Chi-Squared to Calculate Likelihood:</a></li>
-      </ul>
-    </li>
+    <li><a href="#ns-in-the-python-dynesty-package">NS in the Python <code>dynesty</code> Package</a></li>
   </ul>
 </nav>
 
@@ -555,83 +551,142 @@ Mathematical Formulation If events $A$ and $B$ are independent, then the probabi
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Bayes&#39; theorem</h1>
+          <h1>Difference Between MCMC and NS</h1>
 
           <div class="article-style">
-            <p>Bayes Theorem is a fundamental principle in probability theory and statistics that describes how to update the probability of a hypothesis based on new evidence. It is particularly powerful in the context of predictive modeling and decision-making processes.</p>
-<h3 id="mathematical-formulation">Mathematical Formulation</h3>
-<p>If events $A$ and $B$ are independent, then the probability of $A$ given $B$ is simply the probability of $A$:
+            <p>Both <strong>Markov Chain Monte Carlo (MCMC)</strong> and <strong>Nested Sampling (NS)</strong> are Bayesian inference techniques. They both rely on Bayes’ theorem, but they explore parameter space in fundamentally different ways. The biggest conceptual contrast is:</p>
+<ul>
+<li><strong>MCMC samples in the <em>posterior</em> space</strong>.</li>
+<li><strong>NS samples in the <em>prior</em> space</strong>, gradually restricting it to higher-likelihood regions.</li>
+</ul>
+<p>Before digging into the differences, let’s recall Bayes’ theorem:
 $$
-P(A|B) = P(A)
+\text{Posterior}(\mathcal{P}) = \frac{
+\text{Likelihood}(\mathcal{L}) \times \text{Prior($\pi$)}}{\text{Evidence($\mathcal{Z}$)}}
 $$
-However, when events $A$ and $B$ are not independent, the relationship changes as follows:
 $$
-P(A|B) = \frac{P(A \cap B)}{P(B)} \quad \text{and} \quad P(B|A) = \frac{P(A \cap B)}{P(A)}
-$$
-From these relationships, we derive Bayes&rsquo; Theorem:
-$$
-P(B|A) = \frac{P(B) P(A|B)}{P(A)}
-$$
-Bayes&rsquo; Theorem can be interpreted in terms of updating beliefs:
-$$
-\text{Posterior} = \frac{\text{Prior} \times \text{Likelihood}}{\text{Evidence}}
+\mathcal{P}(\theta|x)
+= \frac{
+\mathcal{L}(x|\theta)\times \pi(\theta)
+}{\int \mathcal{L}(x|\theta) \pi(\theta) d\theta
+}
 $$</p>
-<h3 id="components-of-bayes-theorem">Components of Bayes&rsquo; Theorem</h3>
-<ol>
-<li><strong>Likelihood ( $ P(x|\theta) $ ):</strong>
-The likelihood is a function that gives the plausibility of a model parameter value ($\theta$) given specific observed data ($x$). That is, In many applications, the likelihood is assumed to follow a normal distribution:
-$$
-L(x; \theta) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\theta)^2}{2\sigma^2}}
-$$
-where $\theta$ represents the parameter of interest, $x$ represents the data, and $\sigma^2$ is the variance.
-<blockquote>
-<p>Likelihood ask: If I plug in this $\theta$ value to the model, how well does the results explain the observed data?</p>
-</blockquote>
-</li>
-<li><strong>Prior ( $ P(\theta) $ ):</strong>
-The prior represents the initial belief about the distribution of the parameter before considering the current data. Priors can be subjective or based on previous studies:
-$$
-P(\theta)
-$$
-It can be uniform (representing no initial preference) or follow a specific distribution that reflects prior knowledge about the parameter, e.g., a Gaussian prior, gamma and beta distribution.</li>
-<li><strong>Evidence or Normalizing Constant ( $ P(A) $ ):</strong>
-Often considered as a normalizing factor, the evidence ensures that the posterior probabilities sum to one. It is calculated as:
-$$
-P(x) = \int P(x|\theta) P(\theta) d\theta
-$$
-This factor is essential for method like Nested Sampling (NS), and usually been ignored in the MCMC method.</li>
-<li><strong>Posterior ( $ P(\theta|x) $ ):</strong>
-The posterior probability reflects the <strong>updated belief</strong> about the parameter after considering the new evidence. It combines the prior and the likelihood given new data:
-$$
-P(\theta|x) = \frac{P(x|\theta)P(\theta)}{\int P(x|\theta)P(\theta) d\theta}
-$$</li>
-</ol>
-<h2 id="practical-applications">Practical Applications</h2>
-<p>Bayes&rsquo; Theorem is used extensively in various fields including exoplanet study, machine learning, medical testing, and any scenario requiring iterative updating of beliefs upon new evidence. Understanding how to apply the theorem allows for more informed decision-making processes and predictions.</p>
 <hr>
-<h2 id="relationship-between-likelihood-and-chi-squared-statistic">Relationship Between Likelihood and Chi-Squared Statistic</h2>
-<p>The likelihood function in statistical models often measures how well a set of parameters fits the data. When the data and the model predictions vary according to a normal distribution, the likelihood function can be directly linked to the chi-squared statistic.</p>
-<h3 id="chi-squared-statistic">Chi-Squared Statistic:</h3>
-<p>The chi-squared statistic is a measure of how expectations compare to actual observed data. In the context of likelihood calculations, the chi-squared statistic quantifies the discrepancy between observed data and the data predicted by the model, under the assumption that the discrepancies are normally distributed.</p>
-<h3 id="calculation">Calculation:</h3>
-<p>To calculate the chi-squared statistic as a measure of likelihood, you can use the following formula:
+<h2 id="markov-chain-monte-carlo-mcmc">Markov Chain Monte Carlo (MCMC)</h2>
+<p>MCMC focuses directly on sampling from the <strong>posterior distribution</strong>. The idea is simple:</p>
+<ol>
+<li><strong>Start with an initial guess</strong> for the parameters ($\theta$) for each <em>walker</em>.</li>
+<li>For each proposed step, compute
+<ul>
+<li>the likelihood: $\mathcal{L}(\theta) = P(x|\theta)$</li>
+<li>the prior: $\pi(\theta) = P(\theta)$</li>
+</ul>
+</li>
+<li>Combine them to get the <strong>unnormalized posterior</strong>:
 $$
-\chi^2 = \sum \frac{(O_i - E_i)^2}{\sigma_i^2}
+\mathcal{P}(\theta|x) \propto \mathcal{L}(\theta)\pi(\theta)
 $$
-where $O_i$ are the observed values, $E_i$ are the expected values predicted by the model, and $\sigma_i^2$ is the variance associated with each observation.</p>
-<h3 id="using-chi-squared-to-calculate-likelihood">Using Chi-Squared to Calculate Likelihood:</h3>
-<p>The likelihood of observing the data given the model can be expressed as:
+(We ignore the evidence because it’s just a constant normalization factor.)</li>
+<li>Use this posterior to decide whether the walker accepts or rejects the proposed move&hellip;</li>
+</ol>
+<p>Over time, the chain spends more time in regions where the posterior is high. This produces samples distributed according to the true posterior — which is why we say that <strong>MCMC samples from the posterior</strong>.</p>
+<p>MCMC is excellent for <strong>parameter estimation</strong>, but it does not naturally compute the <strong>evidence</strong>, which is required for comparing between different models.</p>
+<hr>
+<h2 id="nested-sampling-ns">Nested Sampling (NS)</h2>
+<p>Nested Sampling takes a very different approach from MCMC.<br>
+Instead of wandering around the posterior, NS <strong>systematically explores the prior</strong>, gradually shrinking it toward regions of higher likelihood.</p>
+<p>The basic flow looks like this:</p>
+<ol>
+<li>
+<p><strong>Initialize a set of random parameters</strong> (called <em>live points</em>)<br>
+These are drawn directly from the prior distribution $\pi(\theta)$.</p>
+</li>
+<li>
+<p>For each live point, compute the likelihood:<br>
 $$
-L = e^{-\chi^2/2}
-$$
-A more memorable form is:
-$$
-\chi^2 = -2 \ln{L}
+\mathcal{L}(\theta) = P(x \mid \theta).
 $$</p>
-<blockquote>
-<p>The $\chi^2$ is just $-2$ times the log-likelihood of a Gaussian model on observation.</p>
-</blockquote>
-<p>These formulation arises from the exponential component of the PDF of the normal distribution, which is what a likelihood function usually take, thus, a easier way to remember how to calculate the likelihood.</p>
+</li>
+<li>
+<p><strong>Identify the live point with the lowest likelihood</strong> and remove it.<br>
+This becomes a <em>dead point</em> (a point we won&rsquo;t revisit, but it <em>will</em> help build the posterior).</p>
+</li>
+<li>
+<p><strong>Replace it</strong> with a new sample drawn from the prior, <strong>subject to a constraint:</strong><br>
+the new point must have a likelihood higher than the one just removed.<br>
+This gradually forces the live points into smaller and smaller regions of higher likelihood.</p>
+</li>
+<li>
+<p>We repeat steps 3–4 many times. Eventually, the remaining prior volume becomes so small (or the change in the evidence becomes negligible) that continuing does not help, and we stop.</p>
+</li>
+</ol>
+<p>And this is why we say that <strong>NS samples from the prior</strong>!</p>
+<hr>
+<h2 id="more-about-ns">More About NS</h2>
+<p>At the stopping point (after step 5), what do we have?</p>
+<ul>
+<li>A list of <strong>dead points</strong> $\theta_i$ with likelihoods<br>
+$$
+\mathcal{L}_i = \mathcal{L}(\theta_i).
+$$</li>
+<li>An estimate of the <strong>remaining prior volume</strong> $X_i$ at each iteration,<br>
+which tells us how much of the prior space is left when that point is removed.</li>
+</ul>
+<p>To compute the posterior, we first need the normalization factor: the <strong>Evidence</strong>.</p>
+<h3 id="evidence-mathcalz">Evidence ($\mathcal{Z}$)</h3>
+<p>Recall that the evidence is:</p>
+<p>$$
+\mathcal{Z} = \int P(x \mid \theta)\ \pi(\theta)\ d\theta,
+$$</p>
+<p>the <strong>volume under the likelihood curve, weighted by the prior</strong>.</p>
+<p>Directly computing this in many dimensions is hard.<br>
+But NS cleverly tracks how the prior volume shrinks as we move to higher likelihoods.</p>
+<p>Define the remaining prior volume as:</p>
+<p>$$
+X(\lambda) = \int_{\mathcal{L}(\theta) &gt; \lambda} \pi(\theta) d\theta,
+$$</p>
+<p>the fraction of prior volume where $\mathcal{L} &gt; \lambda$.</p>
+<p>Skilling (2004) showed that the evidence ($\mathcal{Z}$) then becomes a <strong>1D integral</strong> over this volume:
+$$
+\mathcal{Z} = \int_0^1 \mathcal{L}(X)\ dX.
+$$</p>
+<p>NS approximates this integral by a sum over the dead points:</p>
+<p>$$
+Z \approx \sum_i L_i \ \Delta X_i
+= \sum_i L_i (X_{i-1} - X_i).
+$$</p>
+<h3 id="unnormalized-posterior-the-weight-w_i">Unnormalized Posterior (the weight $w_i$)</h3>
+<p>Each dead point represents a slice of the shrinking prior volume. The <strong>unnormalized posterior contribution</strong> for each dead point is:</p>
+<p>$$
+w_i = L_i\ (X_{i-1} - X_i),
+$$
+which reads as: <strong>likelihood of that slice × size of that slice in prior volume</strong>.</p>
+<p>This automatically gives:
+$$
+\mathcal{Z} \approx \sum_i w_i.
+$$</p>
+<h3 id="posterior-mathcalp">Posterior ($\mathcal{P}$)</h3>
+<p>Once we have the weights and the evidence, the posterior samples are simply:</p>
+<p>$$
+\mathcal{P}(\theta_i \mid x) = \frac{w_i}{\mathcal{Z}} = \frac{w_i}{\sum_i w_i}.
+$$</p>
+<p>That’s it — the dead points (with the right weights) become your posterior samples.</p>
+<hr>
+<h2 id="ns-in-the-python-dynesty-package">NS in the Python <code>dynesty</code> Package</h2>
+<p>Here we connect the quantities discussed above to the actual outputs of a Nested Sampling
+run using the Python package <strong>dynesty</strong>:</p>
+<pre><code class="language-python">logl      = results.logl       # log-likelihoods of dead points
+logwt     = results.logwt      # log-weights (unnormalized posterior weights)
+logvol    = results.logvol     # log prior volumes of dead points
+logz      = results.logz       # cumulative log-evidence estimates
+</code></pre>
+<p>All of these correspond directly to the core definitions of Nested Sampling.</p>
+<p>Note, dynesty includes an extra final contribution from the last batch of
+live points. That means:</p>
+<ul>
+<li><code>logwt[:-1]</code>: weights from dead points only</li>
+<li><code>logwt[-1]</code>: contribution from remaining live points at termination</li>
+</ul>
 
           </div>
 
@@ -648,14 +703,14 @@ $$</p>
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/tutorials/astro-stat/1-2-probability/" rel="next">Distributions</a>
+    <a href="/tutorials/astro-stat/1-3-bayesian/" rel="next">Bayes&#39; theorem</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/tutorials/astro-stat/1-4-difference-between-mcmc-and-ns/" rel="prev">Difference Between MCMC and NS</a>
+    <a href="/tutorials/astro-stat/2-1-distribution/" rel="prev">Distribution</a>
   </div>
   
 </div>
@@ -677,7 +732,7 @@ $$</p>
   
 
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/1-3%20Bayesian.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials/astro-stat/1-4%20Difference%20between%20MCMC%20and%20NS.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>

@@ -404,13 +404,17 @@ $$
 $$&lt;/p&gt;
 &lt;h3 id=&#34;components-of-bayes-theorem&#34;&gt;Components of Bayes&amp;rsquo; Theorem&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Likelihood ( $ P(A|B) $ ):&lt;/strong&gt;
-The likelihood is a function that measures the plausibility of a model parameter value given specific observed data. In many applications, especially in statistical modeling, the likelihood is assumed to follow a normal distribution:
+&lt;li&gt;&lt;strong&gt;Likelihood ( $ P(x|\theta) $ ):&lt;/strong&gt;
+The likelihood is a function that gives the plausibility of a model parameter value ($\theta$) given specific observed data ($x$). That is, In many applications, the likelihood is assumed to follow a normal distribution:
 $$
-L(\theta; x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\theta)^2}{2\sigma^2}}
+L(x; \theta) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\theta)^2}{2\sigma^2}}
 $$
-where $\theta$ represents the parameter of interest, $x$ represents the data, and $\sigma^2$ is the variance.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Prior ( $ P(B) $ ):&lt;/strong&gt;
+where $\theta$ represents the parameter of interest, $x$ represents the data, and $\sigma^2$ is the variance.
+&lt;blockquote&gt;
+&lt;p&gt;Likelihood ask: If I plug in this $\theta$ value to the model, how well does the results explain the observed data?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prior ( $ P(\theta) $ ):&lt;/strong&gt;
 The prior represents the initial belief about the distribution of the parameter before considering the current data. Priors can be subjective or based on previous studies:
 $$
 P(\theta)
@@ -419,11 +423,11 @@ It can be uniform (representing no initial preference) or follow a specific dist
 &lt;li&gt;&lt;strong&gt;Evidence or Normalizing Constant ( $ P(A) $ ):&lt;/strong&gt;
 Often considered as a normalizing factor, the evidence ensures that the posterior probabilities sum to one. It is calculated as:
 $$
-P(A) = \int P(A|B) P(B) dB
+P(x) = \int P(x|\theta) P(\theta) d\theta
 $$
-This factor is essential for the probabilistic model to be valid but is usually more relevant in analytical calculations than in practical applications.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Posterior ( $ P(B|A) $ ):&lt;/strong&gt;
-The posterior probability reflects the updated belief about the parameter after considering the new evidence. It combines the prior and the likelihood given new data:
+This factor is essential for method like Nested Sampling (NS), and usually been ignored in the MCMC method.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Posterior ( $ P(\theta|x) $ ):&lt;/strong&gt;
+The posterior probability reflects the &lt;strong&gt;updated belief&lt;/strong&gt; about the parameter after considering the new evidence. It combines the prior and the likelihood given new data:
 $$
 P(\theta|x) = \frac{P(x|\theta)P(\theta)}{\int P(x|\theta)P(\theta) d\theta}
 $$&lt;/li&gt;
@@ -454,6 +458,147 @@ $$&lt;/p&gt;
 &lt;p&gt;The $\chi^2$ is just $-2$ times the log-likelihood of a Gaussian model on observation.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;These formulation arises from the exponential component of the PDF of the normal distribution, which is what a likelihood function usually take, thus, a easier way to remember how to calculate the likelihood.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Difference Between MCMC and NS</title>
+      <link>https://shihyuntang.github.io/tutorials/astro-stat/1-4-difference-between-mcmc-and-ns/</link>
+      <pubDate>Thu, 02 May 2024 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/astro-stat/1-4-difference-between-mcmc-and-ns/</guid>
+      <description>&lt;p&gt;Both &lt;strong&gt;Markov Chain Monte Carlo (MCMC)&lt;/strong&gt; and &lt;strong&gt;Nested Sampling (NS)&lt;/strong&gt; are Bayesian inference techniques. They both rely on Bayes’ theorem, but they explore parameter space in fundamentally different ways. The biggest conceptual contrast is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MCMC samples in the &lt;em&gt;posterior&lt;/em&gt; space&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NS samples in the &lt;em&gt;prior&lt;/em&gt; space&lt;/strong&gt;, gradually restricting it to higher-likelihood regions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Before digging into the differences, let’s recall Bayes’ theorem:
+$$
+\text{Posterior}(\mathcal{P}) = \frac{
+\text{Likelihood}(\mathcal{L}) \times \text{Prior($\pi$)}}{\text{Evidence($\mathcal{Z}$)}}
+$$
+$$
+\mathcal{P}(\theta|x)
+= \frac{
+\mathcal{L}(x|\theta)\times \pi(\theta)
+}{\int \mathcal{L}(x|\theta) \pi(\theta) d\theta
+}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;markov-chain-monte-carlo-mcmc&#34;&gt;Markov Chain Monte Carlo (MCMC)&lt;/h2&gt;
+&lt;p&gt;MCMC focuses directly on sampling from the &lt;strong&gt;posterior distribution&lt;/strong&gt;. The idea is simple:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Start with an initial guess&lt;/strong&gt; for the parameters ($\theta$) for each &lt;em&gt;walker&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;For each proposed step, compute
+&lt;ul&gt;
+&lt;li&gt;the likelihood: $\mathcal{L}(\theta) = P(x|\theta)$&lt;/li&gt;
+&lt;li&gt;the prior: $\pi(\theta) = P(\theta)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Combine them to get the &lt;strong&gt;unnormalized posterior&lt;/strong&gt;:
+$$
+\mathcal{P}(\theta|x) \propto \mathcal{L}(\theta)\pi(\theta)
+$$
+(We ignore the evidence because it’s just a constant normalization factor.)&lt;/li&gt;
+&lt;li&gt;Use this posterior to decide whether the walker accepts or rejects the proposed move&amp;hellip;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Over time, the chain spends more time in regions where the posterior is high. This produces samples distributed according to the true posterior — which is why we say that &lt;strong&gt;MCMC samples from the posterior&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;MCMC is excellent for &lt;strong&gt;parameter estimation&lt;/strong&gt;, but it does not naturally compute the &lt;strong&gt;evidence&lt;/strong&gt;, which is required for comparing between different models.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;nested-sampling-ns&#34;&gt;Nested Sampling (NS)&lt;/h2&gt;
+&lt;p&gt;Nested Sampling takes a very different approach from MCMC.&lt;br&gt;
+Instead of wandering around the posterior, NS &lt;strong&gt;systematically explores the prior&lt;/strong&gt;, gradually shrinking it toward regions of higher likelihood.&lt;/p&gt;
+&lt;p&gt;The basic flow looks like this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Initialize a set of random parameters&lt;/strong&gt; (called &lt;em&gt;live points&lt;/em&gt;)&lt;br&gt;
+These are drawn directly from the prior distribution $\pi(\theta)$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For each live point, compute the likelihood:&lt;br&gt;
+$$
+\mathcal{L}(\theta) = P(x \mid \theta).
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Identify the live point with the lowest likelihood&lt;/strong&gt; and remove it.&lt;br&gt;
+This becomes a &lt;em&gt;dead point&lt;/em&gt; (a point we won&amp;rsquo;t revisit, but it &lt;em&gt;will&lt;/em&gt; help build the posterior).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Replace it&lt;/strong&gt; with a new sample drawn from the prior, &lt;strong&gt;subject to a constraint:&lt;/strong&gt;&lt;br&gt;
+the new point must have a likelihood higher than the one just removed.&lt;br&gt;
+This gradually forces the live points into smaller and smaller regions of higher likelihood.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We repeat steps 3–4 many times. Eventually, the remaining prior volume becomes so small (or the change in the evidence becomes negligible) that continuing does not help, and we stop.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And this is why we say that &lt;strong&gt;NS samples from the prior&lt;/strong&gt;!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;more-about-ns&#34;&gt;More About NS&lt;/h2&gt;
+&lt;p&gt;At the stopping point (after step 5), what do we have?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A list of &lt;strong&gt;dead points&lt;/strong&gt; $\theta_i$ with likelihoods&lt;br&gt;
+$$
+\mathcal{L}_i = \mathcal{L}(\theta_i).
+$$&lt;/li&gt;
+&lt;li&gt;An estimate of the &lt;strong&gt;remaining prior volume&lt;/strong&gt; $X_i$ at each iteration,&lt;br&gt;
+which tells us how much of the prior space is left when that point is removed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To compute the posterior, we first need the normalization factor: the &lt;strong&gt;Evidence&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;evidence-mathcalz&#34;&gt;Evidence ($\mathcal{Z}$)&lt;/h3&gt;
+&lt;p&gt;Recall that the evidence is:&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{Z} = \int P(x \mid \theta)\ \pi(\theta)\ d\theta,
+$$&lt;/p&gt;
+&lt;p&gt;the &lt;strong&gt;volume under the likelihood curve, weighted by the prior&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Directly computing this in many dimensions is hard.&lt;br&gt;
+But NS cleverly tracks how the prior volume shrinks as we move to higher likelihoods.&lt;/p&gt;
+&lt;p&gt;Define the remaining prior volume as:&lt;/p&gt;
+&lt;p&gt;$$
+X(\lambda) = \int_{\mathcal{L}(\theta) &amp;gt; \lambda} \pi(\theta) d\theta,
+$$&lt;/p&gt;
+&lt;p&gt;the fraction of prior volume where $\mathcal{L} &amp;gt; \lambda$.&lt;/p&gt;
+&lt;p&gt;Skilling (2004) showed that the evidence ($\mathcal{Z}$) then becomes a &lt;strong&gt;1D integral&lt;/strong&gt; over this volume:
+$$
+\mathcal{Z} = \int_0^1 \mathcal{L}(X)\ dX.
+$$&lt;/p&gt;
+&lt;p&gt;NS approximates this integral by a sum over the dead points:&lt;/p&gt;
+&lt;p&gt;$$
+Z \approx \sum_i L_i \ \Delta X_i
+= \sum_i L_i (X_{i-1} - X_i).
+$$&lt;/p&gt;
+&lt;h3 id=&#34;unnormalized-posterior-the-weight-w_i&#34;&gt;Unnormalized Posterior (the weight $w_i$)&lt;/h3&gt;
+&lt;p&gt;Each dead point represents a slice of the shrinking prior volume. The &lt;strong&gt;unnormalized posterior contribution&lt;/strong&gt; for each dead point is:&lt;/p&gt;
+&lt;p&gt;$$
+w_i = L_i\ (X_{i-1} - X_i),
+$$
+which reads as: &lt;strong&gt;likelihood of that slice × size of that slice in prior volume&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This automatically gives:
+$$
+\mathcal{Z} \approx \sum_i w_i.
+$$&lt;/p&gt;
+&lt;h3 id=&#34;posterior-mathcalp&#34;&gt;Posterior ($\mathcal{P}$)&lt;/h3&gt;
+&lt;p&gt;Once we have the weights and the evidence, the posterior samples are simply:&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{P}(\theta_i \mid x) = \frac{w_i}{\mathcal{Z}} = \frac{w_i}{\sum_i w_i}.
+$$&lt;/p&gt;
+&lt;p&gt;That’s it — the dead points (with the right weights) become your posterior samples.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;ns-in-the-python-dynesty-package&#34;&gt;NS in the Python &lt;code&gt;dynesty&lt;/code&gt; Package&lt;/h2&gt;
+&lt;p&gt;Here we connect the quantities discussed above to the actual outputs of a Nested Sampling
+run using the Python package &lt;strong&gt;dynesty&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;logl      = results.logl       # log-likelihoods of dead points
+logwt     = results.logwt      # log-weights (unnormalized posterior weights)
+logvol    = results.logvol     # log prior volumes of dead points
+logz      = results.logz       # cumulative log-evidence estimates
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;All of these correspond directly to the core definitions of Nested Sampling.&lt;/p&gt;
+&lt;p&gt;Note, dynesty includes an extra final contribution from the last batch of
+live points. That means:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;logwt[:-1]&lt;/code&gt;: weights from dead points only&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;logwt[-1]&lt;/code&gt;: contribution from remaining live points at termination&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
