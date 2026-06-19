@@ -5,12 +5,31 @@
     <link>https://shihyuntang.github.io/</link>
       <atom:link href="https://shihyuntang.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Shih-Yun Tang</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025 Shih-Yun Tang</copyright><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2026 Shih-Yun Tang</copyright><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Shih-Yun Tang</title>
       <link>https://shihyuntang.github.io/</link>
     </image>
+    
+    <item>
+      <title>EXSPLOSYN Model</title>
+      <link>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-model/</link>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-model/</guid>
+      <description>&lt;p&gt;This page hosts the full-resolution companion animation for my PhD thesis, &lt;em&gt;Characterization of Young Active Stars for Identifying the Youngest Exoplanets&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The animation below corresponds to &lt;strong&gt;Chapter 4.5, Figure 4.14&lt;/strong&gt;.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;a href=&#34;https://shihyuntang.github.io/animations/EXSPLOSYN_ZDI_inform_reconstruction_T3700.gif&#34; target=&#34;_blank&#34;&gt;
+        &lt;img src=&#34;https://shihyuntang.github.io/animations/EXSPLOSYN_ZDI_inform_reconstruction_T3700.gif&#34; alt=&#34;LkCa4 EXSPLOSYN Model&#34; width=&#34;100%&#34; style=&#34;max-width: 1000px;&#34; /&gt;
+    &lt;/a&gt;
+    &lt;p&gt;&lt;em&gt;Click the animation to open the raw GIF in a new tab.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;This animation shows a standard output from the &lt;code&gt;EXSPLOSYN&lt;/code&gt; spot simulation code. The panel features a 3D projection of the star displaying the surface spot configurations alongside the corresponding synthetic spotted spectra in the upper-right panel. The bottom-right panels trace the resulting variations in radial velocity (RV) and the equivalent width ratio (EWR) of OH and Fe line.&lt;/p&gt;
+&lt;p&gt;Specifically, this model presents the Zeeman-Doppler Imaging (ZDI) informed surface reconstruction for the weak-line T Tauri star LkCa4.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Probability Basic</title>
@@ -136,6 +155,24 @@ where $\bar{X}$ is the sample mean, $\mu_0$ is the hypothesized population mean,
 &lt;li&gt;&lt;strong&gt;Distribution:&lt;/strong&gt; The z-test statistic follows a normal distribution, while the t-test statistic follows a t-distribution, which is more spread out with heavier tails, providing a more conservative test for small sample sizes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;A comparison plot between the t-distribution and the standard normal distribution can be find &lt;a href=&#34;https://www.jmp.com/en_us/statistics-knowledge-portal/t-test/t-distribution.html#:~:text=What&#39;s%20the%20key%20difference%20between,on%20the%20sample%20standard%20deviation.&#34;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LkCa4 EXSPLOSYN Spectra</title>
+      <link>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-lkca4-spec/</link>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-lkca4-spec/</guid>
+      <description>&lt;p&gt;This page hosts the full-resolution companion animation for my PhD thesis, &lt;em&gt;Characterization of Young Active Stars for Identifying the Youngest Exoplanets&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The animation below corresponds to &lt;strong&gt;Chapter 4.5, Figure 4.26&lt;/strong&gt;.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;a href=&#34;https://shihyuntang.github.io/animations/EXSPLOSYN_LkCa4_spectral_comparison.gif&#34; target=&#34;_blank&#34;&gt;
+        &lt;img src=&#34;https://shihyuntang.github.io/animations/EXSPLOSYN_LkCa4_spectral_comparison.gif&#34; alt=&#34;LkCa4 EXSPLOSYN Spectra&#34; width=&#34;100%&#34; style=&#34;max-width: 1000px;&#34; /&gt;
+    &lt;/a&gt;
+    &lt;p&gt;&lt;em&gt;Click the animation to open the raw GIF in a new tab.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;This animation illustrates the variations in the stellar spectrum as a function of rotational phase. The SPIRou observations are plotted in black, while the best-fit forward modeling sequence from &lt;code&gt;EXSPLOSYN&lt;/code&gt; is shown in red. For comparison, the dashed blue line represents a two-component composite spectrum constructed using fixed atmospheric parameters ($T_{\rm phot} = 3914$ K, $T_{\rm spot} = 2769$ K, and a cool spot filling factor $f_{\rm cool} = 55%$) derived by Gully-Santiago et al. (2017).&lt;/p&gt;
 </description>
     </item>
     
@@ -577,12 +614,15 @@ which reads as: &lt;strong&gt;likelihood of that slice × size of that slice in 
 $$
 \mathcal{Z} \approx \sum_i w_i.
 $$&lt;/p&gt;
-&lt;h3 id=&#34;posterior-mathcalp&#34;&gt;Posterior ($\mathcal{P}$)&lt;/h3&gt;
+&lt;h3 id=&#34;posterior-mathcalp-also-known-as-the-importance-weights&#34;&gt;Posterior ($\mathcal{P}$, also known as the Importance Weights)&lt;/h3&gt;
 &lt;p&gt;Once we have the weights and the evidence, the posterior samples are simply:&lt;/p&gt;
 &lt;p&gt;$$
 \mathcal{P}(\theta_i \mid x) = \frac{w_i}{\mathcal{Z}} = \frac{w_i}{\sum_i w_i}.
 $$&lt;/p&gt;
 &lt;p&gt;That’s it — the dead points (with the right weights) become your posterior samples.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Or, the importance weight tells you how much each dead point matters to the posterior. Low-likelihood points matter little. Tiny-volume points matter little. soPoints in the middle matter most.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;ns-in-the-python-dynesty-package&#34;&gt;NS in the Python &lt;code&gt;dynesty&lt;/code&gt; Package&lt;/h2&gt;
 &lt;p&gt;Here we connect the quantities discussed above to the actual outputs of a Nested Sampling

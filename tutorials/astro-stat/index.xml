@@ -5,7 +5,7 @@
     <link>https://shihyuntang.github.io/tutorials/astro-stat/</link>
       <atom:link href="https://shihyuntang.github.io/tutorials/astro-stat/index.xml" rel="self" type="application/rss+xml" />
     <description>Overview</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025 Shih-Yun Tang</copyright><lastBuildDate>Sun, 28 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2026 Shih-Yun Tang</copyright><lastBuildDate>Sun, 28 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://shihyuntang.github.io/img/icon-192.png</url>
       <title>Overview</title>
@@ -457,12 +457,15 @@ which reads as: &lt;strong&gt;likelihood of that slice × size of that slice in 
 $$
 \mathcal{Z} \approx \sum_i w_i.
 $$&lt;/p&gt;
-&lt;h3 id=&#34;posterior-mathcalp&#34;&gt;Posterior ($\mathcal{P}$)&lt;/h3&gt;
+&lt;h3 id=&#34;posterior-mathcalp-also-known-as-the-importance-weights&#34;&gt;Posterior ($\mathcal{P}$, also known as the Importance Weights)&lt;/h3&gt;
 &lt;p&gt;Once we have the weights and the evidence, the posterior samples are simply:&lt;/p&gt;
 &lt;p&gt;$$
 \mathcal{P}(\theta_i \mid x) = \frac{w_i}{\mathcal{Z}} = \frac{w_i}{\sum_i w_i}.
 $$&lt;/p&gt;
 &lt;p&gt;That’s it — the dead points (with the right weights) become your posterior samples.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Or, the importance weight tells you how much each dead point matters to the posterior. Low-likelihood points matter little. Tiny-volume points matter little. soPoints in the middle matter most.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;ns-in-the-python-dynesty-package&#34;&gt;NS in the Python &lt;code&gt;dynesty&lt;/code&gt; Package&lt;/h2&gt;
 &lt;p&gt;Here we connect the quantities discussed above to the actual outputs of a Nested Sampling
