@@ -159,10 +159,10 @@ where $\bar{X}$ is the sample mean, $\mu_0$ is the hypothesized population mean,
     </item>
     
     <item>
-      <title>LkCa4 EXSPLOSYN Spectral Variations</title>
-      <link>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-lkca4-spec/</link>
+      <title>LkCa4 EXSPLOSYN H band Spectral Variations</title>
+      <link>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-lkca4-spec-h/</link>
       <pubDate>Fri, 19 Jun 2026 00:00:00 +0100</pubDate>
-      <guid>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-lkca4-spec/</guid>
+      <guid>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-lkca4-spec-h/</guid>
       <description>&lt;p&gt;This page hosts the full-resolution companion animations for my PhD thesis, &lt;em&gt;Characterization of Young Active Stars for Identifying the Youngest Exoplanets&lt;/em&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;h-band-spectral-comparison&#34;&gt;H-band Spectral Comparison&lt;/h2&gt;
@@ -175,6 +175,15 @@ where $\bar{X}$ is the sample mean, $\mu_0$ is the hypothesized population mean,
 &lt;/div&gt;
 &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
 &lt;p&gt;This animation tracks variations in the stellar spectrum as a function of rotational phase. The SPIRou observations are shown in black, while the best-fit forward modeling sequence from &lt;code&gt;EXSPLOSYN&lt;/code&gt; is plotted in red. For comparison, the dashed blue line represents a standard two-component composite spectrum constructed using fixed atmospheric parameters ($T_{\rm phot} = 3914$ K, $T_{\rm spot} = 2769$ K, and a cool spot filling factor $f_{\rm cool} = 55%$) derived by Gully-Santiago et al. (2017).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LkCa4 EXSPLOSYN Magnetized H band Spectral Variations</title>
+      <link>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-lkca4-spec-h-2kg/</link>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-lkca4-spec-h-2kg/</guid>
+      <description>&lt;p&gt;This page hosts the full-resolution companion animations for my PhD thesis, &lt;em&gt;Characterization of Young Active Stars for Identifying the Youngest Exoplanets&lt;/em&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;h-band-spectral-comparison-with-magnetic-field-effects&#34;&gt;H-band Spectral Comparison with Magnetic Field Effects&lt;/h2&gt;
 &lt;p&gt;The animation below corresponds to &lt;strong&gt;Chapter 4.6, Figure 4.28&lt;/strong&gt; of my thesis.&lt;/p&gt;
@@ -184,19 +193,8 @@ where $\bar{X}$ is the sample mean, $\mu_0$ is the hypothesized population mean,
     &lt;/a&gt;
     &lt;p&gt;&lt;em&gt;Click the animation to open the raw GIF in a new tab.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;h3 id=&#34;description-1&#34;&gt;Description&lt;/h3&gt;
-&lt;p&gt;This sequence is similar to the one above, but highlights the impact of incorporating magnetic fields (the Zeeman effect) into the model. Here, the SPIRou observations remain in black. The unmagnetized &lt;code&gt;EXSPLOSYN&lt;/code&gt; forward model is plotted in red, while the updated &lt;code&gt;EXSPLOSYN&lt;/code&gt; model incorporating a $2\text{ kG}$ magnetic field is shown in cyan.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;k-band-spectral-comparison-with-magnetic-field-effects&#34;&gt;K-band Spectral Comparison with Magnetic Field Effects&lt;/h2&gt;
-&lt;p&gt;The animation below corresponds to &lt;strong&gt;Chapter 4.6, Figure 4.2X&lt;/strong&gt; of my thesis.&lt;/p&gt;
-&lt;div style=&#34;text-align: center; margin-top: 50px; margin-bottom: 30px; clear: both;&#34;&gt;
-    &lt;a href=&#34;https://shihyuntang.github.io/animations/EXSPLOSYN_LkCa4_spectral_comparison.gif&#34; target=&#34;_blank&#34;&gt;
-        &lt;img src=&#34;https://shihyuntang.github.io/animations/EXSPLOSYN_LkCa4_spectral_comparison_Kband_2kG.gif&#34; alt=&#34;LkCa4 EXSPLOSYN Spectra K band 2kG&#34; width=&#34;100%&#34; style=&#34;max-width: 1000px; display: inline-block;&#34; /&gt;
-    &lt;/a&gt;
-    &lt;p&gt;&lt;em&gt;Click the animation to open the raw GIF in a new tab.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;description-2&#34;&gt;Description&lt;/h3&gt;
-&lt;p&gt;This animation demonstrates magnetic effects across two distinct K-band wavelength regions: panel (a) focuses on the highly magnetically sensitive Ti lines, while panel (b) showcases the magnetically insensitive CO molecular bands. In both panels, SPIRou observations are shown in black, the $2\text{ kG}$ &lt;code&gt;EXSPLOSYN&lt;/code&gt; model is in red, and a comparative $2\text{ kG}$ two-component composite spectrum built using &lt;code&gt;synmast&lt;/code&gt; is represented in cyan.&lt;/p&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;This sequence is similar to the previous animation, but highlights the impact of incorporating magnetic fields (the Zeeman effect) into the model. Here, the SPIRou observations remain in black. The unmagnetized &lt;code&gt;EXSPLOSYN&lt;/code&gt; forward model is plotted in red, while the updated &lt;code&gt;EXSPLOSYN&lt;/code&gt; model incorporating a $2\text{ kG}$ magnetic field is shown in cyan.&lt;/p&gt;
 </description>
     </item>
     
@@ -437,6 +435,26 @@ SNR = \frac{\mu}{\sigma} = \frac{\mu}{\sqrt{\mu}} = \sqrt{\mu}
 $$
 This relationship highlights the inherent noise properties in photon-counting measurements like those in CCD photometry.&lt;/p&gt;
 &lt;hr&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LkCa4 EXSPLOSYN K band Spectral Variations</title>
+      <link>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-lkca4-spec-k-2kg/</link>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 +0100</pubDate>
+      <guid>https://shihyuntang.github.io/tutorials/work-animations/exsplosyn-lkca4-spec-k-2kg/</guid>
+      <description>&lt;p&gt;This page hosts the full-resolution companion animations for my PhD thesis, &lt;em&gt;Characterization of Young Active Stars for Identifying the Youngest Exoplanets&lt;/em&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;k-band-spectral-comparison-with-magnetic-field-effects&#34;&gt;K-band Spectral Comparison with Magnetic Field Effects&lt;/h2&gt;
+&lt;p&gt;The animation below corresponds to &lt;strong&gt;Chapter 4.6, Figure 4.2X&lt;/strong&gt; of my thesis.&lt;/p&gt;
+&lt;div style=&#34;text-align: center; margin-top: 50px; margin-bottom: 30px; clear: both;&#34;&gt;
+    &lt;a href=&#34;https://shihyuntang.github.io/animations/EXSPLOSYN_LkCa4_spectral_comparison.gif&#34; target=&#34;_blank&#34;&gt;
+        &lt;img src=&#34;https://shihyuntang.github.io/animations/EXSPLOSYN_LkCa4_spectral_comparison_Kband_2kG.gif&#34; alt=&#34;LkCa4 EXSPLOSYN Spectra K band 2kG&#34; width=&#34;100%&#34; style=&#34;max-width: 1000px; display: inline-block;&#34; /&gt;
+    &lt;/a&gt;
+    &lt;p&gt;&lt;em&gt;Click the animation to open the raw GIF in a new tab.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;This animation demonstrates magnetic effects across two distinct K-band wavelength regions: panel (a) focuses on the highly magnetically sensitive Ti lines, while panel (b) showcases the magnetically insensitive CO molecular bands. In both panels, SPIRou observations are shown in black, the $2\text{ kG}$ &lt;code&gt;EXSPLOSYN&lt;/code&gt; model is in red, and a $2\text{ kG}$ two-component composite spectrum built using &lt;code&gt;synmast&lt;/code&gt; is represented in cyan.&lt;/p&gt;
 </description>
     </item>
     
